@@ -1,0 +1,3710 @@
+[
+    {
+        "id": 1001,
+        "name": "Kreisfreie Stadt Flensburg",
+        "lat": 54.77925635868037,
+        "long": 9.427959802014792,
+        "population": 90164,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Flensburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1002,
+        "name": "Kreisfreie Stadt Kiel",
+        "lat": 54.32259497208581,
+        "long": 10.12190044990746,
+        "population": 246794,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Kiel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1003,
+        "name": "Kreisfreie Stadt Lübeck",
+        "lat": 53.86966603064738,
+        "long": 10.695114212012735,
+        "population": 216530,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Luebeck\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1004,
+        "name": "Kreisfreie Stadt Neumünster",
+        "lat": 54.07949656150638,
+        "long": 9.984640111182767,
+        "population": 80196,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Neumuenster\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1051,
+        "name": "Kreis Dithmarschen",
+        "lat": 54.1949443345976,
+        "long": 9.097112709982643,
+        "population": 133193,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Dithmarschen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1053,
+        "name": "Kreis Herzogtum Lauenburg",
+        "lat": 53.62148714152057,
+        "long": 10.639341105639089,
+        "population": 198019,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Herzogtum_Lauenburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1054,
+        "name": "Kreis Nordfriesland",
+        "lat": 54.6649205959105,
+        "long": 8.95812232652976,
+        "population": 165951,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Nordfriesland\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1055,
+        "name": "Kreis Ostholstein",
+        "lat": 54.1354471914854,
+        "long": 10.71244795535572,
+        "population": 200539,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Ostholstein\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1056,
+        "name": "Kreis Pinneberg",
+        "lat": 53.82559742837092,
+        "long": 9.685022382278637,
+        "population": 316103,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Pinneberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1057,
+        "name": "Kreis Plön",
+        "lat": 54.239702716769095,
+        "long": 10.288258857021411,
+        "population": 128686,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Ploen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1058,
+        "name": "Kreis Rendsburg-Eckernförde",
+        "lat": 54.29258918869044,
+        "long": 9.769579032255635,
+        "population": 274098,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Rendsburg-Eckernfoerde\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1059,
+        "name": "Kreis Schleswig-Flensburg",
+        "lat": 54.638088065562,
+        "long": 9.493549989462126,
+        "population": 201156,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Schleswig-Flensburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1060,
+        "name": "Kreis Segeberg",
+        "lat": 53.93623601030446,
+        "long": 10.132353367559286,
+        "population": 277175,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Segeberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1061,
+        "name": "Kreis Steinburg",
+        "lat": 53.94545864455089,
+        "long": 9.512061631330253,
+        "population": 131013,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Steinburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 1062,
+        "name": "Kreis Stormarn",
+        "lat": 53.73732529021793,
+        "long": 10.298172658502027,
+        "population": 244156,
+        "state": "Schleswig-Holstein",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Stormarn\">Hier_klicken!</a>"
+    },
+    {
+        "id": 2000,
+        "name": "Kreisfreie Stadt Hamburg",
+        "lat": 53.54796610510161,
+        "long": 9.988932946951985,
+        "population": 1847253,
+        "state": "Hamburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Hamburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3101,
+        "name": "Kreisfreie Stadt Braunschweig",
+        "lat": 52.26336803760483,
+        "long": 10.526855081792945,
+        "population": 249406,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Braunschweig\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3102,
+        "name": "Kreisfreie Stadt Salzgitter",
+        "lat": 52.157947659543545,
+        "long": 10.327564806244283,
+        "population": 104291,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Salzgitter\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3103,
+        "name": "Kreisfreie Stadt Wolfsburg",
+        "lat": 52.48280058473589,
+        "long": 10.75294167575839,
+        "population": 124371,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Wolfsburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3151,
+        "name": "Landkreis Gifhorn",
+        "lat": 52.56945454169619,
+        "long": 10.572586503048013,
+        "population": 176523,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Gifhorn\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3153,
+        "name": "Landkreis Goslar",
+        "lat": 51.91498676645103,
+        "long": 10.359640058502027,
+        "population": 136292,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Goslar\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3154,
+        "name": "Landkreis Helmstedt",
+        "lat": 52.26388749544233,
+        "long": 10.895010960352801,
+        "population": 91297,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Helmstedt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3155,
+        "name": "Landkreis Northeim",
+        "lat": 51.741705527830895,
+        "long": 9.79917579112782,
+        "population": 132285,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Northeim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3157,
+        "name": "Landkreis Peine",
+        "lat": 52.31898525336549,
+        "long": 10.24249920951995,
+        "population": 134801,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Peine\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3158,
+        "name": "Landkreis Wolfenbüttel",
+        "lat": 52.14620691443222,
+        "long": 10.634692175234223,
+        "population": 119622,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Wolfenbuettel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3159,
+        "name": "Landkreis Göttingen",
+        "lat": 51.58438955170408,
+        "long": 10.226873766362042,
+        "population": 326041,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Goettingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3241,
+        "name": "Landkreis Region Hannover",
+        "lat": 52.45295753187065,
+        "long": 9.615455023470238,
+        "population": 1157115,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Region_Hannover\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3251,
+        "name": "Landkreis Diepholz",
+        "lat": 52.747952300000016,
+        "long": 8.717420368484673,
+        "population": 217089,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Diepholz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3252,
+        "name": "Landkreis Hameln-Pyrmont",
+        "lat": 52.09785249092309,
+        "long": 9.369075930589945,
+        "population": 148549,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Hameln-Pyrmont\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3254,
+        "name": "Landkreis Hildesheim",
+        "lat": 52.08847199437534,
+        "long": 9.926131581330251,
+        "population": 275817,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Hildesheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3255,
+        "name": "Landkreis Holzminden",
+        "lat": 51.90181496199416,
+        "long": 9.541828843990757,
+        "population": 70458,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Holzminden\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3256,
+        "name": "Landkreis Nienburg (Weser)",
+        "lat": 52.639558506738354,
+        "long": 9.156866691868126,
+        "population": 121390,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Nienburg_(Weser)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3257,
+        "name": "Landkreis Schaumburg",
+        "lat": 52.30717713226124,
+        "long": 9.20930702735685,
+        "population": 157820,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Schaumburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3351,
+        "name": "Landkreis Celle",
+        "lat": 52.73745266258763,
+        "long": 10.088577277356851,
+        "population": 179011,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Celle\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3352,
+        "name": "Landkreis Cuxhaven",
+        "lat": 53.637240938001426,
+        "long": 8.79043301117989,
+        "population": 198038,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Cuxhaven\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3353,
+        "name": "Landkreis Harburg",
+        "lat": 53.34096647665501,
+        "long": 9.926212843250449,
+        "population": 254431,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Harburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3354,
+        "name": "Landkreis Lüchow-Dannenberg",
+        "lat": 53.03464861417759,
+        "long": 11.113311803048015,
+        "population": 48412,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Luechow-Dannenberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3355,
+        "name": "Landkreis Lüneburg",
+        "lat": 53.277044297535866,
+        "long": 10.510684947408926,
+        "population": 184139,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Lueneburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3356,
+        "name": "Landkreis Osterholz",
+        "lat": 53.25579670929874,
+        "long": 8.808465387154419,
+        "population": 113928,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Osterholz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3357,
+        "name": "Landkreis Rotenburg (Wümme)",
+        "lat": 53.24786360248323,
+        "long": 9.308893255115589,
+        "population": 163782,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rotenburg_(Wuemme)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3358,
+        "name": "Landkreis Heidekreis",
+        "lat": 52.95252203809207,
+        "long": 9.778299140942742,
+        "population": 140673,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Heidekreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3359,
+        "name": "Landkreis Stade",
+        "lat": 53.56851600217231,
+        "long": 9.43445555111046,
+        "population": 204512,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Stade\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3360,
+        "name": "Landkreis Uelzen",
+        "lat": 53.00626099352689,
+        "long": 10.547353964326195,
+        "population": 92389,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Uelzen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3361,
+        "name": "Landkreis Verden",
+        "lat": 52.991601322643184,
+        "long": 9.119917721162533,
+        "population": 137133,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Verden\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3401,
+        "name": "Kreisfreie Stadt Delmenhorst",
+        "lat": 53.05515650117078,
+        "long": 8.626023438169463,
+        "population": 77559,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Delmenhorst\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3402,
+        "name": "Kreisfreie Stadt Emden",
+        "lat": 53.36524511674162,
+        "long": 7.192767878189699,
+        "population": 49913,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Emden\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3403,
+        "name": "Kreisfreie Stadt Oldenburg (Oldb)",
+        "lat": 53.15349054423818,
+        "long": 8.221249634103527,
+        "population": 169077,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Oldenburg_(Oldb)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3404,
+        "name": "Kreisfreie Stadt Osnabrück",
+        "lat": 52.28282290165588,
+        "long": 8.04930045443609,
+        "population": 165251,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Osnabrueck\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3405,
+        "name": "Kreisfreie Stadt Wilhelmshaven",
+        "lat": 53.53690713407092,
+        "long": 8.106005418762287,
+        "population": 76089,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Wilhelmshaven\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3451,
+        "name": "Landkreis Ammerland",
+        "lat": 53.22252992293336,
+        "long": 7.997133458872181,
+        "population": 124859,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ammerland\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3452,
+        "name": "Landkreis Aurich",
+        "lat": 53.49332280099312,
+        "long": 7.337965472828224,
+        "population": 189694,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Aurich\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3453,
+        "name": "Landkreis Cloppenburg",
+        "lat": 52.87418172354565,
+        "long": 7.985542619410054,
+        "population": 170682,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Cloppenburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3454,
+        "name": "Landkreis Emsland",
+        "lat": 52.77687531759493,
+        "long": 7.351669657576645,
+        "population": 326954,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Emsland\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3455,
+        "name": "Landkreis Friesland",
+        "lat": 53.51455962473429,
+        "long": 7.989815772272993,
+        "population": 98704,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Friesland\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3456,
+        "name": "Landkreis Grafschaft Bentheim",
+        "lat": 52.532540386555794,
+        "long": 6.947588489647203,
+        "population": 137162,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Grafschaft_Bentheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3457,
+        "name": "Landkreis Leer",
+        "lat": 53.24620072690207,
+        "long": 7.449509663499102,
+        "population": 170756,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Leer\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3458,
+        "name": "Landkreis Oldenburg",
+        "lat": 53.01460979961347,
+        "long": 8.367583231700406,
+        "population": 130890,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Oldenburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3459,
+        "name": "Landkreis Osnabrück",
+        "lat": 52.47987347005071,
+        "long": 7.905712073470241,
+        "population": 358080,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Osnabrueck\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3460,
+        "name": "Landkreis Vechta",
+        "lat": 52.657012846187385,
+        "long": 8.182517803048015,
+        "population": 142814,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Vechta\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3461,
+        "name": "Landkreis Wesermarsch",
+        "lat": 53.35839621896194,
+        "long": 8.355787258316951,
+        "population": 88583,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Wesermarsch\">Hier_klicken!</a>"
+    },
+    {
+        "id": 3462,
+        "name": "Landkreis Wittmund",
+        "lat": 53.608074384668434,
+        "long": 7.70475181395604,
+        "population": 56926,
+        "state": "Niedersachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Wittmund\">Hier_klicken!</a>"
+    },
+    {
+        "id": 4011,
+        "name": "Kreisfreie Stadt Bremen",
+        "lat": 53.07880326138957,
+        "long": 8.827609647692293,
+        "population": 567559,
+        "state": "Bremen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Bremen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 4012,
+        "name": "Kreisfreie Stadt Bremerhaven",
+        "lat": 53.54382397803444,
+        "long": 8.589131986691728,
+        "population": 113643,
+        "state": "Bremen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Bremerhaven\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5111,
+        "name": "Kreisfreie Stadt Düsseldorf",
+        "lat": 51.235875305115414,
+        "long": 6.799587322365532,
+        "population": 621877,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Duesseldorf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5112,
+        "name": "Kreisfreie Stadt Duisburg",
+        "lat": 51.479584689718386,
+        "long": 6.770546608000881,
+        "population": 498686,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Duisburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5113,
+        "name": "Kreisfreie Stadt Essen",
+        "lat": 51.46615232088616,
+        "long": 7.008808422550609,
+        "population": 582760,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Essen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5114,
+        "name": "Kreisfreie Stadt Krefeld",
+        "lat": 51.338342787215524,
+        "long": 6.57337046090515,
+        "population": 227417,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Krefeld\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5116,
+        "name": "Kreisfreie Stadt Mönchengladbach",
+        "lat": 51.211648855431584,
+        "long": 6.42800245777486,
+        "population": 261034,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Moenchengladbach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5117,
+        "name": "Kreisfreie Stadt Mülheim an der Ruhr",
+        "lat": 51.429900759434396,
+        "long": 6.881233124953731,
+        "population": 170632,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Muelheim_an_der_Ruhr\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5119,
+        "name": "Kreisfreie Stadt Oberhausen",
+        "lat": 51.426261730459906,
+        "long": 6.881919770425096,
+        "population": 210764,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Oberhausen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5120,
+        "name": "Kreisfreie Stadt Remscheid",
+        "lat": 51.2272170464215,
+        "long": 7.168107248347459,
+        "population": 111338,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Remscheid\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5122,
+        "name": "Kreisfreie Stadt Solingen",
+        "lat": 51.17309739591919,
+        "long": 7.0854448119230735,
+        "population": 159245,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Solingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5124,
+        "name": "Kreisfreie Stadt Wuppertal",
+        "lat": 51.26037205866341,
+        "long": 7.150377113308276,
+        "population": 355100,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Wuppertal\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5154,
+        "name": "Kreis Kleve",
+        "lat": 51.784059960866,
+        "long": 6.135913583823037,
+        "population": 312465,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Kleve\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5158,
+        "name": "Kreis Mettmann",
+        "lat": 51.3013292023247,
+        "long": 7.009584041497976,
+        "population": 485570,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Mettmann\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5162,
+        "name": "Kreis Rhein-Kreis Neuss",
+        "lat": 51.142279530804146,
+        "long": 6.666567200185087,
+        "population": 451730,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Rhein-Kreis_Neuss\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5166,
+        "name": "Kreis Viersen",
+        "lat": 51.29417403396382,
+        "long": 6.311980430960097,
+        "population": 298863,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Viersen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5170,
+        "name": "Kreis Wesel",
+        "lat": 51.665092096978064,
+        "long": 6.589425676616546,
+        "population": 459976,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Wesel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5314,
+        "name": "Kreisfreie Stadt Bonn",
+        "lat": 50.72640237689028,
+        "long": 7.080735828649516,
+        "population": 329673,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Bonn\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5315,
+        "name": "Kreisfreie Stadt Köln",
+        "lat": 50.95381006250618,
+        "long": 6.964232445378832,
+        "population": 1087863,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Koeln\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5316,
+        "name": "Kreisfreie Stadt Leverkusen",
+        "lat": 51.05362173928301,
+        "long": 6.987578391405422,
+        "population": 163729,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Leverkusen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5334,
+        "name": "Kreis Städteregion Aachen",
+        "lat": 50.733411865932574,
+        "long": 6.244730859242335,
+        "population": 557026,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Staedteregion_Aachen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5358,
+        "name": "Kreis Düren",
+        "lat": 50.80380706103384,
+        "long": 6.481375215346931,
+        "population": 264638,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Dueren\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5362,
+        "name": "Kreis Rhein-Erft-Kreis",
+        "lat": 50.93135312410829,
+        "long": 6.695244803418169,
+        "population": 470615,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Rhein-Erft-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5366,
+        "name": "Kreis Euskirchen",
+        "lat": 50.532624228765755,
+        "long": 6.634735491127818,
+        "population": 193656,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Euskirchen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5370,
+        "name": "Kreis Heinsberg",
+        "lat": 51.05530878176462,
+        "long": 6.151982581330251,
+        "population": 255555,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Heinsberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5374,
+        "name": "Kreis Oberbergischer Kreis",
+        "lat": 51.01382420571213,
+        "long": 7.521294654528629,
+        "population": 272057,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Oberbergischer_Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5378,
+        "name": "Kreis Rheinisch-Bergischer Kreis",
+        "lat": 51.05286271873543,
+        "long": 7.187262990757663,
+        "population": 283271,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Rheinisch-Bergischer_Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5382,
+        "name": "Kreis Rhein-Sieg-Kreis",
+        "lat": 50.825727281033885,
+        "long": 7.339182533551173,
+        "population": 600764,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Rhein-Sieg-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5512,
+        "name": "Kreisfreie Stadt Bottrop",
+        "lat": 51.52604242576383,
+        "long": 6.924748269830171,
+        "population": 117565,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Bottrop\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5513,
+        "name": "Kreisfreie Stadt Gelsenkirchen",
+        "lat": 51.55892514295428,
+        "long": 7.044567904584336,
+        "population": 259645,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Gelsenkirchen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5515,
+        "name": "Kreisfreie Stadt Münster",
+        "lat": 51.96531845828084,
+        "long": 7.626500409149796,
+        "population": 315293,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Muenster\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5554,
+        "name": "Kreis Borken",
+        "lat": 51.89622352115842,
+        "long": 6.890443256009244,
+        "population": 371339,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Borken\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5558,
+        "name": "Kreis Coesfeld",
+        "lat": 51.889776372425885,
+        "long": 7.341573898704461,
+        "population": 220586,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Coesfeld\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5562,
+        "name": "Kreis Recklinghausen",
+        "lat": 51.70863078062241,
+        "long": 7.130566821532685,
+        "population": 614137,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Recklinghausen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5566,
+        "name": "Kreis Steinfurt",
+        "lat": 52.22052136540874,
+        "long": 7.574379354898784,
+        "population": 448220,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Steinfurt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5570,
+        "name": "Kreis Warendorf",
+        "lat": 51.875991202280254,
+        "long": 7.917117871532684,
+        "population": 277840,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Warendorf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5711,
+        "name": "Kreisfreie Stadt Bielefeld",
+        "lat": 52.033402092921854,
+        "long": 8.535372327634471,
+        "population": 334195,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Bielefeld\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5754,
+        "name": "Kreis Gütersloh",
+        "lat": 51.94983224095406,
+        "long": 8.275270101197243,
+        "population": 364938,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Guetersloh\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5758,
+        "name": "Kreis Herford",
+        "lat": 52.17796808775974,
+        "long": 8.635764094731064,
+        "population": 250578,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Herford\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5762,
+        "name": "Kreis Höxter",
+        "lat": 51.69777372431326,
+        "long": 9.154754285673805,
+        "population": 140251,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Hoexter\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5766,
+        "name": "Kreis Lippe",
+        "lat": 52.009570604238576,
+        "long": 8.898849861735119,
+        "population": 347514,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Lippe\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5770,
+        "name": "Kreis Minden-Lübbecke",
+        "lat": 52.35032802659005,
+        "long": 8.701961354158476,
+        "population": 310409,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Minden-Luebbecke\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5774,
+        "name": "Kreis Paderborn",
+        "lat": 51.678102722247246,
+        "long": 8.729931968669746,
+        "population": 307839,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Paderborn\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5911,
+        "name": "Kreisfreie Stadt Bochum",
+        "lat": 51.48334424057005,
+        "long": 7.216974581607866,
+        "population": 365587,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Bochum\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5913,
+        "name": "Kreisfreie Stadt Dortmund",
+        "lat": 51.519422107644886,
+        "long": 7.4664859499074625,
+        "population": 588250,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Dortmund\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5914,
+        "name": "Kreisfreie Stadt Hagen",
+        "lat": 51.38548427177877,
+        "long": 7.48228170896472,
+        "population": 188686,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Hagen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5915,
+        "name": "Kreisfreie Stadt Hamm",
+        "lat": 51.6833906453153,
+        "long": 7.815117763123195,
+        "population": 179916,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Hamm\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5916,
+        "name": "Kreisfreie Stadt Herne",
+        "lat": 51.539929271149816,
+        "long": 7.199947479297283,
+        "population": 156449,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Herne\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5954,
+        "name": "Kreis Ennepe-Ruhr-Kreis",
+        "lat": 51.34485940934255,
+        "long": 7.3067412770792375,
+        "population": 324106,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Ennepe-Ruhr-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5958,
+        "name": "Kreis Hochsauerlandkreis",
+        "lat": 51.31214287352408,
+        "long": 8.264966655355723,
+        "population": 259777,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Hochsauerlandkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5962,
+        "name": "Kreis Märkischer Kreis",
+        "lat": 51.26405328616653,
+        "long": 7.715152746211678,
+        "population": 410222,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Maerkischer_Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5966,
+        "name": "Kreis Olpe",
+        "lat": 51.097679010264784,
+        "long": 7.954215481330251,
+        "population": 133955,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Olpe\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5970,
+        "name": "Kreis Siegen-Wittgenstein",
+        "lat": 50.93147451490884,
+        "long": 8.14027336247543,
+        "population": 276944,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Siegen-Wittgenstein\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5974,
+        "name": "Kreis Soest",
+        "lat": 51.58464290820889,
+        "long": 8.185875340387511,
+        "population": 301785,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Soest\">Hier_klicken!</a>"
+    },
+    {
+        "id": 5978,
+        "name": "Kreis Unna",
+        "lat": 51.64008349063983,
+        "long": 7.56440593021979,
+        "population": 394891,
+        "state": "Nordrhein-Westfalen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreis_Unna\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6411,
+        "name": "Kreisfreie Stadt Darmstadt",
+        "lat": 49.886706851720795,
+        "long": 8.658597850092539,
+        "population": 159878,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Darmstadt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6412,
+        "name": "Kreisfreie Stadt Frankfurt am Main",
+        "lat": 50.11020439847541,
+        "long": 8.658879777819545,
+        "population": 763380,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Frankfurt_am_Main\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6413,
+        "name": "Kreisfreie Stadt Offenbach am Main",
+        "lat": 50.11680926306675,
+        "long": 8.790715708322706,
+        "population": 130280,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Offenbach_am_Main\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6414,
+        "name": "Kreisfreie Stadt Wiesbaden",
+        "lat": 50.07990554594152,
+        "long": 8.241329416265907,
+        "population": 278474,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Wiesbaden\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6431,
+        "name": "Landkreis Bergstraße",
+        "lat": 49.67561930615752,
+        "long": 8.603058530589946,
+        "population": 270340,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bergstrasse\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6432,
+        "name": "Landkreis Darmstadt-Dieburg",
+        "lat": 49.86916254444228,
+        "long": 8.849001078837466,
+        "population": 297844,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Darmstadt-Dieburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6433,
+        "name": "Landkreis Groß-Gerau",
+        "lat": 49.931260489117044,
+        "long": 8.46946629112782,
+        "population": 275726,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Gross-Gerau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6434,
+        "name": "Landkreis Hochtaunuskreis",
+        "lat": 50.282361711476646,
+        "long": 8.50809031349335,
+        "population": 236914,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Hochtaunuskreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6435,
+        "name": "Landkreis Main-Kinzig-Kreis",
+        "lat": 50.2634172052749,
+        "long": 9.337109919965286,
+        "population": 420552,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Main-Kinzig-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6436,
+        "name": "Landkreis Main-Taunus-Kreis",
+        "lat": 50.12909406185453,
+        "long": 8.426167999167156,
+        "population": 238558,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Main-Taunus-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6437,
+        "name": "Landkreis Odenwaldkreis",
+        "lat": 49.68922587616926,
+        "long": 8.96406047264315,
+        "population": 96703,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Odenwaldkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6438,
+        "name": "Landkreis Offenbach",
+        "lat": 50.01917724127985,
+        "long": 8.814167222550612,
+        "population": 355813,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Offenbach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6439,
+        "name": "Landkreis Rheingau-Taunus-Kreis",
+        "lat": 50.15156890672192,
+        "long": 8.055580840017358,
+        "population": 187160,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rheingau-Taunus-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6440,
+        "name": "Landkreis Wetteraukreis",
+        "lat": 50.35116973988332,
+        "long": 8.868689071902839,
+        "population": 308339,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Wetteraukreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6531,
+        "name": "Landkreis Gießen",
+        "lat": 50.745095995154486,
+        "long": 8.720493820607302,
+        "population": 270688,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Giessen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6532,
+        "name": "Landkreis Lahn-Dill-Kreis",
+        "lat": 50.66602573768784,
+        "long": 8.347006821902838,
+        "population": 253319,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Lahn-Dill-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6533,
+        "name": "Landkreis Limburg-Weilburg",
+        "lat": 50.447450024451605,
+        "long": 8.166958221532687,
+        "population": 171912,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Limburg-Weilburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6534,
+        "name": "Landkreis Marburg-Biedenkopf",
+        "lat": 50.85088637418148,
+        "long": 8.712512467189132,
+        "population": 247084,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Marburg-Biedenkopf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6535,
+        "name": "Landkreis Vogelsbergkreis",
+        "lat": 50.658904514860275,
+        "long": 9.247121303788322,
+        "population": 105643,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Vogelsbergkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6611,
+        "name": "Kreisfreie Stadt Kassel",
+        "lat": 51.31617362436576,
+        "long": 9.473832775323883,
+        "population": 202137,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Kassel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6631,
+        "name": "Landkreis Fulda",
+        "lat": 50.56539727111656,
+        "long": 9.73084665850203,
+        "population": 223145,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Fulda\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6632,
+        "name": "Landkreis Hersfeld-Rotenburg",
+        "lat": 50.91968239210204,
+        "long": 9.727449340387508,
+        "population": 120719,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Hersfeld-Rotenburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6633,
+        "name": "Landkreis Kassel",
+        "lat": 51.46972024376716,
+        "long": 9.392230730960097,
+        "population": 236764,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Kassel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6634,
+        "name": "Landkreis Schwalm-Eder-Kreis",
+        "lat": 51.02905728877578,
+        "long": 9.339180049074617,
+        "population": 179673,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Schwalm-Eder-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6635,
+        "name": "Landkreis Waldeck-Frankenberg",
+        "lat": 51.213453228467706,
+        "long": 8.928598215621733,
+        "population": 156406,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Waldeck-Frankenberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 6636,
+        "name": "Landkreis Werra-Meißner-Kreis",
+        "lat": 51.19236858157083,
+        "long": 9.922686249446981,
+        "population": 100629,
+        "state": "Hessen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Werra-Meissner-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7111,
+        "name": "Kreisfreie Stadt Koblenz",
+        "lat": 50.35120412990451,
+        "long": 7.576586741897438,
+        "population": 114052,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Koblenz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7131,
+        "name": "Landkreis Ahrweiler",
+        "lat": 50.482250632810235,
+        "long": 7.033541967652719,
+        "population": 130086,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ahrweiler\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7132,
+        "name": "Landkreis Altenkirchen (Westerwald)",
+        "lat": 50.7917051869186,
+        "long": 7.792575411736405,
+        "population": 128805,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Altenkirchen_(Westerwald)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7133,
+        "name": "Landkreis Bad Kreuznach",
+        "lat": 49.845358898291636,
+        "long": 7.678237504510182,
+        "population": 158345,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bad_Kreuznach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7134,
+        "name": "Landkreis Birkenfeld",
+        "lat": 49.72403445645508,
+        "long": 7.283292359408369,
+        "population": 80951,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Birkenfeld\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7135,
+        "name": "Landkreis Cochem-Zell",
+        "lat": 50.15411526088238,
+        "long": 7.1626136537341685,
+        "population": 61375,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Cochem-Zell\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7137,
+        "name": "Landkreis Mayen-Koblenz",
+        "lat": 50.33462496261623,
+        "long": 7.3677358838993054,
+        "population": 214434,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Mayen-Koblenz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7138,
+        "name": "Landkreis Neuwied",
+        "lat": 50.54366133499974,
+        "long": 7.417505234141421,
+        "population": 182811,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Neuwied\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7140,
+        "name": "Landkreis Rhein-Hunsrück-Kreis",
+        "lat": 50.00235474654745,
+        "long": 7.532637129777135,
+        "population": 103163,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rhein-Hunsrueck-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7141,
+        "name": "Landkreis Rhein-Lahn-Kreis",
+        "lat": 50.2791169713864,
+        "long": 7.816997220998882,
+        "population": 122297,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rhein-Lahn-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7143,
+        "name": "Landkreis Westerwaldkreis",
+        "lat": 50.57387700377824,
+        "long": 7.844046293937795,
+        "population": 201904,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Westerwaldkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7211,
+        "name": "Kreisfreie Stadt Trier",
+        "lat": 49.76879073504406,
+        "long": 6.653236350194003,
+        "population": 111528,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Trier\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7231,
+        "name": "Landkreis Bernkastel-Wittlich",
+        "lat": 49.95523816347295,
+        "long": 6.9649643996119845,
+        "population": 112483,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bernkastel-Wittlich\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7232,
+        "name": "Landkreis Eifelkreis Bitburg-Prüm",
+        "lat": 50.0725008090377,
+        "long": 6.381295557080332,
+        "population": 99058,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Eifelkreis_Bitburg-Pruem\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7233,
+        "name": "Landkreis Vulkaneifel",
+        "lat": 50.25486760417625,
+        "long": 6.755790615082566,
+        "population": 60646,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Vulkaneifel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7235,
+        "name": "Landkreis Trier-Saarburg",
+        "lat": 49.62970987682764,
+        "long": 6.60940042201701,
+        "population": 149398,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Trier-Saarburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7311,
+        "name": "Kreisfreie Stadt Frankenthal (Pfalz)",
+        "lat": 49.53218741810365,
+        "long": 8.350958037851534,
+        "population": 48762,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Frankenthal_(Pfalz)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7312,
+        "name": "Kreisfreie Stadt Kaiserslautern",
+        "lat": 49.446754564313956,
+        "long": 7.758250964112553,
+        "population": 100030,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Kaiserslautern\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7313,
+        "name": "Kreisfreie Stadt Landau in der Pfalz",
+        "lat": 49.19996985924822,
+        "long": 8.112641036421344,
+        "population": 46881,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Landau_in_der_Pfalz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7314,
+        "name": "Kreisfreie Stadt Ludwigshafen am Rhein",
+        "lat": 49.47725378873986,
+        "long": 8.437871982129222,
+        "population": 172253,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Ludwigshafen_am_Rhein\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7315,
+        "name": "Kreisfreie Stadt Mainz",
+        "lat": 49.98845950399043,
+        "long": 8.25025536176046,
+        "population": 218578,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Mainz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7316,
+        "name": "Kreisfreie Stadt Neustadt an der Weinstraße",
+        "lat": 49.356281027905055,
+        "long": 8.151429976867083,
+        "population": 53264,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Neustadt_an_der_Weinstrasse\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7317,
+        "name": "Kreisfreie Stadt Pirmasens",
+        "lat": 49.20298829860712,
+        "long": 7.5919019749029975,
+        "population": 40231,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Pirmasens\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7318,
+        "name": "Kreisfreie Stadt Speyer",
+        "lat": 49.33620630157115,
+        "long": 8.43074366117845,
+        "population": 50561,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Speyer\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7319,
+        "name": "Kreisfreie Stadt Worms",
+        "lat": 49.63976049249758,
+        "long": 8.304761870804878,
+        "population": 83542,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Worms\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7320,
+        "name": "Kreisfreie Stadt Zweibrücken",
+        "lat": 49.24808706442499,
+        "long": 7.366325552158089,
+        "population": 34193,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Zweibruecken\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7331,
+        "name": "Landkreis Alzey-Worms",
+        "lat": 49.76472933071838,
+        "long": 8.122961105528308,
+        "population": 129687,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Alzey-Worms\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7332,
+        "name": "Landkreis Bad Dürkheim",
+        "lat": 49.47187307745694,
+        "long": 8.127930675654955,
+        "population": 132671,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bad_Duerkheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7333,
+        "name": "Landkreis Donnersbergkreis",
+        "lat": 49.639528097938424,
+        "long": 7.910035549029984,
+        "population": 75325,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Donnersbergkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7334,
+        "name": "Landkreis Germersheim",
+        "lat": 49.18821051164517,
+        "long": 8.302136803492054,
+        "population": 129013,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Germersheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7335,
+        "name": "Landkreis Kaiserslautern",
+        "lat": 49.468545536776126,
+        "long": 7.553974542627885,
+        "population": 105979,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Kaiserslautern\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7336,
+        "name": "Landkreis Kusel",
+        "lat": 49.545379510547036,
+        "long": 7.436414179243232,
+        "population": 70219,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Kusel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7337,
+        "name": "Landkreis Südliche Weinstraße",
+        "lat": 49.1381570688948,
+        "long": 7.961350594179909,
+        "population": 110521,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Suedliche_Weinstrasse\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7338,
+        "name": "Landkreis Rhein-Pfalz-Kreis",
+        "lat": 49.45303038742487,
+        "long": 8.35472780373417,
+        "population": 154609,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rhein-Pfalz-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7339,
+        "name": "Landkreis Mainz-Bingen",
+        "lat": 49.934765727485896,
+        "long": 8.039998650388005,
+        "population": 211417,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Mainz-Bingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 7340,
+        "name": "Landkreis Südwestpfalz",
+        "lat": 49.290847544617165,
+        "long": 7.629229632347283,
+        "population": 94831,
+        "state": "Rheinland-Pfalz",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Suedwestpfalz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8111,
+        "name": "Stadtkreis Stuttgart",
+        "lat": 48.784864651285375,
+        "long": 9.173438649805997,
+        "population": 635911,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Stuttgart\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8115,
+        "name": "Landkreis Böblingen",
+        "lat": 48.67665903016649,
+        "long": 8.941515621774894,
+        "population": 392807,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Boeblingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8116,
+        "name": "Landkreis Esslingen",
+        "lat": 48.66793420968209,
+        "long": 9.356398896265832,
+        "population": 535024,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Esslingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8117,
+        "name": "Landkreis Göppingen",
+        "lat": 48.67238557989142,
+        "long": 9.699900907080334,
+        "population": 258145,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Goeppingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8118,
+        "name": "Landkreis Ludwigsburg",
+        "lat": 48.939117984597544,
+        "long": 9.11961737589707,
+        "population": 545423,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ludwigsburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8119,
+        "name": "Landkreis Rems-Murr-Kreis",
+        "lat": 48.91367980685912,
+        "long": 9.517703805286194,
+        "population": 427248,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rems-Murr-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8121,
+        "name": "Stadtkreis Heilbronn",
+        "lat": 49.150590223883995,
+        "long": 9.200033965082568,
+        "population": 126592,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Heilbronn\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8125,
+        "name": "Landkreis Heilbronn",
+        "lat": 49.252882957316025,
+        "long": 9.26869851406444,
+        "population": 344456,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Heilbronn\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8126,
+        "name": "Landkreis Hohenlohekreis",
+        "lat": 49.287999523730484,
+        "long": 9.606541768428729,
+        "population": 112655,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Hohenlohekreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8127,
+        "name": "Landkreis Schwäbisch Hall",
+        "lat": 49.14286002592079,
+        "long": 9.924737565858582,
+        "population": 196761,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Schwaebisch_Hall\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8128,
+        "name": "Landkreis Main-Tauber-Kreis",
+        "lat": 49.51846011088627,
+        "long": 9.721166849611992,
+        "population": 132399,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Main-Tauber-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8135,
+        "name": "Landkreis Heidenheim",
+        "lat": 48.675804788492684,
+        "long": 10.132986691609759,
+        "population": 132777,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Heidenheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8136,
+        "name": "Landkreis Ostalbkreis",
+        "lat": 48.90258061430557,
+        "long": 10.112772358390242,
+        "population": 314025,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ostalbkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8211,
+        "name": "Stadtkreis Baden-Baden",
+        "lat": 48.7444271759598,
+        "long": 8.250456938215484,
+        "population": 55185,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Baden-Baden\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8212,
+        "name": "Stadtkreis Karlsruhe",
+        "lat": 49.014723245742914,
+        "long": 8.401637426867085,
+        "population": 312060,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Karlsruhe\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8215,
+        "name": "Landkreis Karlsruhe",
+        "lat": 49.2679221768686,
+        "long": 8.740418270610874,
+        "population": 445101,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Karlsruhe\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8216,
+        "name": "Landkreis Rastatt",
+        "lat": 48.89175949957382,
+        "long": 8.198352607856355,
+        "population": 231420,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rastatt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8221,
+        "name": "Stadtkreis Heidelberg",
+        "lat": 49.40092507519548,
+        "long": 8.672799483535355,
+        "population": 161485,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Heidelberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8222,
+        "name": "Stadtkreis Mannheim",
+        "lat": 49.48911354520629,
+        "long": 8.46671290727435,
+        "population": 310658,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Mannheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8225,
+        "name": "Landkreis Neckar-Odenwald-Kreis",
+        "lat": 49.486112617805134,
+        "long": 9.28704669626583,
+        "population": 143633,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Neckar-Odenwald-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8226,
+        "name": "Landkreis Rhein-Neckar-Kreis",
+        "lat": 49.29934822885231,
+        "long": 8.828908752716043,
+        "population": 548355,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rhein-Neckar-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8231,
+        "name": "Stadtkreis Pforzheim",
+        "lat": 48.88463104253513,
+        "long": 8.703890697065898,
+        "population": 125957,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Pforzheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8235,
+        "name": "Landkreis Calw",
+        "lat": 48.69878195053932,
+        "long": 8.623413281571269,
+        "population": 159201,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Calw\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8236,
+        "name": "Landkreis Enzkreis",
+        "lat": 48.97639226473094,
+        "long": 8.78483759936988,
+        "population": 199556,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Enzkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8237,
+        "name": "Landkreis Freudenstadt",
+        "lat": 48.4959132742555,
+        "long": 8.440715409650485,
+        "population": 118243,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Freudenstadt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8311,
+        "name": "Stadtkreis Freiburg im Breisgau",
+        "lat": 48.0100547781338,
+        "long": 7.820109319398745,
+        "population": 231195,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Freiburg_im_Breisgau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8315,
+        "name": "Landkreis Breisgau-Hochschwarzwald",
+        "lat": 47.95178780283175,
+        "long": 8.070797586227341,
+        "population": 263601,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Breisgau-Hochschwarzwald\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8316,
+        "name": "Landkreis Emmendingen",
+        "lat": 48.15309049586719,
+        "long": 7.90506525116402,
+        "population": 166408,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Emmendingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8317,
+        "name": "Landkreis Ortenaukreis",
+        "lat": 48.44415581436778,
+        "long": 7.97343601197852,
+        "population": 430953,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ortenaukreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8325,
+        "name": "Landkreis Rottweil",
+        "lat": 48.25520488561554,
+        "long": 8.517077986469456,
+        "population": 139878,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rottweil\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8326,
+        "name": "Landkreis Schwarzwald-Baar-Kreis",
+        "lat": 48.04831802535307,
+        "long": 8.383007372550907,
+        "population": 212506,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Schwarzwald-Baar-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8327,
+        "name": "Landkreis Tuttlingen",
+        "lat": 48.03437635925863,
+        "long": 8.807508277449093,
+        "population": 140766,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Tuttlingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8335,
+        "name": "Landkreis Konstanz",
+        "lat": 47.814332049325884,
+        "long": 8.876836307080332,
+        "population": 286305,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Konstanz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8336,
+        "name": "Landkreis Lörrach",
+        "lat": 47.69016212177088,
+        "long": 7.738932134917431,
+        "population": 228736,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Loerrach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8337,
+        "name": "Landkreis Waldshut",
+        "lat": 47.688634906115354,
+        "long": 8.186220369446858,
+        "population": 171003,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Waldshut\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8415,
+        "name": "Landkreis Reutlingen",
+        "lat": 48.425494716964465,
+        "long": 9.363127362754534,
+        "population": 287034,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Reutlingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8416,
+        "name": "Landkreis Tübingen",
+        "lat": 48.487550956873505,
+        "long": 8.984571450970018,
+        "population": 228678,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Tuebingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8417,
+        "name": "Landkreis Zollernalbkreis",
+        "lat": 48.27375557296078,
+        "long": 8.948310214306556,
+        "population": 189363,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Zollernalbkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8421,
+        "name": "Stadtkreis Ulm",
+        "lat": 48.409699812938015,
+        "long": 9.95789432352092,
+        "population": 126790,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Stadtkreis_Ulm\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8425,
+        "name": "Landkreis Alb-Donau-Kreis",
+        "lat": 48.43774605308456,
+        "long": 9.732829170464985,
+        "population": 197076,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Alb-Donau-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8426,
+        "name": "Landkreis Biberach",
+        "lat": 48.10105934247798,
+        "long": 9.822198060718279,
+        "population": 201282,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Biberach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8435,
+        "name": "Landkreis Bodenseekreis",
+        "lat": 47.74898654325089,
+        "long": 9.37280606197852,
+        "population": 217470,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bodenseekreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8436,
+        "name": "Landkreis Ravensburg",
+        "lat": 47.83547534952062,
+        "long": 9.762699218428732,
+        "population": 285424,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ravensburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 8437,
+        "name": "Landkreis Sigmaringen",
+        "lat": 48.03516661425904,
+        "long": 9.218272238263596,
+        "population": 130849,
+        "state": "Baden-Württemberg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Sigmaringen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9161,
+        "name": "Kreisfreie Stadt Ingolstadt",
+        "lat": 48.76220144979821,
+        "long": 11.418447070174759,
+        "population": 137392,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Ingolstadt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9162,
+        "name": "Kreisfreie Stadt München",
+        "lat": 48.15468171238829,
+        "long": 11.560031855480196,
+        "population": 1484226,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Muenchen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9163,
+        "name": "Kreisfreie Stadt Rosenheim",
+        "lat": 47.84565765720435,
+        "long": 12.110896889015551,
+        "population": 63551,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Rosenheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9171,
+        "name": "Landkreis Altötting",
+        "lat": 48.22479936298889,
+        "long": 12.713689493937796,
+        "population": 111516,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Altoetting\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9172,
+        "name": "Landkreis Berchtesgadener Land",
+        "lat": 47.65887859823193,
+        "long": 12.878572521774894,
+        "population": 105929,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Berchtesgadener_Land\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9173,
+        "name": "Landkreis Bad Tölz-Wolfratshausen",
+        "lat": 47.72795841729656,
+        "long": 11.509260551940029,
+        "population": 127917,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bad_Toelz-Wolfratshausen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9174,
+        "name": "Landkreis Dachau",
+        "lat": 48.33877048028295,
+        "long": 11.371623733123291,
+        "population": 154899,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Dachau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9175,
+        "name": "Landkreis Ebersberg",
+        "lat": 48.06601139575081,
+        "long": 11.926337209214363,
+        "population": 143649,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ebersberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9176,
+        "name": "Landkreis Eichstätt",
+        "lat": 48.91156300629517,
+        "long": 11.360614519204741,
+        "population": 132881,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Eichstaett\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9177,
+        "name": "Landkreis Erding",
+        "lat": 48.30956926820656,
+        "long": 12.003512482347281,
+        "population": 138182,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Erding\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9178,
+        "name": "Landkreis Freising",
+        "lat": 48.45617135891535,
+        "long": 11.705895429243231,
+        "population": 180007,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Freising\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9179,
+        "name": "Landkreis Fürstenfeldbruck",
+        "lat": 48.203886067740804,
+        "long": 11.186088335499443,
+        "population": 219311,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Fuerstenfeldbruck\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9180,
+        "name": "Landkreis Garmisch-Partenkirchen",
+        "lat": 47.573075205866424,
+        "long": 11.107645198059968,
+        "population": 88424,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Garmisch-Partenkirchen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9181,
+        "name": "Landkreis Landsberg am Lech",
+        "lat": 48.02755812052214,
+        "long": 10.951994299611997,
+        "population": 120302,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Landsberg_am_Lech\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9182,
+        "name": "Landkreis Miesbach",
+        "lat": 47.754363830040255,
+        "long": 11.803468075897069,
+        "population": 100010,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Miesbach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9183,
+        "name": "Landkreis Mühldorf a. Inn",
+        "lat": 48.25498532818367,
+        "long": 12.401095922308794,
+        "population": 115872,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Muehldorf_a._Inn\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9184,
+        "name": "Landkreis München",
+        "lat": 48.017535026455256,
+        "long": 11.604198294713806,
+        "population": 350473,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Muenchen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9185,
+        "name": "Landkreis Neuburg-Schrobenhausen",
+        "lat": 48.67852034817657,
+        "long": 11.187850194713805,
+        "population": 97303,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Neuburg-Schrobenhausen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9186,
+        "name": "Landkreis Pfaffenhofen a.d. Ilm",
+        "lat": 48.52604016372562,
+        "long": 11.494019549074775,
+        "population": 128227,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Pfaffenhofen_a.d._Ilm\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9187,
+        "name": "Landkreis Rosenheim",
+        "lat": 47.963576074892124,
+        "long": 12.180974066634592,
+        "population": 261330,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rosenheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9188,
+        "name": "Landkreis Starnberg",
+        "lat": 48.03379823904883,
+        "long": 11.26545200373417,
+        "population": 136667,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Starnberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9189,
+        "name": "Landkreis Traunstein",
+        "lat": 47.95296159154177,
+        "long": 12.645622333899306,
+        "population": 177319,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Traunstein\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9190,
+        "name": "Landkreis Weilheim-Schongau",
+        "lat": 47.812642005456226,
+        "long": 11.02978798414142,
+        "population": 135478,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Weilheim-Schongau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9261,
+        "name": "Kreisfreie Stadt Landshut",
+        "lat": 48.544707416239895,
+        "long": 12.148284945295817,
+        "population": 73411,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Landshut\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9262,
+        "name": "Kreisfreie Stadt Passau",
+        "lat": 48.5829598380257,
+        "long": 13.414030725291004,
+        "population": 52803,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Passau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9263,
+        "name": "Kreisfreie Stadt Straubing",
+        "lat": 48.88260687717872,
+        "long": 12.572451670392818,
+        "population": 47791,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Straubing\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9271,
+        "name": "Landkreis Deggendorf",
+        "lat": 48.79361912705181,
+        "long": 12.999903731571267,
+        "population": 119478,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Deggendorf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9272,
+        "name": "Landkreis Freyung-Grafenau",
+        "lat": 48.8457043572641,
+        "long": 13.50453429548982,
+        "population": 78362,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Freyung-Grafenau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9273,
+        "name": "Landkreis Kelheim",
+        "lat": 48.843773924716885,
+        "long": 11.86915326842873,
+        "population": 123058,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Kelheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9274,
+        "name": "Landkreis Landshut",
+        "lat": 48.58862514466174,
+        "long": 12.175175671774891,
+        "population": 159895,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Landshut\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9275,
+        "name": "Landkreis Passau",
+        "lat": 48.49962025037134,
+        "long": 13.251757991851873,
+        "population": 192656,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Passau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9276,
+        "name": "Landkreis Regen",
+        "lat": 49.0437618286011,
+        "long": 13.070384980795257,
+        "population": 77410,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Regen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9277,
+        "name": "Landkreis Rottal-Inn",
+        "lat": 48.435949350616895,
+        "long": 12.868154006838216,
+        "population": 121502,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rottal-Inn\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9278,
+        "name": "Landkreis Straubing-Bogen",
+        "lat": 48.996515210016675,
+        "long": 12.657002730311028,
+        "population": 101120,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Straubing-Bogen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9279,
+        "name": "Landkreis Dingolfing-Landau",
+        "lat": 48.63813898678057,
+        "long": 12.584918651406133,
+        "population": 96683,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Dingolfing-Landau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9361,
+        "name": "Kreisfreie Stadt Amberg",
+        "lat": 49.45053786132575,
+        "long": 11.845764061372451,
+        "population": 42207,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Amberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9362,
+        "name": "Kreisfreie Stadt Regensburg",
+        "lat": 49.012011279113715,
+        "long": 12.11188605235209,
+        "population": 153094,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Regensburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9363,
+        "name": "Kreisfreie Stadt Weiden i.d. OPf.",
+        "lat": 49.67835659837747,
+        "long": 12.15891653743256,
+        "population": 42743,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Weiden_i.d._OPf.\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9371,
+        "name": "Landkreis Amberg-Sulzbach",
+        "lat": 49.56384720012044,
+        "long": 11.73489053671157,
+        "population": 103049,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Amberg-Sulzbach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9372,
+        "name": "Landkreis Cham",
+        "lat": 49.26402850501329,
+        "long": 12.656674427691208,
+        "population": 127998,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Cham\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9373,
+        "name": "Landkreis Neumarkt i.d. OPf.",
+        "lat": 49.24360161375859,
+        "long": 11.536088734917431,
+        "population": 134573,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Neumarkt_i.d._OPf.\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9374,
+        "name": "Landkreis Neustadt a.d. Waldnaab",
+        "lat": 49.72805617222618,
+        "long": 12.158484779389108,
+        "population": 94450,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Neustadt_a.d._Waldnaab\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9375,
+        "name": "Landkreis Regensburg",
+        "lat": 49.054879631442674,
+        "long": 12.112857301940029,
+        "population": 194070,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Regensburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9376,
+        "name": "Landkreis Schwandorf",
+        "lat": 49.391488748223665,
+        "long": 12.245519243161782,
+        "population": 147872,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Schwandorf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9377,
+        "name": "Landkreis Tirschenreuth",
+        "lat": 49.92567712297307,
+        "long": 12.14911983491743,
+        "population": 72046,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Tirschenreuth\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9461,
+        "name": "Kreisfreie Stadt Bamberg",
+        "lat": 49.89614529170234,
+        "long": 10.893089565882637,
+        "population": 77373,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Bamberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9462,
+        "name": "Kreisfreie Stadt Bayreuth",
+        "lat": 49.94410560748431,
+        "long": 11.583395975485008,
+        "population": 74783,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Bayreuth\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9463,
+        "name": "Kreisfreie Stadt Coburg",
+        "lat": 50.26988559810677,
+        "long": 10.951655669228796,
+        "population": 41072,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Coburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9464,
+        "name": "Kreisfreie Stadt Hof",
+        "lat": 50.31377432698236,
+        "long": 11.90280014842392,
+        "population": 45825,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Hof\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9471,
+        "name": "Landkreis Bamberg",
+        "lat": 49.956426944223395,
+        "long": 11.01461179500559,
+        "population": 147163,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bamberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9472,
+        "name": "Landkreis Bayreuth",
+        "lat": 49.82912855981886,
+        "long": 11.455752481813382,
+        "population": 103664,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bayreuth\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9473,
+        "name": "Landkreis Coburg",
+        "lat": 50.34030158125997,
+        "long": 10.842903303200272,
+        "population": 86747,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Coburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9474,
+        "name": "Landkreis Forchheim",
+        "lat": 49.72612720470873,
+        "long": 11.163741264306555,
+        "population": 116203,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Forchheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9475,
+        "name": "Landkreis Hof",
+        "lat": 50.26801403099223,
+        "long": 11.700504851648247,
+        "population": 94801,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Hof\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9476,
+        "name": "Landkreis Kronach",
+        "lat": 50.33810425985423,
+        "long": 11.37781992667308,
+        "population": 66743,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Kronach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9477,
+        "name": "Landkreis Kulmbach",
+        "lat": 50.11498447790949,
+        "long": 11.47596575940837,
+        "population": 71566,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Kulmbach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9478,
+        "name": "Landkreis Lichtenfels",
+        "lat": 50.13230522433171,
+        "long": 11.071795161202505,
+        "population": 66776,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Lichtenfels\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9479,
+        "name": "Landkreis Wunsiedel i. Fichtelgebirge",
+        "lat": 50.093396672499665,
+        "long": 12.049263387245466,
+        "population": 72655,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Wunsiedel_i._Fichtelgebirge\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9561,
+        "name": "Kreisfreie Stadt Ansbach",
+        "lat": 49.301291142829555,
+        "long": 10.570241689403558,
+        "population": 41798,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Ansbach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9562,
+        "name": "Kreisfreie Stadt Erlangen",
+        "lat": 49.59262676518573,
+        "long": 11.004224657832289,
+        "population": 112528,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Erlangen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9563,
+        "name": "Kreisfreie Stadt Fürth",
+        "lat": 49.4961663599003,
+        "long": 10.965110134311367,
+        "population": 128497,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Fuerth\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9564,
+        "name": "Kreisfreie Stadt Nürnberg",
+        "lat": 49.454620740267494,
+        "long": 11.070895883171403,
+        "population": 518370,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Nuernberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9565,
+        "name": "Kreisfreie Stadt Schwabach",
+        "lat": 49.33167635286771,
+        "long": 11.021490610984447,
+        "population": 40981,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Schwabach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9571,
+        "name": "Landkreis Ansbach",
+        "lat": 49.197330839694516,
+        "long": 10.393578826139185,
+        "population": 184591,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ansbach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9572,
+        "name": "Landkreis Erlangen-Höchstadt",
+        "lat": 49.68090736534542,
+        "long": 10.83793162201701,
+        "population": 137262,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Erlangen-Hoechstadt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9573,
+        "name": "Landkreis Fürth",
+        "lat": 49.45915796206433,
+        "long": 10.828768985111436,
+        "population": 117853,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Fuerth\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9574,
+        "name": "Landkreis Nürnberger Land",
+        "lat": 49.50951640588009,
+        "long": 11.354740767652718,
+        "population": 170792,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Nuernberger_Land\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9575,
+        "name": "Landkreis Neustadt a.d. Aisch-Bad Windsheim",
+        "lat": 49.590126887599695,
+        "long": 10.491563497817856,
+        "population": 101014,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Neustadt_a.d._Aisch-Bad_Windsheim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9576,
+        "name": "Landkreis Roth",
+        "lat": 49.23251385065258,
+        "long": 11.106380266876707,
+        "population": 126749,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Roth\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9577,
+        "name": "Landkreis Weißenburg-Gunzenhausen",
+        "lat": 49.037384886962336,
+        "long": 10.863593638263595,
+        "population": 94734,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Weissenburg-Gunzenhausen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9661,
+        "name": "Kreisfreie Stadt Aschaffenburg",
+        "lat": 49.974975812471214,
+        "long": 9.145906274320991,
+        "population": 71002,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Aschaffenburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9662,
+        "name": "Kreisfreie Stadt Schweinfurt",
+        "lat": 50.040046013549926,
+        "long": 10.221585229607182,
+        "population": 53426,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Schweinfurt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9663,
+        "name": "Kreisfreie Stadt Würzburg",
+        "lat": 49.79259231637736,
+        "long": 9.938393742943724,
+        "population": 127934,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Wuerzburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9671,
+        "name": "Landkreis Aschaffenburg",
+        "lat": 50.07511753789072,
+        "long": 9.249820628225107,
+        "population": 174200,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Aschaffenburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9672,
+        "name": "Landkreis Bad Kissingen",
+        "lat": 50.23075816537996,
+        "long": 9.899824235935558,
+        "population": 103235,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bad_Kissingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9673,
+        "name": "Landkreis Rhön-Grabfeld",
+        "lat": 50.41779279889106,
+        "long": 10.189621550630118,
+        "population": 79635,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rhoen-Grabfeld\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9674,
+        "name": "Landkreis Haßberge",
+        "lat": 50.09102866281753,
+        "long": 10.601223595489817,
+        "population": 84384,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Hassberge\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9675,
+        "name": "Landkreis Kitzingen",
+        "lat": 49.77446037859657,
+        "long": 10.25432428414142,
+        "population": 91155,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Kitzingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9676,
+        "name": "Landkreis Miltenberg",
+        "lat": 49.80076964401326,
+        "long": 9.236569130795257,
+        "population": 128743,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Miltenberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9677,
+        "name": "Landkreis Main-Spessart",
+        "lat": 50.01623124687712,
+        "long": 9.62364051377266,
+        "population": 126158,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Main-Spessart\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9678,
+        "name": "Landkreis Schweinfurt",
+        "lat": 49.95217148349205,
+        "long": 10.329985436227343,
+        "population": 115445,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Schweinfurt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9679,
+        "name": "Landkreis Würzburg",
+        "lat": 49.63212019805927,
+        "long": 9.954822888797489,
+        "population": 162302,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Wuerzburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9761,
+        "name": "Kreisfreie Stadt Augsburg",
+        "lat": 48.34904512126072,
+        "long": 10.894055860766391,
+        "population": 296582,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Augsburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9762,
+        "name": "Kreisfreie Stadt Kaufbeuren",
+        "lat": 47.882167138206945,
+        "long": 10.6190294529341,
+        "population": 44398,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Kaufbeuren\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9763,
+        "name": "Kreisfreie Stadt Kempten (Allgäu)",
+        "lat": 47.740077955992305,
+        "long": 10.30896203882155,
+        "population": 69151,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Kempten_(Allgaeu)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9764,
+        "name": "Kreisfreie Stadt Memmingen",
+        "lat": 47.98161605493291,
+        "long": 10.182878308026291,
+        "population": 44100,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Memmingen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9771,
+        "name": "Landkreis Aichach-Friedberg",
+        "lat": 48.447474489734056,
+        "long": 11.037716029243231,
+        "population": 134655,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Aichach-Friedberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9772,
+        "name": "Landkreis Augsburg",
+        "lat": 48.384373675407026,
+        "long": 10.642612594955919,
+        "population": 253468,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Augsburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9773,
+        "name": "Landkreis Dillingen a.d. Donau",
+        "lat": 48.59936636982464,
+        "long": 10.512581499611994,
+        "population": 96562,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Dillingen_a.d._Donau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9774,
+        "name": "Landkreis Günzburg",
+        "lat": 48.360420498909924,
+        "long": 10.382661546265831,
+        "population": 127027,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Guenzburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9775,
+        "name": "Landkreis Neu-Ulm",
+        "lat": 48.33267520980937,
+        "long": 10.142021445489817,
+        "population": 175204,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Neu-Ulm\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9776,
+        "name": "Landkreis Lindau (Bodensee)",
+        "lat": 47.61234229307126,
+        "long": 9.91025693545133,
+        "population": 81981,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Lindau_(Bodensee)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9777,
+        "name": "Landkreis Ostallgäu",
+        "lat": 47.75084521796735,
+        "long": 10.561108264160664,
+        "population": 141182,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ostallgaeu\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9778,
+        "name": "Landkreis Unterallgäu",
+        "lat": 48.072120823887346,
+        "long": 10.400081200388007,
+        "population": 145341,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Unterallgaeu\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9779,
+        "name": "Landkreis Donau-Ries",
+        "lat": 48.83318033427426,
+        "long": 10.68937361197852,
+        "population": 133783,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Donau-Ries\">Hier_klicken!</a>"
+    },
+    {
+        "id": 9780,
+        "name": "Landkreis Oberallgäu",
+        "lat": 47.582224242807925,
+        "long": 10.223175876673084,
+        "population": 156008,
+        "state": "Bayern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Oberallgaeu\">Hier_klicken!</a>"
+    },
+    {
+        "id": 10041,
+        "name": "Landkreis Regionalverband Saarbrücken",
+        "lat": 49.27683926463498,
+        "long": 6.973772652522039,
+        "population": 328714,
+        "state": "Saarland",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Regionalverband_Saarbruecken\">Hier_klicken!</a>"
+    },
+    {
+        "id": 10042,
+        "name": "Landkreis Merzig-Wadern",
+        "lat": 49.475267520012615,
+        "long": 6.65959395451018,
+        "population": 103243,
+        "state": "Saarland",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Merzig-Wadern\">Hier_klicken!</a>"
+    },
+    {
+        "id": 10043,
+        "name": "Landkreis Neunkirchen",
+        "lat": 49.38366400080482,
+        "long": 7.119940578031104,
+        "population": 131408,
+        "state": "Saarland",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Neunkirchen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 10044,
+        "name": "Landkreis Saarlouis",
+        "lat": 49.31930773495155,
+        "long": 6.738086889621616,
+        "population": 194319,
+        "state": "Saarland",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Saarlouis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 10045,
+        "name": "Landkreis Saarpfalz-Kreis",
+        "lat": 49.23678790844377,
+        "long": 7.203789393937794,
+        "population": 142196,
+        "state": "Saarland",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Saarpfalz-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 10046,
+        "name": "Landkreis St. Wendel",
+        "lat": 49.5178635495485,
+        "long": 7.089127249417985,
+        "population": 87007,
+        "state": "Saarland",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_St._Wendel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12051,
+        "name": "Kreisfreie Stadt Brandenburg an der Havel",
+        "lat": 52.407203446323855,
+        "long": 12.506116870804878,
+        "population": 72184,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Brandenburg_an_der_Havel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12052,
+        "name": "Kreisfreie Stadt Cottbus",
+        "lat": 51.77719295725233,
+        "long": 14.343701361396507,
+        "population": 99678,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Cottbus\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12053,
+        "name": "Kreisfreie Stadt Frankfurt (Oder)",
+        "lat": 52.33875186899499,
+        "long": 14.48275492647908,
+        "population": 57751,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Frankfurt_(Oder)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12054,
+        "name": "Kreisfreie Stadt Potsdam",
+        "lat": 52.40176709204808,
+        "long": 13.052474860378382,
+        "population": 180334,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Potsdam\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12060,
+        "name": "Landkreis Barnim",
+        "lat": 52.872615584034115,
+        "long": 13.711302630165125,
+        "population": 185244,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Barnim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12061,
+        "name": "Landkreis Dahme-Spreewald",
+        "lat": 52.05783487887082,
+        "long": 13.815538916730816,
+        "population": 170791,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Dahme-Spreewald\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12062,
+        "name": "Landkreis Elbe-Elster",
+        "lat": 51.61369630447656,
+        "long": 13.439853302958157,
+        "population": 101827,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Elbe-Elster\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12063,
+        "name": "Landkreis Havelland",
+        "lat": 52.66201113697707,
+        "long": 12.560768172405018,
+        "population": 162996,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Havelland\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12064,
+        "name": "Landkreis Märkisch-Oderland",
+        "lat": 52.626158052096024,
+        "long": 14.126488690979638,
+        "population": 195751,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Maerkisch-Oderland\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12065,
+        "name": "Landkreis Oberhavel",
+        "lat": 52.91806137314027,
+        "long": 13.200035778613113,
+        "population": 212914,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Oberhavel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12066,
+        "name": "Landkreis Oberspreewald-Lausitz",
+        "lat": 51.7073578511806,
+        "long": 13.971604638797492,
+        "population": 109371,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Oberspreewald-Lausitz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12067,
+        "name": "Landkreis Oder-Spree",
+        "lat": 52.26294764849587,
+        "long": 14.181549807468338,
+        "population": 178803,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Oder-Spree\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12068,
+        "name": "Landkreis Ostprignitz-Ruppin",
+        "lat": 53.0140183613551,
+        "long": 12.655887308002237,
+        "population": 98861,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ostprignitz-Ruppin\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12069,
+        "name": "Landkreis Potsdam-Mittelmark",
+        "lat": 52.23380625991935,
+        "long": 12.655556812608639,
+        "population": 216566,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Potsdam-Mittelmark\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12070,
+        "name": "Landkreis Prignitz",
+        "lat": 53.126022879543996,
+        "long": 11.947949305432084,
+        "population": 76158,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Prignitz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12071,
+        "name": "Landkreis Spree-Neiße",
+        "lat": 51.62552864787349,
+        "long": 14.46197247036876,
+        "population": 113720,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Spree-Neisse\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12072,
+        "name": "Landkreis Teltow-Fläming",
+        "lat": 52.12067929635131,
+        "long": 13.275832076042962,
+        "population": 169997,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Teltow-Flaeming\">Hier_klicken!</a>"
+    },
+    {
+        "id": 12073,
+        "name": "Landkreis Uckermark",
+        "lat": 53.25429790831824,
+        "long": 13.816327089427615,
+        "population": 118947,
+        "state": "Brandenburg",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Uckermark\">Hier_klicken!</a>"
+    },
+    {
+        "id": 13003,
+        "name": "Kreisfreie Stadt Rostock",
+        "lat": 54.10872362828523,
+        "long": 12.122577335111435,
+        "population": 209191,
+        "state": "Mecklenburg-Vorpommern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Rostock\">Hier_klicken!</a>"
+    },
+    {
+        "id": 13004,
+        "name": "Kreisfreie Stadt Schwerin",
+        "lat": 53.6320003221381,
+        "long": 11.390876140397628,
+        "population": 95653,
+        "state": "Mecklenburg-Vorpommern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Schwerin\">Hier_klicken!</a>"
+    },
+    {
+        "id": 13071,
+        "name": "Landkreis Mecklenburgische Seenplatte",
+        "lat": 53.58413487660879,
+        "long": 13.022669731183262,
+        "population": 258074,
+        "state": "Mecklenburg-Vorpommern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Mecklenburgische_Seenplatte\">Hier_klicken!</a>"
+    },
+    {
+        "id": 13072,
+        "name": "Landkreis Rostock",
+        "lat": 53.92356386540429,
+        "long": 12.15967822706109,
+        "population": 215794,
+        "state": "Mecklenburg-Vorpommern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Rostock\">Hier_klicken!</a>"
+    },
+    {
+        "id": 13073,
+        "name": "Landkreis Vorpommern-Rügen",
+        "lat": 54.28492099743477,
+        "long": 12.867152769300965,
+        "population": 224702,
+        "state": "Mecklenburg-Vorpommern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Vorpommern-Ruegen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 13074,
+        "name": "Landkreis Nordwestmecklenburg",
+        "lat": 53.83507967536144,
+        "long": 11.19272666828284,
+        "population": 157322,
+        "state": "Mecklenburg-Vorpommern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Nordwestmecklenburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 13075,
+        "name": "Landkreis Vorpommern-Greifswald",
+        "lat": 53.888591595913724,
+        "long": 13.697666216730816,
+        "population": 235623,
+        "state": "Mecklenburg-Vorpommern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Vorpommern-Greifswald\">Hier_klicken!</a>"
+    },
+    {
+        "id": 13076,
+        "name": "Landkreis Ludwigslust-Parchim",
+        "lat": 53.43549645312954,
+        "long": 11.85625036940031,
+        "population": 211779,
+        "state": "Mecklenburg-Vorpommern",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ludwigslust-Parchim\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14511,
+        "name": "Kreisfreie Stadt Chemnitz",
+        "lat": 50.83671059715803,
+        "long": 12.913292078419108,
+        "population": 246334,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Chemnitz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14521,
+        "name": "Landkreis Erzgebirgskreis",
+        "lat": 50.6427907428432,
+        "long": 12.922601819834863,
+        "population": 334948,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Erzgebirgskreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14522,
+        "name": "Landkreis Mittelsachsen",
+        "lat": 50.97895012625943,
+        "long": 13.111369703346162,
+        "population": 304099,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Mittelsachsen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14523,
+        "name": "Landkreis Vogtlandkreis",
+        "lat": 50.46488621476276,
+        "long": 12.218749008632358,
+        "population": 225997,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Vogtlandkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14524,
+        "name": "Landkreis Zwickau",
+        "lat": 50.80964950022057,
+        "long": 12.551349169980753,
+        "population": 315002,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Zwickau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14612,
+        "name": "Kreisfreie Stadt Dresden",
+        "lat": 51.06755763364508,
+        "long": 13.74546320315216,
+        "population": 556780,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Dresden\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14625,
+        "name": "Landkreis Bautzen",
+        "lat": 51.32207001742166,
+        "long": 14.232270040979635,
+        "population": 299758,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Bautzen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14626,
+        "name": "Landkreis Görlitz",
+        "lat": 51.27957667570868,
+        "long": 14.802643244083686,
+        "population": 252725,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Goerlitz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14627,
+        "name": "Landkreis Meißen",
+        "lat": 51.264321540088744,
+        "long": 13.47493719316178,
+        "population": 241717,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Meissen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14628,
+        "name": "Landkreis Sächsische Schweiz-Osterzgebirge",
+        "lat": 50.89376018258923,
+        "long": 13.784115488893718,
+        "population": 245586,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Saechsische_Schweiz-Osterzgebirge\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14713,
+        "name": "Kreisfreie Stadt Leipzig",
+        "lat": 51.34757267779313,
+        "long": 12.374065503540164,
+        "population": 593145,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Leipzig\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14729,
+        "name": "Landkreis Leipzig",
+        "lat": 51.42358030715325,
+        "long": 12.796283701309909,
+        "population": 258139,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Leipzig\">Hier_klicken!</a>"
+    },
+    {
+        "id": 14730,
+        "name": "Landkreis Nordsachsen",
+        "lat": 51.564535447460884,
+        "long": 12.75832185388006,
+        "population": 197741,
+        "state": "Sachsen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Nordsachsen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15001,
+        "name": "Kreisfreie Stadt Dessau-Roßlau",
+        "lat": 51.84894336562283,
+        "long": 12.221498485887446,
+        "population": 80103,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Dessau-Rosslau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15002,
+        "name": "Kreisfreie Stadt Halle (Saale)",
+        "lat": 51.4884910212035,
+        "long": 11.967223208826358,
+        "population": 238762,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Halle_(Saale)\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15003,
+        "name": "Kreisfreie Stadt Magdeburg",
+        "lat": 52.12153959916596,
+        "long": 11.622267553540164,
+        "population": 237565,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Magdeburg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15081,
+        "name": "Landkreis Altmarkkreis Salzwedel",
+        "lat": 52.75819067675618,
+        "long": 11.134500755916305,
+        "population": 83173,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Altmarkkreis_Salzwedel\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15082,
+        "name": "Landkreis Anhalt-Bitterfeld",
+        "lat": 51.98961201945359,
+        "long": 12.103770594567917,
+        "population": 158486,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Anhalt-Bitterfeld\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15083,
+        "name": "Landkreis Börde",
+        "lat": 52.268692324634756,
+        "long": 11.289695344567912,
+        "population": 170923,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Boerde\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15084,
+        "name": "Landkreis Burgenlandkreis",
+        "lat": 51.17007812780593,
+        "long": 11.92244104112553,
+        "population": 178846,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Burgenlandkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15085,
+        "name": "Landkreis Harz",
+        "lat": 51.86559419292274,
+        "long": 10.886431894955921,
+        "population": 213310,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Harz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15086,
+        "name": "Landkreis Jerichower Land",
+        "lat": 52.29333160743828,
+        "long": 12.068103862124412,
+        "population": 89589,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Jerichower_Land\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15087,
+        "name": "Landkreis Mansfeld-Südharz",
+        "lat": 51.531901664994095,
+        "long": 11.403841376430968,
+        "population": 134942,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Mansfeld-Suedharz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15088,
+        "name": "Landkreis Saalekreis",
+        "lat": 51.35923865119753,
+        "long": 11.77764914883598,
+        "population": 183815,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Saalekreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15089,
+        "name": "Landkreis Salzlandkreis",
+        "lat": 51.86149034998342,
+        "long": 11.627704822550907,
+        "population": 189125,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Salzlandkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15090,
+        "name": "Landkreis Stendal",
+        "lat": 52.73251939857825,
+        "long": 11.858753992531664,
+        "population": 111190,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Stendal\">Hier_klicken!</a>"
+    },
+    {
+        "id": 15091,
+        "name": "Landkreis Wittenberg",
+        "lat": 51.83007082035824,
+        "long": 12.635207104752295,
+        "population": 124953,
+        "state": "Sachsen-Anhalt",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Wittenberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16051,
+        "name": "Kreisfreie Stadt Erfurt",
+        "lat": 50.982098362828886,
+        "long": 11.02597850509219,
+        "population": 213981,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Erfurt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16052,
+        "name": "Kreisfreie Stadt Gera",
+        "lat": 50.902992849637265,
+        "long": 12.079316454316178,
+        "population": 93125,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Gera\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16053,
+        "name": "Kreisfreie Stadt Jena",
+        "lat": 50.92997891314842,
+        "long": 11.579965651964086,
+        "population": 111343,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Jena\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16054,
+        "name": "Kreisfreie Stadt Suhl",
+        "lat": 50.608226132003544,
+        "long": 10.67422623098926,
+        "population": 36789,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Suhl\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16055,
+        "name": "Kreisfreie Stadt Weimar",
+        "lat": 50.98250108499539,
+        "long": 11.324806870780824,
+        "population": 65228,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Weimar\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16056,
+        "name": "Kreisfreie Stadt Eisenach",
+        "lat": 50.98135891213223,
+        "long": 10.311335680965202,
+        "population": 42250,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Kreisfreie_Stadt_Eisenach\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16061,
+        "name": "Landkreis Eichsfeld",
+        "lat": 51.36038702628073,
+        "long": 10.199234311978518,
+        "population": 100006,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Eichsfeld\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16062,
+        "name": "Landkreis Nordhausen",
+        "lat": 51.51751346748634,
+        "long": 10.731262359408367,
+        "population": 83416,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Nordhausen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16063,
+        "name": "Landkreis Wartburgkreis",
+        "lat": 50.881551814774866,
+        "long": 10.194420657952566,
+        "population": 118974,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Wartburgkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16064,
+        "name": "Landkreis Unstrut-Hainich-Kreis",
+        "lat": 51.20749467935049,
+        "long": 10.512129975121056,
+        "population": 102232,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Unstrut-Hainich-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16065,
+        "name": "Landkreis Kyffhäuserkreis",
+        "lat": 51.32576566166398,
+        "long": 10.876675876527191,
+        "population": 74212,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Kyffhaeuserkreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16066,
+        "name": "Landkreis Schmalkalden-Meiningen",
+        "lat": 50.645757056336066,
+        "long": 10.39646809548982,
+        "population": 124916,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Schmalkalden-Meiningen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16067,
+        "name": "Landkreis Gotha",
+        "lat": 50.93049717563525,
+        "long": 10.709814424102928,
+        "population": 134908,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Gotha\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16068,
+        "name": "Landkreis Sömmerda",
+        "lat": 51.17061576293501,
+        "long": 11.115665033365405,
+        "population": 69427,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Soemmerda\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16069,
+        "name": "Landkreis Hildburghausen",
+        "lat": 50.453438719755425,
+        "long": 10.719179821386888,
+        "population": 63197,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Hildburghausen\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16070,
+        "name": "Landkreis Ilm-Kreis",
+        "lat": 50.78945761411922,
+        "long": 10.949237743937795,
+        "population": 106249,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Ilm-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16071,
+        "name": "Landkreis Weimarer Land",
+        "lat": 51.04125162116262,
+        "long": 11.472812585451328,
+        "population": 82156,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Weimarer_Land\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16072,
+        "name": "Landkreis Sonneberg",
+        "lat": 50.43242950629388,
+        "long": 11.13845040135802,
+        "population": 57717,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Sonneberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16073,
+        "name": "Landkreis Saalfeld-Rudolstadt",
+        "lat": 50.64054719906822,
+        "long": 11.296383427061087,
+        "population": 103199,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Saalfeld-Rudolstadt\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16074,
+        "name": "Landkreis Saale-Holzland-Kreis",
+        "lat": 50.931377908087306,
+        "long": 11.801941437974925,
+        "population": 82950,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Saale-Holzland-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16075,
+        "name": "Landkreis Saale-Orla-Kreis",
+        "lat": 50.61934492658918,
+        "long": 11.751367592919667,
+        "population": 80312,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Saale-Orla-Kreis\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16076,
+        "name": "Landkreis Greiz",
+        "lat": 50.73963666990821,
+        "long": 12.065210366876705,
+        "population": 97398,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Greiz\">Hier_klicken!</a>"
+    },
+    {
+        "id": 16077,
+        "name": "Landkreis Altenburger Land",
+        "lat": 50.959625220169194,
+        "long": 12.384954377206977,
+        "population": 89393,
+        "state": "Thüringen",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Landkreis_Altenburger_Land\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11012,
+        "name": "Bezirk Berlin Reinickendorf",
+        "lat": 52.5988460072278,
+        "long": 13.28643592000481,
+        "population": 259689,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Reinickendorf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11004,
+        "name": "Bezirk Berlin Charlottenburg-Wilmersdorf",
+        "lat": 52.50745503759411,
+        "long": 13.271293439015551,
+        "population": 334401,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Charlottenburg-Wilmersdorf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11009,
+        "name": "Bezirk Berlin Treptow-Köpenick",
+        "lat": 52.43861886110884,
+        "long": 13.614455982541283,
+        "population": 266488,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Treptow-Koepenick\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11003,
+        "name": "Bezirk Berlin Pankow",
+        "lat": 52.60373260442343,
+        "long": 13.430882404316177,
+        "population": 398036,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Pankow\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11008,
+        "name": "Bezirk Berlin Neukölln",
+        "lat": 52.477893297245615,
+        "long": 13.435841998532949,
+        "population": 321123,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Neukoelln\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11011,
+        "name": "Bezirk Berlin Lichtenberg",
+        "lat": 52.529615017192754,
+        "long": 13.4918838194228,
+        "population": 286522,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Lichtenberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11010,
+        "name": "Bezirk Berlin Marzahn-Hellersdorf",
+        "lat": 52.52550736974583,
+        "long": 13.578562097259903,
+        "population": 262967,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Marzahn-Hellersdorf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11005,
+        "name": "Bezirk Berlin Spandau",
+        "lat": 52.540290382120965,
+        "long": 13.170666389621617,
+        "population": 239019,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Spandau\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11006,
+        "name": "Bezirk Berlin Steglitz-Zehlendorf",
+        "lat": 52.43686126745368,
+        "long": 13.264706997235846,
+        "population": 302177,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Steglitz-Zehlendorf\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11001,
+        "name": "Bezirk Berlin Mitte",
+        "lat": 52.53789638395271,
+        "long": 13.3563438472599,
+        "population": 375238,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Mitte\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11002,
+        "name": "Bezirk Berlin Friedrichshain-Kreuzberg",
+        "lat": 52.50977190036641,
+        "long": 13.44790304410774,
+        "population": 282059,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Friedrichshain-Kreuzberg\">Hier_klicken!</a>"
+    },
+    {
+        "id": 11007,
+        "name": "Bezirk Berlin Tempelhof-Schöneberg",
+        "lat": 52.46121738956324,
+        "long": 13.385608284699373,
+        "population": 341772,
+        "state": "Berlin",
+        "link": "<a_href=\"http://www.virometer.it-stud.hs-heilbronn.de/Bezirk_Berlin_Tempelhof-Schoeneberg\">Hier_klicken!</a>"
+    }
+]

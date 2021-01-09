@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Mapcard for counties should match snapshot for countyId=1 1`] = `
+<body>
+  <div>
+    <h2
+      class="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+    >
+      Landkarte
+    </h2>
+    <div
+      class="makeStyles-root-13"
+    >
+      <header
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorDefault MuiPaper-elevation4"
+      >
+        <div
+          class="MuiTabs-root"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+          <div
+            class="MuiTabs-scrollable"
+            style="width: 99px; height: 99px; position: absolute; top: -9999px; overflow: scroll;"
+          />
+          <div
+            class="MuiTabs-scroller MuiTabs-scrollable"
+            style="margin-bottom: 0px;"
+          >
+            <div
+              aria-label="scrollable force tabs example"
+              class="MuiTabs-flexContainer"
+              role="tablist"
+            >
+              <button
+                aria-controls="scrollable-force-tabpanel-0"
+                aria-selected="true"
+                class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected"
+                id="scrollable-force-tab-0"
+                role="tab"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiTab-wrapper"
+                >
+                  Infektionen
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                aria-controls="scrollable-force-tabpanel-1"
+                aria-selected="false"
+                class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
+                id="scrollable-force-tab-1"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiTab-wrapper"
+                >
+                  Genesene
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                aria-controls="scrollable-force-tabpanel-2"
+                aria-selected="false"
+                class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
+                id="scrollable-force-tab-2"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiTab-wrapper"
+                >
+                  Todesfälle
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                aria-controls="scrollable-force-tabpanel-3"
+                aria-selected="false"
+                class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary"
+                id="scrollable-force-tab-3"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiTab-wrapper"
+                >
+                  Hilfe
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <span
+              class="PrivateTabIndicator-root-14 PrivateTabIndicator-colorPrimary-15 MuiTabs-indicator"
+              style="left: 0px; width: 0px;"
+            />
+          </div>
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </div>
+      </header>
+      <div
+        aria-labelledby="scrollable-force-tab-0"
+        id="scrollable-force-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-18"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            <div>
+              <iframe
+                frameborder="0"
+                height="770"
+                src="http://localhost:3000/d-solo/aim5ADoGz/total-germany-counties-states?orgId=1&panelId=21null"
+                title="county-1"
+                width="100%"
+              />
+            </div>
+          </span>
+        </div>
+      </div>
+      <div
+        aria-labelledby="scrollable-force-tab-1"
+        hidden=""
+        id="scrollable-force-tabpanel-1"
+        role="tabpanel"
+      />
+      <div
+        aria-labelledby="scrollable-force-tab-2"
+        hidden=""
+        id="scrollable-force-tabpanel-2"
+        role="tabpanel"
+      />
+      <div
+        aria-labelledby="scrollable-force-tab-3"
+        hidden=""
+        id="scrollable-force-tabpanel-3"
+        role="tabpanel"
+      />
+    </div>
+  </div>
+</body>
+`;

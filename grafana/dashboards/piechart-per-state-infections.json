@@ -1,0 +1,1200 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {
+        "Landkreis_Tuttlingen": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Baden-Wuerttemberg'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Baden-Württemberg",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Bezirk_Berlin_Steglitz-Zehlendorf": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 5,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Berlin'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Berlin",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Landkreis_Kaiserslautern": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 13,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Rheinland-Pfalz'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Rheinland-Pfalz",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Kreisfreie_Stadt_Rostock": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "id": 10,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Mecklenburg-Vorpommern'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Mecklenburg-Vorpommern",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Kreisfreie_Stadt_Wiesbaden": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      },
+      "id": 9,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Hessen'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Hessen",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Landkreis_Vogtlandkreis": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 17
+      },
+      "id": 15,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Sachsen'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Sachsen",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 24
+      },
+      "id": 14,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Saarland'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Saarland",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Landkreis_Eichsfeld": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 25
+      },
+      "id": 3,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Thueringen'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Thüringen",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Kreisfreie_Stadt_Wuppertal": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 32
+      },
+      "id": 12,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Nordrhein-Westfalen'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Nordrhein-Westfalen",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Kreis_Dithmarschen": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 33
+      },
+      "id": 17,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Schleswig-Holstein'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Schleswig-Holstein",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Kreisfreie_Stadt_Salzgitter": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 40
+      },
+      "id": 11,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Niedersachsen'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Niedersachsen",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Landkreis_Jerichower_Land": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 41
+      },
+      "id": 16,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Sachsen-Anhalt'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Sachsen-Anhalt",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 48
+      },
+      "id": 7,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Bremen'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Bremen",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Kreisfreie_Stadt_Cottbus": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 49
+      },
+      "id": 6,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Brandenburg'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Brandenburg",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 56
+      },
+      "id": 8,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Hamburg'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Hamburg",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Kreisfreie_Stadt_Nuernberg": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 57
+      },
+      "id": 4,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT (\"sumCases\"*100000)/\"Einwohner\", \"name\", now() as time FROM\r\n(SELECT \r\ndistinct \"Counties\".\"name\" AS \"name\", sum(\"cases\") AS \"sumCases\", \"population\" AS \"Einwohner\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" WHERE \"state\" = 'Bayern'\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY sum(\"cases\") DESC) AS \"Cases\"\r\nORDER BY  (\"sumCases\"*100000)/\"Einwohner\" DESC\r\nLIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in Bayern",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    }
+  ],
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Piechart per state (infections)",
+  "uid": "40TMdf0Mk",
+  "version": 1
+}

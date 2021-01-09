@@ -1,0 +1,1459 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "iteration": 1609861286868,
+    "links": [],
+    "panels": [
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 16,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "51.8",
+        "mapCenterLongitude": "12",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Sachsen-Anhalt'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 12,
+          "x": 12,
+          "y": 10
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 14,
+        "initialZoom": "9",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "49.4",
+        "mapCenterLongitude": "7",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Saarland'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 12,
+          "x": 12,
+          "y": 20
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 13,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "49.8",
+        "mapCenterLongitude": "7.5",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Rheinland-Pfalz'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 30
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 11,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "53.3",
+        "mapCenterLongitude": "9",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Niedersachsen'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 38
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 10,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "53.8",
+        "mapCenterLongitude": "12.5",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Mecklenburg-Vorpommern'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 46
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 7,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "53.3",
+        "mapCenterLongitude": "9",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Bremen'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 54
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 6,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "52.5",
+        "mapCenterLongitude": "13.4",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Brandenburg'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 62
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 8,
+        "initialZoom": "9",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "53.5",
+        "mapCenterLongitude": "10",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Hamburg'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 70
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 9,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "51",
+        "mapCenterLongitude": "9",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Hessen'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 78
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 12,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "51",
+        "mapCenterLongitude": "7",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Nordrhein-Westfalen'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 86
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 5,
+        "initialZoom": "10",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "52.5",
+        "mapCenterLongitude": "13.4",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Berlin'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 13,
+          "w": 12,
+          "x": 12,
+          "y": 94
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 15,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "51",
+        "mapCenterLongitude": "13.7",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Sachsen'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 17,
+          "x": 7,
+          "y": 107
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 17,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "54",
+        "mapCenterLongitude": "10",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Schleswig-Holstein'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 17,
+          "x": 7,
+          "y": 121
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 4,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "48.7",
+        "mapCenterLongitude": "11.5",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Bayern'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 17,
+          "x": 7,
+          "y": 135
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 3,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "51",
+        "mapCenterLongitude": "11",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Thueringen'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      },
+      {
+        "circleMaxSize": 30,
+        "circleMinSize": 2,
+        "colors": [
+          "#1f78b4",
+          "#1f78b4",
+          "#1f78b4"
+        ],
+        "datasource": "PostgreSQL",
+        "decimals": 0,
+        "esMetric": "Count",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 13,
+          "w": 17,
+          "x": 7,
+          "y": 149
+        },
+        "hideEmpty": false,
+        "hideZero": false,
+        "id": 2,
+        "initialZoom": "8",
+        "locationData": "table",
+        "mapCenter": "custom",
+        "mapCenterLatitude": "48.7",
+        "mapCenterLongitude": "9",
+        "maxDataPoints": 1,
+        "mouseWheelZoom": true,
+        "pluginVersion": "7.3.2",
+        "repeat": null,
+        "showLegend": false,
+        "stickyLabels": false,
+        "tableQueryOptions": {
+          "geohashField": "geohash",
+          "labelField": "Kreis",
+          "latitudeField": "lat",
+          "longitudeField": "long",
+          "metricField": "Todesfälle",
+          "queryType": "coordinates"
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Counties\".\"state\" = 'Baden-Wuerttemberg'\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "thresholds": "0,10",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Todesfälle pro 100.000 Einwohner",
+        "type": "grafana-worldmap-panel",
+        "unitPlural": "",
+        "unitSingle": "",
+        "valueName": "max"
+      }
+    ],
+    "schemaVersion": 26,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "error": null,
+          "hide": 0,
+          "includeAll": true,
+          "label": null,
+          "multi": true,
+          "name": "bundeslaender",
+          "options": [
+            {
+              "selected": true,
+              "text": "All",
+              "value": "$__all"
+            },
+            {
+              "selected": false,
+              "text": "Sachsen",
+              "value": "Sachsen"
+            },
+            {
+              "selected": false,
+              "text": "Saarland",
+              "value": "Saarland"
+            },
+            {
+              "selected": false,
+              "text": "Brandenburg",
+              "value": "Brandenburg"
+            },
+            {
+              "selected": false,
+              "text": "Hessen",
+              "value": "Hessen"
+            },
+            {
+              "selected": false,
+              "text": "Nordrhein-Westfalen",
+              "value": "Nordrhein-Westfalen"
+            },
+            {
+              "selected": false,
+              "text": "Bremen",
+              "value": "Bremen"
+            },
+            {
+              "selected": false,
+              "text": "Hamburg",
+              "value": "Hamburg"
+            },
+            {
+              "selected": false,
+              "text": "Mecklenburg-Vorpommern",
+              "value": "Mecklenburg-Vorpommern"
+            },
+            {
+              "selected": false,
+              "text": "Baden-Württemberg",
+              "value": "Baden-Württemberg"
+            },
+            {
+              "selected": false,
+              "text": "Berlin",
+              "value": "Berlin"
+            },
+            {
+              "selected": false,
+              "text": "Thüringen",
+              "value": "Thüringen"
+            },
+            {
+              "selected": false,
+              "text": "Rheinland-Pfalz",
+              "value": "Rheinland-Pfalz"
+            },
+            {
+              "selected": false,
+              "text": "Sachsen-Anhalt",
+              "value": "Sachsen-Anhalt"
+            },
+            {
+              "selected": false,
+              "text": "Niedersachsen",
+              "value": "Niedersachsen"
+            },
+            {
+              "selected": false,
+              "text": "Bayern",
+              "value": "Bayern"
+            },
+            {
+              "selected": false,
+              "text": "Schleswig-Holstein",
+              "value": "Schleswig-Holstein"
+            }
+          ],
+          "query": "Sachsen, Saarland, Brandenburg, Hessen, Nordrhein-Westfalen, Bremen, Hamburg, Mecklenburg-Vorpommern, Baden-Württemberg, Berlin, Thüringen, Rheinland-Pfalz, Sachsen-Anhalt, Niedersachsen, Bayern, Schleswig-Holstein",
+          "queryValue": "",
+          "skipUrlSync": false,
+          "type": "custom"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Map per state (deaths)",
+    "uid": "_ZiEfRbGz",
+    "version": 1
+  }

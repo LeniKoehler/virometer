@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  db:
+    build:
+      context: .
+      target: test
+    environment:
+      POSTGRES_USER: virometer
+      POSTGRES_PASSWORD: virometerPasswort1

@@ -1,0 +1,2499 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "iteration": 1609861963617,
+    "links": [],
+    "panels": [
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 0,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeat": "numberboxes",
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Baden-Wuerttemberg",
+            "value": "Baden-Wuerttemberg"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 6,
+          "y": 0
+        },
+        "id": 3,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Thueringen",
+            "value": "Thueringen"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 12,
+          "y": 0
+        },
+        "id": 4,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Bayern",
+            "value": "Bayern"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 18,
+          "y": 0
+        },
+        "id": 5,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Berlin",
+            "value": "Berlin"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 0,
+          "y": 9
+        },
+        "id": 6,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Brandenburg",
+            "value": "Brandenburg"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 6,
+          "y": 9
+        },
+        "id": 7,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Bremen",
+            "value": "Bremen"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 12,
+          "y": 9
+        },
+        "id": 8,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Hamburg",
+            "value": "Hamburg"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 18,
+          "y": 9
+        },
+        "id": 9,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Hessen",
+            "value": "Hessen"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 0,
+          "y": 18
+        },
+        "id": 10,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Mecklenburg-Vorpommern",
+            "value": "Mecklenburg-Vorpommern"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 6,
+          "y": 18
+        },
+        "id": 11,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Niedersachsen",
+            "value": "Niedersachsen"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 12,
+          "y": 18
+        },
+        "id": 12,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Nordrhein-Westfalen",
+            "value": "Nordrhein-Westfalen"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 18,
+          "y": 18
+        },
+        "id": 13,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Rheinland-Pfalz",
+            "value": "Rheinland-Pfalz"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 0,
+          "y": 27
+        },
+        "id": 14,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Saarland",
+            "value": "Saarland"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 6,
+          "y": 27
+        },
+        "id": 15,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Sachsen",
+            "value": "Sachsen"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 12,
+          "y": 27
+        },
+        "id": 16,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Sachsen-Anhalt",
+            "value": "Sachsen-Anhalt"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Infektionsfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "R-Wert"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 18,
+          "y": 27
+        },
+        "id": 17,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "textMode": "auto"
+        },
+        "pluginVersion": "7.3.2",
+        "repeatIteration": 1609861963617,
+        "repeatPanelId": 2,
+        "scopedVars": {
+          "numberboxes": {
+            "selected": false,
+            "text": "Schleswig-Holstein",
+            "value": "Schleswig-Holstein"
+          }
+        },
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \r\nsum(\"Cases\".\"cases\") AS \"Infektionsfälle\", \r\nsum(\"Cases\".\"recovered\") AS \"Genesene\", \r\nsum(\"Cases\".\"dead\") AS \"Todesfälle\", \r\n((SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes))::decimal/\r\n(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes) AND \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" FROM \"Cases\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = $numberboxes)",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "$numberboxes",
+        "type": "stat"
+      }
+    ],
+    "schemaVersion": 26,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "allValue": null,
+          "current": {
+            "selected": true,
+            "tags": [],
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "error": null,
+          "hide": 0,
+          "includeAll": true,
+          "label": null,
+          "multi": true,
+          "name": "numberboxes",
+          "options": [
+            {
+              "selected": true,
+              "text": "All",
+              "value": "$__all"
+            },
+            {
+              "selected": false,
+              "text": "Baden-Wuerttemberg",
+              "value": "Baden-Wuerttemberg"
+            },
+            {
+              "selected": false,
+              "text": "Thueringen",
+              "value": "Thueringen"
+            },
+            {
+              "selected": false,
+              "text": "Bayern",
+              "value": "Bayern"
+            },
+            {
+              "selected": false,
+              "text": "Berlin",
+              "value": "Berlin"
+            },
+            {
+              "selected": false,
+              "text": "Brandenburg",
+              "value": "Brandenburg"
+            },
+            {
+              "selected": false,
+              "text": "Bremen",
+              "value": "Bremen"
+            },
+            {
+              "selected": false,
+              "text": "Hamburg",
+              "value": "Hamburg"
+            },
+            {
+              "selected": false,
+              "text": "Hessen",
+              "value": "Hessen"
+            },
+            {
+              "selected": false,
+              "text": "Mecklenburg-Vorpommern",
+              "value": "Mecklenburg-Vorpommern"
+            },
+            {
+              "selected": false,
+              "text": "Niedersachsen",
+              "value": "Niedersachsen"
+            },
+            {
+              "selected": false,
+              "text": "Nordrhein-Westfalen",
+              "value": "Nordrhein-Westfalen"
+            },
+            {
+              "selected": false,
+              "text": "Rheinland-Pfalz",
+              "value": "Rheinland-Pfalz"
+            },
+            {
+              "selected": false,
+              "text": "Saarland",
+              "value": "Saarland"
+            },
+            {
+              "selected": false,
+              "text": "Sachsen",
+              "value": "Sachsen"
+            },
+            {
+              "selected": false,
+              "text": "Sachsen-Anhalt",
+              "value": "Sachsen-Anhalt"
+            },
+            {
+              "selected": false,
+              "text": "Schleswig-Holstein",
+              "value": "Schleswig-Holstein"
+            }
+          ],
+          "query": "Baden-Wuerttemberg,Thueringen,Bayern,Berlin,Brandenburg,Bremen,Hamburg,Hessen,Mecklenburg-Vorpommern,Niedersachsen,Nordrhein-Westfalen,Rheinland-Pfalz,Saarland,Sachsen,Sachsen-Anhalt,Schleswig-Holstein",
+          "queryValue": "",
+          "skipUrlSync": false,
+          "type": "custom"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Numberbox per state",
+    "uid": "jzvjta0Gz",
+    "version": 1
+  }

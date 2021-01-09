@@ -1,0 +1,3954 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Hier bearbeitet Leni ihre Dashboards",
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "iteration": 1610141599147,
+  "links": [],
+  "panels": [
+    {
+      "circleMaxSize": 30,
+      "circleMinSize": 2,
+      "colors": [
+        "#02e3fa",
+        "#02e3fa"
+      ],
+      "datasource": "PostgreSQL",
+      "decimals": 0,
+      "esMetric": "Count",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 7,
+        "x": 0,
+        "y": 0
+      },
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 20,
+      "initialZoom": "6",
+      "locationData": "table",
+      "mapCenter": "custom",
+      "mapCenterLatitude": "51",
+      "mapCenterLongitude": "9",
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
+      "pluginVersion": "7.3.2",
+      "showLegend": false,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "Bundesland",
+        "latitudeField": "lat",
+        "longitudeField": "long",
+        "metricField": "Infektionen",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerSH AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Schleswig-Holstein'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Schleswig-Holstein\" UNION \n\n\n\nSELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerHH AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Hamburg'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Hamburg\" UNION \n\n\n\nSELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerBY AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Bayern'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Bayern\" UNION \n  \n\nSELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerBE AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Berlin'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Berlin\" UNION \n\n\n\n  SELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerBB AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Brandenburg'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Brandenburg\" UNION \n\n\n    SELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerHB AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Bremen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Bremen\" UNION \n\n\n\n\n      SELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerHE AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Hessen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Hessen\" UNION \n\n\n\n      SELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerMV AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Mecklenburg-Vorpommern'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Mecklenburg-Vorpommern\" UNION \n\n\n\n        SELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerNI AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Niedersachsen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Niedersachsen\" UNION \n\n\n\n        SELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerNW AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Nordrhein-Westfalen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Nordrhein-Westfalen\" UNION \n\n\n\n          SELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerRP AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Rheinland-Pfalz'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Rheinland-Pfalz\" UNION \n\n\nSELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerSL AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Saarland'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Saarland\" UNION \n\n\nSELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerSN AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Sachsen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Sachsen\" UNION \n\n\nSELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerSA AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Sachsen-Anhalt'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Sachsen-Anhalt\" UNION \n\n\nSELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerBW AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Baden-Wuerttemberg'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Baden-Württemberg\" UNION \n  \n\nSELECT \"Bundesland\", \"Infektionen\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\")*100000/$einwohnerTH AS \"Infektionen\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Thueringen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Thüringen\"\n\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "1000",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner (Bundesländer)",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "valueName": "max"
+    },
+    {
+      "circleMaxSize": 30,
+      "circleMinSize": "2",
+      "colors": [
+        "#02e3fa",
+        "#02e3fa"
+      ],
+      "datasource": "PostgreSQL",
+      "decimals": 0,
+      "esMetric": "Count",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 7,
+        "x": 0,
+        "y": 0
+      },
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 20,
+      "initialZoom": "6",
+      "locationData": "table",
+      "mapCenter": "custom",
+      "mapCenterLatitude": "51",
+      "mapCenterLongitude": "9",
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
+      "pluginVersion": "7.3.1",
+      "showLegend": false,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "Bundesland",
+        "latitudeField": "lat",
+        "longitudeField": "long",
+        "metricField": "Infektionsfälle",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerSH AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Schleswig-Holstein'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Schleswig-Holstein\" UNION \r\n\r\n\r\n\r\nSELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerHH AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Hamburg'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Hamburg\" UNION \r\n\r\n\r\n\r\nSELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerBY AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Bayern'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Bayern\" UNION \r\n  \r\n\r\nSELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerBE AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Berlin'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Berlin\" UNION \r\n\r\n\r\n\r\n  SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerBB AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Brandenburg'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Brandenburg\" UNION \r\n\r\n\r\n    SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerHB AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Bremen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Bremen\" UNION \r\n\r\n\r\n\r\n\r\n      SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerHE AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Hessen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Hessen\" UNION \r\n\r\n\r\n\r\n      SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerMV AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Mecklenburg-Vorpommern'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Mecklenburg-Vorpommern\" UNION \r\n\r\n\r\n\r\n        SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerNI AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Niedersachsen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Niedersachsen\" UNION \r\n\r\n\r\n\r\n        SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerNW AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Nordrhein-Westfalen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Nordrhein-Westfalen\" UNION \r\n\r\n\r\n\r\n          SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerRP AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Rheinland-Pfalz'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Rheinland-Pfalz\" UNION \r\n\r\n\r\nSELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerSL AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Saarland'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Saarland\" UNION \r\n\r\n\r\nSELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerSN AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Sachsen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Sachsen\" UNION \r\n\r\n\r\nSELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"cases\")*100000/$einwohnerSA AS \"Infektionsfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Sachsen-Anhalt'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Sachsen-Anhalt\" UNION \r\n\r\n\r\n\r\nSELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM ( SELECT (SELECT \"name\" FROM \"States\" WHERE \"name\" = 'Thueringen') AS \"Bundesland\", (sum(\"cases\")*100000)/$einwohnerTH AS \"Infektionsfälle\", (SELECT \"lat\" FROM \"States\" WHERE \"name\" = 'Thueringen') AS \"lat\", (SELECT \"long\" FROM \"States\" WHERE \"name\" = 'Thueringen') AS \"long\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Thüringen')) AS \"Thüringen\" UNION\r\n\r\n\r\n\r\n SELECT \"Bundesland\", \"Infektionsfälle\", \"lat\", \"long\" FROM ( SELECT (SELECT \"name\" FROM \"States\" WHERE \"name\" = 'Baden-Wuerttemberg') AS \"Bundesland\", (sum(\"cases\")*100000)/$einwohnerBW AS \"Infektionsfälle\", (SELECT \"lat\" FROM \"States\" WHERE \"name\" = 'Baden-Wuerttemberg') AS \"lat\", (SELECT \"long\" FROM \"States\" WHERE \"name\" = 'Baden-Wuerttemberg') AS \"long\"\r\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \r\nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Baden-Württemberg')) AS \"Baden-Württemberg\"",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "1000",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionsfälle insgesamt pro Bundesland",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "unitSingular": "",
+      "valueName": "max"
+    },
+    {
+      "circleMaxSize": 30,
+      "circleMinSize": 2,
+      "colors": [
+        "#02e3fa",
+        "#02e3fa"
+      ],
+      "datasource": "PostgreSQL",
+      "decimals": 0,
+      "esMetric": "Count",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 7,
+        "x": 7,
+        "y": 0
+      },
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 21,
+      "initialZoom": "7",
+      "locationData": "table",
+      "mapCenter": "custom",
+      "mapCenterLatitude": "51",
+      "mapCenterLongitude": "10",
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
+      "pluginVersion": "7.3.1",
+      "showLegend": false,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "Kreis",
+        "latitudeField": "lat",
+        "longitudeField": "long",
+        "metricField": "Infektionsfälle",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"cases\")*100000)/\"population\" AS \"Infektionsfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "1000",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner (Regionen)",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "valueName": "max"
+    },
+    {
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgb(0, 208, 255)",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Anzahl der Todesfälle"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1f78b4",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Anzahl der Infektionen"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#02e3fa",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Anzahl der Genesenen"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "rgb(255, 255, 255)",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "R-Wert"
+            },
+            "properties": [
+              {
+                "id": "decimals",
+                "value": 2
+              },
+              {
+                "id": "color",
+                "value": {
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 10,
+        "x": 14,
+        "y": 0
+      },
+      "id": 10,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "sum"
+          ],
+          "fields": "/.*/",
+          "values": true
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.3.1",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  sum(\"cases\") AS \"Anzahl der Infektionen\",\n  sum(\"recovered\") AS \"Anzahl der Genesenen\",\n  sum(\"dead\") AS \"Anzahl der Todesfälle\",\n((SELECT sum(\"Cases\".\"cases\"))::decimal/(SELECT sum(\"Cases\".\"cases\") FROM \"Cases\" WHERE  \"date\" < now()-interval'1 week')::decimal) AS \"R-Wert\" \nFROM \"Cases\"\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "\"AnzahlGenesen\""
+                ],
+                "type": "column"
+              },
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "alias"
+              }
+            ]
+          ],
+          "table": "\"Testdata\"",
+          "timeColumn": "\"Meldedatum\"",
+          "timeColumnType": "date",
+          "where": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "aliasColors": {
+        "Infektionsfälle, die später als genesen gemeldet wurden": "rgb(255, 255, 255)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "PostgreSQL",
+      "description": "Dieses Diagramm zeigt die genesenen Infektionsfälle pro Tag. Der genesene Fall wird an dem Datum gezählt, an dem die Infektion ursprünglich gemeldet wurde, nicht an dem Datum an dem die Person wieder genesen wurde.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 10,
+        "w": 10,
+        "x": 14,
+        "y": 5
+      },
+      "hiddenSeries": false,
+      "id": 37,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:145",
+          "alias": "Infektionsfälle, die später als genesen gemeldet wurden",
+          "fill": 2,
+          "lines": true,
+          "linewidth": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  $__timeGroupAlias(\"Cases\".\"date\",$__interval), \n  sum(\"Cases\".\"recovered\") AS \"Infektionsfälle, die später als genesen gemeldet wurden\"\nFROM   \"Cases\" \nGROUP BY 1\nORDER BY 1\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Genesene in ganz Deutschland pro Tag (absolute Werte)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:92",
+          "format": "none",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:93",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Anzahl Infektionen die an diesem Tag gemeldet wurden": "#02e3fa"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "PostgreSQL",
+      "description": "Dieses Diagramm zeigt die Infektionsfälle, die insgesamt pro Tag in ganz Deutschland gemeldet werden.Tageswerte können von Wochentag zu Wochentag teils stark schwanken, wenn Labore und Gesundheitsämter nicht voll besetzt sind oder geschlossen haben, und darum an einigen Tagen wesentlich weniger Infektionen melden, als tatsächlich auftreten.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 10,
+        "w": 10,
+        "x": 14,
+        "y": 15
+      },
+      "hiddenSeries": false,
+      "id": 38,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:145",
+          "alias": "Anzahl Infektionen die an diesem Tag gemeldet wurden",
+          "fill": 2,
+          "lines": true,
+          "linewidth": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  $__timeGroupAlias(\"Cases\".\"date\",$__interval), \n  sum(\"Cases\".\"cases\") AS \"Anzahl Infektionen die an diesem Tag gemeldet wurden\"\nFROM   \"Cases\" \nGROUP BY 1\nORDER BY 1\n\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Infektionen in ganz Deutschland pro Tag (absolute Werte)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:92",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:93",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "circleMaxSize": 30,
+      "circleMinSize": 2,
+      "colors": [
+        "#ffffff",
+        "#ffffff",
+        "#ffffff"
+      ],
+      "datasource": "PostgreSQL",
+      "decimals": 0,
+      "esMetric": "Count",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 7,
+        "x": 0,
+        "y": 17
+      },
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 29,
+      "initialZoom": "6",
+      "locationData": "table",
+      "mapCenter": "custom",
+      "mapCenterLatitude": "51",
+      "mapCenterLongitude": "9",
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
+      "pluginVersion": "7.3.2",
+      "showLegend": false,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "Bundesland",
+        "latitudeField": "lat",
+        "longitudeField": "long",
+        "metricField": "Genesene",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerSH AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Schleswig-Holstein'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Schleswig-Holstein\" UNION \r\n\r\n\r\n\r\nSELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerHH AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Hamburg'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Hamburg\" UNION \r\n\r\n\r\n\r\nSELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerBY AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Bayern'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Bayern\" UNION \r\n  \r\n\r\nSELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerBE AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Berlin'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Berlin\" UNION \r\n\r\n\r\n\r\n  SELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerBB AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Brandenburg'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Brandenburg\" UNION \r\n\r\n\r\n    SELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerHB AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Bremen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Bremen\" UNION \r\n\r\n\r\n\r\n\r\n      SELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerHE AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Hessen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Hessen\" UNION \r\n\r\n\r\n\r\n      SELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerMV AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Mecklenburg-Vorpommern'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Mecklenburg-Vorpommern\" UNION \r\n\r\n\r\n\r\n        SELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerNI AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Niedersachsen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Niedersachsen\" UNION \r\n\r\n\r\n\r\n        SELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerNW AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Nordrhein-Westfalen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Nordrhein-Westfalen\" UNION \r\n\r\n\r\n\r\n          SELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerRP AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Rheinland-Pfalz'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Rheinland-Pfalz\" UNION \r\n\r\n\r\nSELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerSL AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Saarland'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Saarland\" UNION \r\n\r\n\r\nSELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerSN AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Sachsen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Sachsen\" UNION \r\n\r\n\r\nSELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerSA AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Sachsen-Anhalt'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Sachsen-Anhalt\" UNION \r\n\r\n\r\nSELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerBW AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Baden-Wuerttemberg'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Baden-Württemberg\" UNION \r\n  \r\n\r\nSELECT \"Bundesland\", \"Genesene\", \"lat\", \"long\" FROM (SELECT\r\n  \"Counties\".\"state\" AS \"Bundesland\", \r\n  sum(\"Cases\".\"recovered\")*100000/$einwohnerTH AS \"Genesene\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\r\nFROM\r\n  \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\r\nWHERE \"state\" = 'Thueringen'\r\nGROUP BY \r\n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Thüringen\"\r\n  \r\n  \r\n\r\n\r\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Genesene pro 100.000 Einwohner (Bundesländer)",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "valueName": "max"
+    },
+    {
+      "circleMaxSize": 30,
+      "circleMinSize": 2,
+      "colors": [
+        "#ffffff",
+        "#ffffff"
+      ],
+      "datasource": "PostgreSQL",
+      "decimals": 0,
+      "esMetric": "Count",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 7,
+        "x": 7,
+        "y": 17
+      },
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 25,
+      "initialZoom": "7",
+      "locationData": "table",
+      "mapCenter": "custom",
+      "mapCenterLatitude": "51",
+      "mapCenterLongitude": "9.5",
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
+      "pluginVersion": "7.3.2",
+      "showLegend": false,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "Kreis",
+        "latitudeField": "lat",
+        "longitudeField": "long",
+        "metricField": "Genesene",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"recovered\")*100000)/\"population\" AS \"Genesene\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "1000",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Genesene pro 100.000 Einwohner (Regionen)",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "valueName": "max"
+    },
+    {
+      "aliasColors": {
+        "Infektionsfälle, die später als Todesfall gemeldet wurden": "#1f78b4"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "PostgreSQL",
+      "description": "Dieses Diagramm zeigt die Todesfälle pro Tag. Der Todesfall wird an dem Datum gezählt, an dem die Infektion ursprünglich gemeldet wurde, nicht an dem Datum an dem der Todesfall gemeldet wurde.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 10,
+        "w": 10,
+        "x": 14,
+        "y": 25
+      },
+      "hiddenSeries": false,
+      "id": 39,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:145",
+          "alias": "Infektionsfälle, die später als Todesfall gemeldet wurden",
+          "fill": 2,
+          "lines": true,
+          "linewidth": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  $__timeGroupAlias(\"Cases\".\"date\",$__interval), \n  sum(\"Cases\".\"dead\") AS \"Infektionsfälle, die später als Todesfall gemeldet wurden\"\nFROM   \"Cases\" \nGROUP BY 1\nORDER BY 1\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Todesfälle in ganz Deutschland pro Tag (absolute Werte)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:92",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:93",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "circleMaxSize": 30,
+      "circleMinSize": 2,
+      "colors": [
+        "#3274D9",
+        "#3274D9",
+        "#3274D9"
+      ],
+      "datasource": "PostgreSQL",
+      "decimals": 0,
+      "esMetric": "Count",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 7,
+        "x": 0,
+        "y": 34
+      },
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 30,
+      "initialZoom": "6",
+      "locationData": "table",
+      "mapCenter": "custom",
+      "mapCenterLatitude": "51",
+      "mapCenterLongitude": "9",
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
+      "pluginVersion": "7.3.2",
+      "showLegend": false,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "Bundesland",
+        "latitudeField": "lat",
+        "longitudeField": "long",
+        "metricField": "Todesfälle",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerSH AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Schleswig-Holstein'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Schleswig-Holstein\" UNION \n\n\n\nSELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerHH AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Hamburg'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Hamburg\" UNION \n\n\n\nSELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerBY AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Bayern'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Bayern\" UNION \n  \n\nSELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerBE AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Berlin'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Berlin\" UNION \n\n\n\n  SELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerBB AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Brandenburg'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Brandenburg\" UNION \n\n\n    SELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerHB AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Bremen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Bremen\" UNION \n\n\n\n\n      SELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerHE AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Hessen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Hessen\" UNION \n\n\n\n      SELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerMV AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Mecklenburg-Vorpommern'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Mecklenburg-Vorpommern\" UNION \n\n\n\n        SELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerNI AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Niedersachsen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Niedersachsen\" UNION \n\n\n\n        SELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerNW AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Nordrhein-Westfalen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Nordrhein-Westfalen\" UNION \n\n\n\n          SELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerRP AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Rheinland-Pfalz'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Rheinland-Pfalz\" UNION \n\n\nSELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerSL AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Saarland'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Saarland\" UNION \n\n\nSELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerSN AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Sachsen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Sachsen\" UNION \n\n\nSELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerSA AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Sachsen-Anhalt'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Sachsen-Anhalt\" UNION \n  \n  \nSELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerBW AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Baden-Wuerttemberg'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Baden-Württemberg\" UNION \n  \n  \nSELECT \"Bundesland\", \"Todesfälle\", \"lat\", \"long\" FROM (SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"dead\")*100000/$einwohnerTH AS \"Todesfälle\", \"States\".\"lat\" AS \"lat\", \"States\".\"long\" AS \"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nWHERE \"state\" = 'Thueringen'\nGROUP BY \n  \"Counties\".\"state\", \"States\".\"lat\", \"States\".\"long\") AS \"Thüringen\"\n\n\n\n\n\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "0,1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Todesfälle pro 100.000 Einwohner (Bundesländer)",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "valueName": "max"
+    },
+    {
+      "circleMaxSize": 30,
+      "circleMinSize": 2,
+      "colors": [
+        "#1f78b4",
+        "#1f78b4"
+      ],
+      "datasource": "PostgreSQL",
+      "decimals": 0,
+      "esMetric": "Count",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 7,
+        "x": 7,
+        "y": 34
+      },
+      "hideEmpty": false,
+      "hideZero": false,
+      "id": 23,
+      "initialZoom": "7",
+      "locationData": "table",
+      "mapCenter": "custom",
+      "mapCenterLatitude": "51",
+      "mapCenterLongitude": "9.5",
+      "maxDataPoints": 1,
+      "mouseWheelZoom": true,
+      "pluginVersion": "7.3.2",
+      "showLegend": false,
+      "stickyLabels": false,
+      "tableQueryOptions": {
+        "geohashField": "geohash",
+        "labelField": "Kreis",
+        "latitudeField": "lat",
+        "longitudeField": "long",
+        "metricField": "Todesfälle",
+        "queryType": "coordinates"
+      },
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Kreis\", \n  (sum(\"Cases\".\"dead\")*100000)/\"population\" AS \"Todesfälle\", \n  \"Counties\".\"lat\",\n  \"Counties\".\"long\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nGROUP BY \n  \"Counties\".\"name\", \"Counties\".\"lat\", \"Counties\".\"long\", \"population\"",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": "1000",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Todesfälle pro 100.000 Einwohner (Regionen)",
+      "type": "grafana-worldmap-panel",
+      "unitPlural": "",
+      "unitSingle": "",
+      "valueName": "max"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "PostgreSQL",
+      "description": "Dieses Diagramm zeigt die Infektionsfälle, die pro Tag gemeldet wurden sowie die Fälle, die davon später als genesenen oder als Todesfall gemeldet wurden.\n- Bewegen Sie die Maus über das Liniendiagramm, um die Werte für jeden Tag zu finden\n- Blenden Sie Linien ein und aus, indem sie unten in der Legende auf die Beschreibung der Linie klicken \n- Halten Sie STRG gedrückt, um auf mehrere Linien gleichzeitigzu klicken\n- Zoomen Sie in einen bestimmten Zeitraum, indem Sie einen Bereich markieren. Dafür müssen Sie die linke Maustaste gedrückt halten und nach links oder rechts ziehen.\n- Machen Sie den Zoom rückgängig, indem Sie STRG+Z gleichzeitig drücken.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 10,
+        "w": 10,
+        "x": 14,
+        "y": 35
+      },
+      "hiddenSeries": false,
+      "id": 40,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.3.1",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:145",
+          "alias": "Infektionsfälle, die später als Todesfall gemeldet wurden",
+          "color": "#1f78b4",
+          "lines": true,
+          "linewidth": 2
+        },
+        {
+          "$$hashKey": "object:1428",
+          "alias": "Infektionsfälle, die an diesem Tag gemeldet wurden",
+          "color": "#02e3fa",
+          "lines": true,
+          "linewidth": 2
+        },
+        {
+          "$$hashKey": "object:1454",
+          "alias": "Infektionsfälle, die später als genesen gemeldet wurden",
+          "color": "rgb(255, 255, 255)",
+          "lines": true,
+          "linewidth": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  $__timeGroupAlias(\"Cases\".\"date\",$__interval), \n  sum(\"Cases\".\"dead\") AS \"Infektionsfälle, die später als Todesfall gemeldet wurden\"\nFROM   \"Cases\" \nGROUP BY 1\nORDER BY 1\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  $__timeGroupAlias(\"Cases\".\"date\",$__interval), \n  sum(\"Cases\".\"cases\") AS \"Infektionsfälle, die an diesem Tag gemeldet wurden\"\nFROM   \"Cases\" \nGROUP BY 1\nORDER BY 1\n\n",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  $__timeGroupAlias(\"Cases\".\"date\",$__interval), \n  sum(\"Cases\".\"recovered\") AS \"Infektionsfälle, die später als genesen gemeldet wurden\"\nFROM   \"Cases\" \nGROUP BY 1\nORDER BY 1\n",
+          "refId": "C",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Werte für ganz Deutschland pro Tag (absolute Werte)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:92",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:93",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 10,
+        "x": 14,
+        "y": 45
+      },
+      "id": 35,
+      "options": {
+        "content": "Zuletzt Aktualisiert am  {{lu}}\n\n\nDaten werden seit dem  {{date dl format=\"DD.MM.YYYY\"}} mit einberechnet.\n\n\n\nAlle Daten werden von dem [RKI](https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0) bereitgestellt.\n\n\n"
+      },
+      "pluginVersion": "7.3.1",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \"lastUpdate\" AS \"lu\", min(\"date\") AS \"dl\"\nFROM \"Cases\"\nGROUP BY \"lastUpdate\", \"date\" LIMIT 1\n\n",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Datenstand",
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null,
+            "filterable": true
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 9,
+        "x": 0,
+        "y": 51
+      },
+      "id": 33,
+      "options": {
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "7.3.1",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  \"Counties\".\"state\" AS \"Bundesland\", \n  sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n  sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n  sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nINNER JOIN \"States\" ON \"Counties\".\"state\" = \"States\".\"name\"\nGROUP BY \n  \"Counties\".\"state\"",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Übersicht pro Bundesland",
+      "type": "table"
+    },
+    {
+      "aliasColors": {
+        "Hamburg": "#FADE2A",
+        "Nordrhein-Westfalen": "rgb(102, 102, 102)",
+        "Thüringen": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 9,
+        "y": 51
+      },
+      "id": 51,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "percentage": false,
+        "percentageDecimals": 2,
+        "show": true,
+        "sideWidth": null,
+        "sort": "current",
+        "sortDesc": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/2903773 AS \"Schleswig-Holstein\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Schleswig-Holstein')",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "\"AnzahlFall\""
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "table": "\"Testdata\"",
+          "timeColumn": "\"Meldedatum\"",
+          "timeColumnType": "date",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            },
+            {
+              "datatype": "numeric",
+              "name": "",
+              "params": [
+                "\"IdBundesland\"",
+                "=",
+                "1"
+              ],
+              "type": "expression"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/1847253 AS \"Hamburg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Hamburg')",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/11100394 AS \"Baden-Württemberg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Baden-Wuerttemberg')",
+          "refId": "C",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/13123566 AS \"Bayern\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Bayern')",
+          "refId": "D",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/3644827 AS \"Berlin\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Berlin')",
+          "refId": "E",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/2521893 AS \"Brandenburg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Brandenburg')",
+          "refId": "F",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/682986 AS \"Bremen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Bremen')\n",
+          "refId": "G",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/6288080 AS \"Hessen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Hessen')\n",
+          "refId": "H",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/1610000 AS \"Mecklenburg-Vorpommern\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Mecklenburg-Vorpommern')",
+          "refId": "I",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/7993608 AS \"Niedersachsen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Niedersachsen')\n\n",
+          "refId": "J",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/17900000 AS \"Nordrhein-Westfalen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Nordrhein-Westfalen')",
+          "refId": "K",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/4093903 AS \"Rheinland-Pfalz\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Rheinland-Pfalz')\n",
+          "refId": "L",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/990509 AS \"Saarland\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Saarland')",
+          "refId": "M",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/4071971 AS \"Sachsen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Sachsen')",
+          "refId": "N",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/2190000 AS \"Sachsen-Anhalt\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Sachsen-Anhalt')\n",
+          "refId": "O",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "hide": false,
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"cases\")*100000)/2137000 AS \"Thüringen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Thueringen')",
+          "refId": "P",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Infektionen pro 100.000 Einwohner in ganz Deutschland",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Landkreis_Hildburghausen": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 7,
+        "w": 7,
+        "x": 17,
+        "y": 51
+      },
+      "id": 47,
+      "interval": null,
+      "legend": {
+        "header": "Infektionen",
+        "percentage": false,
+        "percentageDecimals": 1,
+        "show": true,
+        "sort": null,
+        "sortDesc": null,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \"Counties\".\"name\" AS \"Landkreis\", (sum(\"Cases\".\"cases\")*100000)/\"population\",  now() AS time \r\nFROM \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY (sum(\"Cases\".\"cases\")*100000)/\"population\" DESC  LIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Top 10 der meisten Infektionen pro 100.000 Einwohner in einer Region",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Hamburg": "#FADE2A",
+        "Nordrhein-Westfalen": "rgb(102, 102, 102)",
+        "Thüringen": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 9,
+        "y": 58
+      },
+      "id": 49,
+      "interval": null,
+      "legend": {
+        "header": "Genesene",
+        "percentage": false,
+        "percentageDecimals": 1,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/2903773 AS \"Schleswig-Holstein\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Schleswig-Holstein')",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/1847253 AS \"Hamburg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Hamburg')",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/11100394 AS \"Baden-Württemberg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Baden-Wuerttemberg')",
+          "refId": "C",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/13123566 AS \"Bayern\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Bayern')",
+          "refId": "D",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/3644827 AS \"Berlin\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Berlin')",
+          "refId": "E",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/2521893 AS \"Brandenburg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Brandenburg')",
+          "refId": "F",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/682986 AS \"Bremen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Bremen')\n",
+          "refId": "G",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/6288080 AS \"Hessen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Hessen')\n",
+          "refId": "H",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/1610000 AS \"Mecklenburg-Vorpommern\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Mecklenburg-Vorpommern')",
+          "refId": "I",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/7993608 AS \"Niedersachsen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Niedersachsen')\n\n",
+          "refId": "J",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/17900000 AS \"Nordrhein-Westfalen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Nordrhein-Westfalen')",
+          "refId": "K",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/4093903 AS \"Rheinland-Pfalz\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Rheinland-Pfalz')\n",
+          "refId": "L",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/990509 AS \"Saarland\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Saarland')",
+          "refId": "M",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/4071971 AS \"Sachsen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Sachsen')",
+          "refId": "N",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/2190000 AS \"Sachsen-Anhalt\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Sachsen-Anhalt')\n",
+          "refId": "O",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"recovered\")*100000)/2137000 AS \"Thüringen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Thueringen')",
+          "refId": "P",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Genesene pro 100.000 Einwohner in ganz Deutschland",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Kreisfreie_Stadt_Offenbach_am_Main": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 7,
+        "w": 7,
+        "x": 17,
+        "y": 58
+      },
+      "id": 45,
+      "interval": null,
+      "legend": {
+        "header": "Genesene",
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \"Counties\".\"name\" AS \"Landkreis\", (sum(\"Cases\".\"recovered\")*100000)/\"population\",  now() AS time \r\nFROM \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY (sum(\"Cases\".\"recovered\")*100000)/\"population\" DESC  LIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Top 10 der meisten Genesenen pro 100.000 Einwohner in einer Region",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "datasource": "PostgreSQL",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null,
+            "filterable": true
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 9,
+        "x": 0,
+        "y": 62
+      },
+      "id": 32,
+      "options": {
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Fälle gesamt"
+          }
+        ]
+      },
+      "pluginVersion": "7.3.1",
+      "targets": [
+        {
+          "format": "table",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  \"Counties\".\"name\" AS \"Landkreis/Stadtkreis\", \n  sum(\"Cases\".\"cases\") AS \"Fälle gesamt\", \n  sum(\"Cases\".\"recovered\") AS \"Genesen gesamt\", \n  sum(\"Cases\".\"dead\") AS \"Todesfälle gesamt\"\nFROM\n  \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nGROUP BY \n  \"Counties\".\"name\"",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Übersicht pro Region",
+      "type": "table"
+    },
+    {
+      "aliasColors": {
+        "Hamburg": "#FADE2A",
+        "Nordrhein-Westfalen": "rgb(102, 102, 102)",
+        "Thüringen": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 9,
+        "y": 65
+      },
+      "id": 53,
+      "interval": null,
+      "legend": {
+        "header": "Todesfälle",
+        "percentage": false,
+        "percentageDecimals": null,
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/2903773 AS \"Schleswig-Holstein\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Schleswig-Holstein')",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/1847253 AS \"Hamburg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Hamburg')",
+          "refId": "B",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/11100394 AS \"Baden-Württemberg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Baden-Wuerttemberg')",
+          "refId": "C",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/13123566 AS \"Bayern\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Bayern')",
+          "refId": "D",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/3644827 AS \"Berlin\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Berlin')",
+          "refId": "E",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/2521893 AS \"Brandenburg\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Brandenburg')",
+          "refId": "F",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/682986 AS \"Bremen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Bremen')\n",
+          "refId": "G",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/6288080 AS \"Hessen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Hessen')\n",
+          "refId": "H",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/1610000 AS \"Mecklenburg-Vorpommern\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Mecklenburg-Vorpommern')",
+          "refId": "I",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/7993608 AS \"Niedersachsen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Niedersachsen')\n\n",
+          "refId": "J",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/17900000 AS \"Nordrhein-Westfalen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Nordrhein-Westfalen')",
+          "refId": "K",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/4093903 AS \"Rheinland-Pfalz\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Rheinland-Pfalz')\n",
+          "refId": "L",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/990509 AS \"Saarland\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Saarland')",
+          "refId": "M",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/4071971 AS \"Sachsen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Sachsen')",
+          "refId": "N",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/2190000 AS \"Sachsen-Anhalt\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Sachsen-Anhalt')\n",
+          "refId": "O",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        },
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "rawQuery": true,
+          "rawSql": "SELECT \nnow() AS \"time\", (sum(\"dead\")*100000)/2137000 AS \"Thüringen\"\nFROM \"Cases\" INNER JOIN \"Counties\" ON \"Cases\".\"countyID\" = \"Counties\".\"id\" \nWHERE \"countyID\" IN (SELECT \"id\" FROM \"Counties\" WHERE \"state\" = 'Thueringen')",
+          "refId": "P",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Todesfälle pro 100.000 Einwohner in ganz Deutschland",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Landkreis_Odenwaldkreis": "rgb(255, 255, 255)"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "PostgreSQL",
+      "decimals": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "none",
+      "gridPos": {
+        "h": 7,
+        "w": 7,
+        "x": 17,
+        "y": 65
+      },
+      "id": 43,
+      "interval": null,
+      "legend": {
+        "header": "Todesfälle",
+        "show": true,
+        "sort": "current",
+        "sortDesc": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "pluginVersion": "7.3.2",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "format": "time_series",
+          "group": [],
+          "metricColumn": "none",
+          "queryType": "randomWalk",
+          "rawQuery": true,
+          "rawSql": "SELECT \"Counties\".\"name\" AS \"Landkreis\", (sum(\"Cases\".\"dead\")*100000)/\"population\",  now() AS time \r\nFROM \"Counties\"\r\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\r\nGROUP BY \"Counties\".\"name\", \"population\"\r\nORDER BY (sum(\"Cases\".\"dead\")*100000)/\"population\" DESC  LIMIT 10",
+          "refId": "A",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "column"
+              }
+            ]
+          ],
+          "timeColumn": "time",
+          "where": [
+            {
+              "name": "$__timeFilter",
+              "params": [],
+              "type": "macro"
+            }
+          ]
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Top 10 der meisten Todesfällen pro 100.000 Einwohner in einer Region",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "1866448",
+          "value": "1866448"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"cases\") AS \"Gesamtsumme der Infektionen\" FROM \"Cases\"",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "summeInfektionen",
+        "options": [],
+        "query": "SELECT sum(\"cases\") AS \"Gesamtsumme der Infektionen\" FROM \"Cases\"",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "17115",
+          "value": "17115"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"dead\") FROM \"Cases\" ",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "summeTodesfaelle",
+        "options": [
+          {
+            "selected": true,
+            "text": "17115",
+            "value": "17115"
+          }
+        ],
+        "query": "SELECT sum(\"dead\") FROM \"Cases\" ",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "779267",
+          "value": "779267"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"recovered\") FROM \"Cases\"",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "summeGenesen",
+        "options": [
+          {
+            "selected": true,
+            "text": "779267",
+            "value": "779267"
+          }
+        ],
+        "query": "SELECT sum(\"recovered\") FROM \"Cases\"",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "288067",
+          "value": "288067"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT (sum(\"cases\")-sum(\"recovered\")-sum(\"dead\")) FROM \"Cases\"",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "summeAktiveFaelle",
+        "options": [
+          {
+            "selected": true,
+            "text": "288067",
+            "value": "288067"
+          }
+        ],
+        "query": "SELECT (sum(\"cases\")-sum(\"recovered\")-sum(\"dead\")) FROM \"Cases\"",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "995149",
+          "value": "995149"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"cases\") FROM \"Cases\" WHERE \"date\" < now() - interval '1 week'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "summeInfektionenVor7Tagen",
+        "options": [
+          {
+            "selected": true,
+            "text": "995149",
+            "value": "995149"
+          }
+        ],
+        "query": "SELECT sum(\"cases\") FROM \"Cases\" WHERE \"date\" < now() - interval '1 week'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "16855",
+          "value": "16855"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"dead\") FROM \"Cases\" WHERE \"date\" < now() - interval '1 week'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "summeTodesfaelleVor7Tagen",
+        "options": [
+          {
+            "selected": true,
+            "text": "16855",
+            "value": "16855"
+          }
+        ],
+        "query": "SELECT sum(\"dead\") FROM \"Cases\" WHERE \"date\" < now() - interval '1 week'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "777090",
+          "value": "777090"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"recovered\") FROM \"Cases\" WHERE \"date\" < now() - interval '1 week'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "summeGenesenVor7Tagen",
+        "options": [
+          {
+            "selected": true,
+            "text": "777090",
+            "value": "777090"
+          }
+        ],
+        "query": "SELECT sum(\"recovered\") FROM \"Cases\" WHERE \"date\" < now() - interval '1 week'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "11100394",
+          "value": "11100394"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Baden-Württemberg'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerBW",
+        "options": [
+          {
+            "selected": true,
+            "text": "11100394",
+            "value": "11100394"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Baden-Württemberg'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "2903773",
+          "value": "2903773"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Schleswig-Holstein'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerSH",
+        "options": [
+          {
+            "selected": true,
+            "text": "2903773",
+            "value": "2903773"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Schleswig-Holstein'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "4071971",
+          "value": "4071971"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Sachsen'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerSN",
+        "options": [
+          {
+            "selected": true,
+            "text": "4071971",
+            "value": "4071971"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Sachsen'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "986887",
+          "value": "986887"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Saarland'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerSL",
+        "options": [
+          {
+            "selected": true,
+            "text": "986887",
+            "value": "986887"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Saarland'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "2521893",
+          "value": "2521893"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Brandenburg'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerBB",
+        "options": [
+          {
+            "selected": true,
+            "text": "2521893",
+            "value": "2521893"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Brandenburg'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "6288080",
+          "value": "6288080"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Hessen'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerHE",
+        "options": [
+          {
+            "selected": true,
+            "text": "6288080",
+            "value": "6288080"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Hessen'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "17947221",
+          "value": "17947221"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Nordrhein-Westfalen'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerNW",
+        "options": [
+          {
+            "selected": true,
+            "text": "17947221",
+            "value": "17947221"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Nordrhein-Westfalen'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "681202",
+          "value": "681202"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Bremen'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerHB",
+        "options": [
+          {
+            "selected": true,
+            "text": "681202",
+            "value": "681202"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Bremen'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "1847253",
+          "value": "1847253"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Hamburg'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerHH",
+        "options": [
+          {
+            "selected": true,
+            "text": "1847253",
+            "value": "1847253"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Hamburg'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "1608138",
+          "value": "1608138"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Mecklenburg-Vorpommern'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerMV",
+        "options": [
+          {
+            "selected": true,
+            "text": "1608138",
+            "value": "1608138"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Mecklenburg-Vorpommern'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "3669491",
+          "value": "3669491"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Berlin'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerBE",
+        "options": [
+          {
+            "selected": true,
+            "text": "3669491",
+            "value": "3669491"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Berlin'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "2133378",
+          "value": "2133378"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Thüringen'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerTH",
+        "options": [
+          {
+            "selected": true,
+            "text": "2133378",
+            "value": "2133378"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Thüringen'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "4093903",
+          "value": "4093903"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Rheinland-Pfalz'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerRP",
+        "options": [
+          {
+            "selected": true,
+            "text": "4093903",
+            "value": "4093903"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Rheinland-Pfalz'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "2194782",
+          "value": "2194782"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Sachsen-Anhalt'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerSA",
+        "options": [
+          {
+            "selected": true,
+            "text": "2194782",
+            "value": "2194782"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Sachsen-Anhalt'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "7993608",
+          "value": "7993608"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Niedersachsen'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerNI",
+        "options": [
+          {
+            "selected": true,
+            "text": "7993608",
+            "value": "7993608"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Niedersachsen'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "13124737",
+          "value": "13124737"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Bayern'",
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "einwohnerBY",
+        "options": [
+          {
+            "selected": true,
+            "text": "13124737",
+            "value": "13124737"
+          }
+        ],
+        "query": "SELECT sum(\"population\") FROM \"Counties\" WHERE \"state\" = 'Bayern'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-90d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Total Germany (counties/states)",
+  "uid": "aim5ADoGz",
+  "version": 1
+}

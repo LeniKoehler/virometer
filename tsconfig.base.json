@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@virometer-gmbh/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@virometer-gmbh/data-access-covid": [
+        "libs/data-access-covid/src/index.ts"
+      ],
+      "@virometer-gmbh/ui": ["libs/ui/src/index.ts"],
+      "@virometer-gmbh/diagramms": ["libs/diagramms/src/index.ts"],
+      "@virometer-gmbh/data-access-db": ["libs/data-access-db/src/index.ts"],
+      "@virometer-gmbh/data-storage": ["libs/data-storage/src/index.ts"],
+      "@virometer-gmbh/data-download": ["libs/data-download/src/index.ts"],
+      "@virometer-gmbh/subpages-lk": ["libs/subpages-lk/src/index.ts"],
+      "@virometer-gmbh/table-lk": ["libs/table-lk/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

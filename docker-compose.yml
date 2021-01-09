@@ -1,0 +1,60 @@
+version: "3.8"
+services:
+  db:
+    build:
+      context: .
+      target: dev
+    restart: always
+    environment:
+      POSTGRES_USER: virometer
+      POSTGRES_PASSWORD: virometerPasswort1
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    depends_on:
+      - "db"
+    ports:
+      - 8080:8080
+
+  grafana:
+    ports:
+      - "3000:3000"
+    image: grafana/grafana
+    container_name: grafana
+    volumes:
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources/
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards/
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel, grafana-worldmap-panel, marcusolsson-dynamictext-panel, briangann-datatable-panel
+      - GF_SECURITY_ALLOW_EMBEDDING=true
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_DATE_FORMATS_FULL_DATE=DD-MM-YYYY HH:mm:ss
+      - GF_DATE_FORMATS_INTERVAL_DAY=MMM DD
+      - GF_DATE_FORMATS_INTERVAL_MONTH=MM-YYYY
+
+  web:
+    image: "web"
+    restart: always
+    build:
+      context: .
+      dockerfile: ./frontendDocker/Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 4200:80
+  web-backend:
+    image: "web-backend"
+    restart: always
+    build:
+      context: .
+      dockerfile: ./backendDocker/Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 1337:1337
+
+volumes:
+  db-data:

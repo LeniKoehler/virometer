@@ -1,0 +1,2474 @@
+[
+  {
+    "id": 1001,
+    "name": "Kreisfreie Stadt_Flensburg",
+    "latitude": 54.77925635868037,
+    "longitude": 9.427959802014792
+  },
+  {
+    "id": 1002,
+    "name": "Kreisfreie Stadt_Kiel",
+    "latitude": 54.32259497208581,
+    "longitude": 10.12190044990746
+  },
+  {
+    "id": 1003,
+    "name": "Kreisfreie Stadt_Lübeck",
+    "latitude": 53.86966603064738,
+    "longitude": 10.695114212012735
+  },
+  {
+    "id": 1004,
+    "name": "Kreisfreie Stadt_Neumünster",
+    "latitude": 54.07949656150638,
+    "longitude": 9.984640111182767
+  },
+  {
+    "id": 1051,
+    "name": "Kreis_Dithmarschen",
+    "latitude": 54.1949443345976,
+    "longitude": 9.097112709982643
+  },
+  {
+    "id": 1053,
+    "name": "Kreis_Herzogtum Lauenburg",
+    "latitude": 53.62148714152057,
+    "longitude": 10.639341105639089
+  },
+  {
+    "id": 1054,
+    "name": "Kreis_Nordfriesland",
+    "latitude": 54.6649205959105,
+    "longitude": 8.95812232652976
+  },
+  {
+    "id": 1055,
+    "name": "Kreis Ostholstein",
+    "latitude": 54.1354471914854,
+    "longitude": 10.71244795535572
+  },
+  {
+    "id": 1056,
+    "name": "Kreis_Pinneberg",
+    "latitude": 53.82559742837092,
+    "longitude": 9.685022382278637
+  },
+  {
+    "id": 1057,
+    "name": "Kreis_Plön",
+    "latitude": 54.239702716769095,
+    "longitude": 10.288258857021411
+  },
+  {
+    "id": 1058,
+    "name": "Kreis_Rendsburg-Eckernförde",
+    "latitude": 54.29258918869044,
+    "longitude": 9.769579032255635
+  },
+  {
+    "id": 1059,
+    "name": "Kreis_Schleswig-Flensburg",
+    "latitude": "54.638088065562",
+    "longitude": 9.493549989462126
+  },
+  {
+    "id": 1060,
+    "name": "Kreis_Segeberg",
+    "latitude": 53.93623601030446,
+    "longitude": 10.132353367559286
+  },
+  {
+    "id": 1061,
+    "name": "Kreis_Steinburg",
+    "latitude": 53.94545864455089,
+    "longitude": 9.512061631330253
+  },
+  {
+    "id": 1062,
+    "name": "Kreis_Stormarn",
+    "latitude": 53.73732529021793,
+    "longitude": 10.298172658502027
+  },
+  {
+    "id": 2000,
+    "name": "Kreisfreie Stadt_Hamburg",
+    "latitude": 53.54796610510161,
+    "longitude": 9.988932946951985
+  },
+  {
+    "id": 3101,
+    "name": "Kreisfreie Stadt_Braunschweig",
+    "latitude": 52.26336803760483,
+    "longitude": 10.526855081792945
+  },
+  {
+    "id": 3102,
+    "name": "Kreisfreie Stadt_Salzgitter",
+    "latitude": 52.157947659543545,
+    "longitude": 10.327564806244283
+  },
+  {
+    "id": 3103,
+    "name": "Kreisfreie Stadt_Wolfsburg",
+    "latitude": 52.48280058473589,
+    "longitude": 10.75294167575839
+  },
+  {
+    "id": 3151,
+    "name": "Landkreis_Gifhorn",
+    "latitude": 52.56945454169619,
+    "longitude": 10.572586503048013
+  },
+  {
+    "id": 3153,
+    "name": "Landkreis_Goslar",
+    "latitude": 51.91498676645103,
+    "longitude": 10.359640058502027
+  },
+  {
+    "id": 3154,
+    "name": "Landkreis_Helmstedt",
+    "latitude": 52.26388749544233,
+    "longitude": 10.895010960352801
+  },
+  {
+    "id": 3155,
+    "name": "Landkreis_Northeim",
+    "latitude": 51.741705527830895,
+    "longitude": 9.79917579112782
+  },
+  {
+    "id": 3157,
+    "name": "Landkreis_Peine",
+    "latitude": 52.31898525336549,
+    "longitude": 10.24249920951995
+  },
+  {
+    "id": 3158,
+    "name": "Landkreis_Wolfenbüttel",
+    "latitude": 52.14620691443222,
+    "longitude": 10.634692175234223
+  },
+  {
+    "id": 3159,
+    "name": "Landkreis_Göttingen",
+    "latitude": 51.58438955170408,
+    "longitude": 10.226873766362042
+  },
+  {
+    "id": 3241,
+    "name": "Landkreis_Region Hannover",
+    "latitude": 52.45295753187065,
+    "longitude": 9.615455023470238
+  },
+  {
+    "id": 3251,
+    "name": "Landkreis_Diepholz",
+    "latitude": 52.747952300000016,
+    "longitude": 8.717420368484673
+  },
+  {
+    "id": 3252,
+    "name": "Landkreis_Hameln-Pyrmont",
+    "latitude": 52.09785249092309,
+    "longitude": 9.369075930589945
+  },
+  {
+    "id": 3254,
+    "name": "Landkreis_Hildesheim",
+    "latitude": 52.08847199437534,
+    "longitude": 9.926131581330251
+  },
+  {
+    "id": 3255,
+    "name": "Landkreis_Holzminden",
+    "latitude": 51.90181496199416,
+    "longitude": 9.541828843990757
+  },
+  {
+    "id": 3256,
+    "name": "Landkreis_Nienburg (Weser)",
+    "latitude": 52.639558506738354,
+    "longitude": 9.156866691868126
+  },
+  {
+    "id": 3257,
+    "name": "Landkreis_Schaumburg",
+    "latitude": 52.30717713226124,
+    "longitude": 9.20930702735685
+  },
+  {
+    "id": 3351,
+    "name": "Landkreis_Celle",
+    "latitude": 52.73745266258763,
+    "longitude": 10.088577277356851
+  },
+  {
+    "id": 3352,
+    "name": "Landkreis_Cuxhaven",
+    "latitude": 53.637240938001426,
+    "longitude": 8.79043301117989
+  },
+  {
+    "id": 3353,
+    "name": "Landkreis_Harburg",
+    "latitude": 53.34096647665501,
+    "longitude": 9.926212843250449
+  },
+  {
+    "id": 3354,
+    "name": "Landkreis_Lüchow-Dannenberg",
+    "latitude": 53.03464861417759,
+    "longitude": 11.113311803048015
+  },
+  {
+    "id": 3355,
+    "name": "Landkreis_Lüneburg",
+    "latitude": 53.277044297535866,
+    "longitude": 10.510684947408926
+  },
+  {
+    "id": 3356,
+    "name": "Landkreis_Osterholz",
+    "latitude": 53.25579670929874,
+    "longitude": 8.808465387154419
+  },
+  {
+    "id": 3357,
+    "name": "Landkreis_Rotenburg (Wümme)",
+    "latitude": 53.24786360248323,
+    "longitude": 9.308893255115589
+  },
+  {
+    "id": 3358,
+    "name": "Landkreis_Heidekreis",
+    "latitude": 52.95252203809207,
+    "longitude": 9.778299140942742
+  },
+  {
+    "id": 3359,
+    "name": "Landkreis_Stade",
+    "latitude": 53.56851600217231,
+    "longitude": 9.43445555111046
+  },
+  {
+    "id": 3360,
+    "name": "Landkreis_Uelzen",
+    "latitude": 53.00626099352689,
+    "longitude": 10.547353964326195
+  },
+  {
+    "id": 3361,
+    "name": "Landkreis_Verden",
+    "latitude": 52.991601322643184,
+    "longitude": 9.119917721162533
+  },
+  {
+    "id": 3401,
+    "name": "Kreisfreie Stadt_Delmenhorst",
+    "latitude": 53.05515650117078,
+    "longitude": 8.626023438169463
+  },
+  {
+    "id": 3402,
+    "name": "Kreisfreie Stadt_Emden",
+    "latitude": 53.36524511674162,
+    "longitude": 7.192767878189699
+  },
+  {
+    "id": 3403,
+    "name": "Kreisfreie Stadt_Oldenburg (Oldb)",
+    "latitude": 53.15349054423818,
+    "longitude": 8.221249634103527
+  },
+  {
+    "id": 3404,
+    "name": "Kreisfreie Stadt_Osnabrück",
+    "latitude": 52.28282290165588,
+    "longitude": 8.04930045443609
+  },
+  {
+    "id": 3405,
+    "name": "Kreisfreie Stadt_Wilhelmshaven",
+    "latitude": 53.53690713407092,
+    "longitude": 8.106005418762287
+  },
+  {
+    "id": 3451,
+    "name": "Landkreis_Ammerland",
+    "latitude": 53.22252992293336,
+    "longitude": 7.997133458872181
+  },
+  {
+    "id": 3452,
+    "name": "Landkreis_Aurich",
+    "latitude": 53.49332280099312,
+    "longitude": 7.337965472828224
+  },
+  {
+    "id": 3453,
+    "name": "Landkreis_Cloppenburg",
+    "latitude": 52.87418172354565,
+    "longitude": 7.985542619410054
+  },
+  {
+    "id": 3454,
+    "name": "Landkreis_Emsland",
+    "latitude": 52.77687531759493,
+    "longitude": 7.351669657576645
+  },
+  {
+    "id": 3455,
+    "name": "Landkreis_Friesland",
+    "latitude": 53.51455962473429,
+    "longitude": 7.989815772272993
+  },
+  {
+    "id": 3456,
+    "name": "Landkreis_Grafschaft Bentheim",
+    "latitude": 52.532540386555794,
+    "longitude": 6.947588489647203
+  },
+  {
+    "id": 3457,
+    "name": "Landkreis_Leer",
+    "latitude": 53.24620072690207,
+    "longitude": 7.449509663499102
+  },
+  {
+    "id": 3458,
+    "name": "Landkreis_Oldenburg",
+    "latitude": 53.01460979961347,
+    "longitude": 8.367583231700406
+  },
+  {
+    "id": 3459,
+    "name": "Landkreis_Osnabrück",
+    "latitude": 52.47987347005071,
+    "longitude": 7.905712073470241
+  },
+  {
+    "id": 3460,
+    "name": "Landkreis_Vechta",
+    "latitude": 52.657012846187385,
+    "longitude": 8.182517803048015
+  },
+  {
+    "id": 3461,
+    "name": "Landkreis_Wesermarsch",
+    "latitude": 53.35839621896194,
+    "longitude": 8.355787258316951
+  },
+  {
+    "id": 3462,
+    "name": "Landkreis_Wittmund",
+    "latitude": 53.608074384668434,
+    "longitude": 7.70475181395604
+  },
+  {
+    "id": 4011,
+    "name": "Kreisfreie Stadt_Bremen",
+    "latitude": 53.07880326138957,
+    "longitude": 8.827609647692293
+  },
+  {
+    "id": 4012,
+    "name": "Kreisfreie Stadt_Bremerhaven",
+    "latitude": 53.54382397803444,
+    "longitude": 8.589131986691728
+  },
+  {
+    "id": 5111,
+    "name": "Kreisfreie Stadt_Düsseldorf",
+    "latitude": 51.235875305115414,
+    "longitude": 6.799587322365532
+  },
+  {
+    "id": 5112,
+    "name": "Kreisfreie Stadt_Duisburg",
+    "latitude": 51.479584689718386,
+    "longitude": 6.770546608000881
+  },
+  {
+    "id": 5113,
+    "name": "Kreisfreie Stadt_Essen",
+    "latitude": 51.46615232088616,
+    "longitude": 7.008808422550609
+  },
+  {
+    "id": 5114,
+    "name": "Kreisfreie Stadt_Krefeld",
+    "latitude": 51.338342787215524,
+    "longitude": 6.57337046090515
+  },
+  {
+    "id": 5116,
+    "name": "Kreisfreie Stadt_Mönchengladbach",
+    "latitude": 51.211648855431584,
+    "longitude": 6.42800245777486
+  },
+  {
+    "id": 5117,
+    "name": "Kreisfreie Stadt_Mülheim an der Ruhr",
+    "latitude": 51.429900759434396,
+    "longitude": 6.881233124953731
+  },
+  {
+    "id": 5119,
+    "name": "Kreisfreie Stadt_Oberhausen",
+    "latitude": 51.426261730459906,
+    "longitude": 6.881919770425096
+  },
+  {
+    "id": 5120,
+    "name": "Kreisfreie Stadt_Remscheid",
+    "latitude": 51.2272170464215,
+    "longitude": 7.168107248347459
+  },
+  {
+    "id": 5122,
+    "name": "Kreisfreie Stadt_Solingen",
+    "latitude": 51.17309739591919,
+    "longitude": 7.0854448119230735
+  },
+  {
+    "id": 5124,
+    "name": "Kreisfreie Stadt_Wuppertal",
+    "latitude": 51.26037205866341,
+    "longitude": 7.150377113308276
+  },
+  {
+    "id": 5154,
+    "name": "Kreis_Kleve",
+    "latitude": "51.784059960866",
+    "longitude": 6.135913583823037
+  },
+  {
+    "id": 5158,
+    "name": "Kreis_Mettmann",
+    "latitude": 51.3013292023247,
+    "longitude": 7.009584041497976
+  },
+  {
+    "id": 5162,
+    "name": "Kreis_Rhein-Kreis Neuss",
+    "latitude": 51.142279530804146,
+    "longitude": 6.666567200185087
+  },
+  {
+    "id": 5166,
+    "name": "Kreis_Viersen",
+    "latitude": 51.29417403396382,
+    "longitude": 6.311980430960097
+  },
+  {
+    "id": 5170,
+    "name": "Kreis_Wesel",
+    "latitude": 51.665092096978064,
+    "longitude": 6.589425676616546
+  },
+  {
+    "id": 5314,
+    "name": "Kreisfreie Stadt_Bonn",
+    "latitude": 50.72640237689028,
+    "longitude": 7.080735828649516
+  },
+  {
+    "id": 5315,
+    "name": "Kreisfreie Stadt_Köln",
+    "latitude": 50.95381006250618,
+    "longitude": 6.964232445378832
+  },
+  {
+    "id": 5316,
+    "name": "Kreisfreie Stadt_Leverkusen",
+    "latitude": 51.05362173928301,
+    "longitude": 6.987578391405422
+  },
+  {
+    "id": 5334,
+    "name": "Kreis_Städteregion Aachen",
+    "latitude": 50.733411865932574,
+    "longitude": 6.244730859242335
+  },
+  {
+    "id": 5358,
+    "name": "Kreis_Düren",
+    "latitude": 50.80380706103384,
+    "longitude": 6.481375215346931
+  },
+  {
+    "id": 5362,
+    "name": "Kreis_Rhein-Erft-Kreis",
+    "latitude": 50.93135312410829,
+    "longitude": 6.695244803418169
+  },
+  {
+    "id": 5366,
+    "name": "Kreis_Euskirchen",
+    "latitude": 50.532624228765755,
+    "longitude": 6.634735491127818
+  },
+  {
+    "id": 5370,
+    "name": "Kreis_Heinsberg",
+    "latitude": 51.05530878176462,
+    "longitude": 6.151982581330251
+  },
+  {
+    "id": 5374,
+    "name": "Kreis_Oberbergischer Kreis",
+    "latitude": 51.01382420571213,
+    "longitude": 7.521294654528629
+  },
+  {
+    "id": 5378,
+    "name": "Kreis_Rheinisch-Bergischer Kreis",
+    "latitude": 51.05286271873543,
+    "longitude": 7.187262990757663
+  },
+  {
+    "id": 5382,
+    "name": "Kreis_Rhein-Sieg-Kreis",
+    "latitude": 50.825727281033885,
+    "longitude": 7.339182533551173
+  },
+  {
+    "id": 5512,
+    "name": "Kreisfreie Stadt_Bottrop",
+    "latitude": 51.52604242576383,
+    "longitude": 6.924748269830171
+  },
+  {
+    "id": 5513,
+    "name": "Kreisfreie Stadt_Gelsenkirchen",
+    "latitude": 51.55892514295428,
+    "longitude": 7.044567904584336
+  },
+  {
+    "id": 5515,
+    "name": "Kreisfreie Stadt_Münster",
+    "latitude": 51.96531845828084,
+    "longitude": 7.626500409149796
+  },
+  {
+    "id": 5554,
+    "name": "Kreis_Borken",
+    "latitude": 51.89622352115842,
+    "longitude": 6.890443256009244
+  },
+  {
+    "id": 5558,
+    "name": "Kreis_Coesfeld",
+    "latitude": 51.889776372425885,
+    "longitude": 7.341573898704461
+  },
+  {
+    "id": 5562,
+    "name": "Kreis_Recklinghausen",
+    "latitude": 51.70863078062241,
+    "longitude": 7.130566821532685
+  },
+  {
+    "id": 5566,
+    "name": "Kreis_Steinfurt",
+    "latitude": 52.22052136540874,
+    "longitude": 7.574379354898784
+  },
+  {
+    "id": 5570,
+    "name": "Kreis_Warendorf",
+    "latitude": 51.875991202280254,
+    "longitude": 7.917117871532684
+  },
+  {
+    "id": 5711,
+    "name": "Kreisfreie Stadt_Bielefeld",
+    "latitude": 52.033402092921854,
+    "longitude": 8.535372327634471
+  },
+  {
+    "id": 5754,
+    "name": "Kreis_Gütersloh",
+    "latitude": 51.94983224095406,
+    "longitude": 8.275270101197243
+  },
+  {
+    "id": 5758,
+    "name": "Kreis_Herford",
+    "latitude": 52.17796808775974,
+    "longitude": 8.635764094731064
+  },
+  {
+    "id": 5762,
+    "name": "Kreis_Höxter",
+    "latitude": 51.69777372431326,
+    "longitude": 9.154754285673805
+  },
+  {
+    "id": 5766,
+    "name": "Kreis_Lippe",
+    "latitude": 52.009570604238576,
+    "longitude": 8.898849861735119
+  },
+  {
+    "id": 5770,
+    "name": "Kreis_Minden-Lübbecke",
+    "latitude": 52.35032802659005,
+    "longitude": 8.701961354158476
+  },
+  {
+    "id": 5774,
+    "name": "Kreis_Paderborn",
+    "latitude": 51.678102722247246,
+    "longitude": 8.729931968669746
+  },
+  {
+    "id": 5911,
+    "name": "Kreisfreie Stadt_Bochum",
+    "latitude": 51.48334424057005,
+    "longitude": 7.216974581607866
+  },
+  {
+    "id": 5913,
+    "name": "Kreisfreie Stadt_Dortmund",
+    "latitude": 51.519422107644886,
+    "longitude": 7.4664859499074625
+  },
+  {
+    "id": 5914,
+    "name": "Kreisfreie Stadt_Hagen",
+    "latitude": 51.38548427177877,
+    "longitude": 7.48228170896472
+  },
+  {
+    "id": 5915,
+    "name": "Kreisfreie Stadt_Hamm",
+    "latitude": 51.6833906453153,
+    "longitude": 7.815117763123195
+  },
+  {
+    "id": 5916,
+    "name": "Kreisfreie Stadt_Herne",
+    "latitude": 51.539929271149816,
+    "longitude": 7.199947479297283
+  },
+  {
+    "id": 5954,
+    "name": "Kreis_Ennepe-Ruhr-Kreis",
+    "latitude": 51.34485940934255,
+    "longitude": 7.3067412770792375
+  },
+  {
+    "id": 5958,
+    "name": "Kreis_Hochsauerlandkreis",
+    "latitude": 51.31214287352408,
+    "longitude": 8.264966655355723
+  },
+  {
+    "id": 5962,
+    "name": "Kreis_Märkischer Kreis",
+    "latitude": 51.26405328616653,
+    "longitude": 7.715152746211678
+  },
+  {
+    "id": 5966,
+    "name": "Kreis_Olpe",
+    "latitude": 51.097679010264784,
+    "longitude": 7.954215481330251
+  },
+  {
+    "id": 5970,
+    "name": "Kreis_Siegen-Wittgenstein",
+    "latitude": 50.93147451490884,
+    "longitude": 8.14027336247543
+  },
+  {
+    "id": 5974,
+    "name": "Kreis_Soest",
+    "latitude": 51.58464290820889,
+    "longitude": 8.185875340387511
+  },
+  {
+    "id": 5978,
+    "name": "Kreis_Unna",
+    "latitude": 51.64008349063983,
+    "longitude": 7.56440593021979
+  },
+  {
+    "id": 6411,
+    "name": "Kreisfreie Stadt_Darmstadt",
+    "latitude": 49.886706851720795,
+    "longitude": 8.658597850092539
+  },
+  {
+    "id": 6412,
+    "name": "Kreisfreie Stadt_Frankfurt am Main",
+    "latitude": 50.11020439847541,
+    "longitude": 8.658879777819545
+  },
+  {
+    "id": 6413,
+    "name": "Kreisfreie Stadt_Offenbach am Main",
+    "latitude": 50.11680926306675,
+    "longitude": 8.790715708322706
+  },
+  {
+    "id": 6414,
+    "name": "Kreisfreie Stadt_Wiesbaden",
+    "latitude": 50.07990554594152,
+    "longitude": 8.241329416265907
+  },
+  {
+    "id": 6431,
+    "name": "Landkreis_Bergstraße",
+    "latitude": 49.67561930615752,
+    "longitude": 8.603058530589946
+  },
+  {
+    "id": 6432,
+    "name": "Landkreis_Darmstadt-Dieburg",
+    "latitude": 49.86916254444228,
+    "longitude": 8.849001078837466
+  },
+  {
+    "id": 6433,
+    "name": "Landkreis_Groß-Gerau",
+    "latitude": 49.931260489117044,
+    "longitude": 8.46946629112782
+  },
+  {
+    "id": 6434,
+    "name": "Landkreis_Hochtaunuskreis",
+    "latitude": 50.282361711476646,
+    "longitude": 8.50809031349335
+  },
+  {
+    "id": 6435,
+    "name": "Landkreis_Main-Kinzig-Kreis",
+    "latitude": "50.2634172052749",
+    "longitude": 9.337109919965286
+  },
+  {
+    "id": 6436,
+    "name": "Landkreis_Main-Taunus-Kreis",
+    "latitude": 50.12909406185453,
+    "longitude": 8.426167999167156
+  },
+  {
+    "id": 6437,
+    "name": "Landkreis_Odenwaldkreis",
+    "latitude": 49.68922587616926,
+    "longitude": 8.96406047264315
+  },
+  {
+    "id": 6438,
+    "name": "Landkreis_Offenbach",
+    "latitude": 50.01917724127985,
+    "longitude": 8.814167222550612
+  },
+  {
+    "id": 6439,
+    "name": "Landkreis_Rheingau-Taunus-Kreis",
+    "latitude": 50.15156890672192,
+    "longitude": 8.055580840017358
+  },
+  {
+    "id": 6440,
+    "name": "Landkreis_Wetteraukreis",
+    "latitude": 50.35116973988332,
+    "longitude": 8.868689071902839
+  },
+  {
+    "id": 6531,
+    "name": "Landkreis_Gießen",
+    "latitude": 50.745095995154486,
+    "longitude": 8.720493820607302
+  },
+  {
+    "id": 6532,
+    "name": "Landkreis_Lahn-Dill-Kreis",
+    "latitude": 50.66602573768784,
+    "longitude": 8.347006821902838
+  },
+  {
+    "id": 6533,
+    "name": "Landkreis_Limburg-Weilburg",
+    "latitude": 50.447450024451605,
+    "longitude": 8.166958221532687
+  },
+  {
+    "id": 6534,
+    "name": "Landkreis_Marburg-Biedenkopf",
+    "latitude": 50.85088637418148,
+    "longitude": 8.712512467189132
+  },
+  {
+    "id": 6535,
+    "name": "Landkreis_Vogelsbergkreis",
+    "latitude": 50.658904514860275,
+    "longitude": 9.247121303788322
+  },
+  {
+    "id": 6611,
+    "name": "Kreisfreie Stadt_Kassel",
+    "latitude": 51.31617362436576,
+    "longitude": 9.473832775323883
+  },
+  {
+    "id": 6631,
+    "name": "Landkreis_Fulda",
+    "latitude": 50.56539727111656,
+    "longitude": 9.73084665850203
+  },
+  {
+    "id": 6632,
+    "name": "Landkreis_Hersfeld-Rotenburg",
+    "latitude": 50.91968239210204,
+    "longitude": 9.727449340387508
+  },
+  {
+    "id": 6633,
+    "name": "Landkreis_Kassel",
+    "latitude": 51.46972024376716,
+    "longitude": 9.392230730960097
+  },
+  {
+    "id": 6634,
+    "name": "Landkreis_Schwalm-Eder-Kreis",
+    "latitude": 51.02905728877578,
+    "longitude": 9.339180049074617
+  },
+  {
+    "id": 6635,
+    "name": "Landkreis_Waldeck-Frankenberg",
+    "latitude": 51.213453228467706,
+    "longitude": 8.928598215621733
+  },
+  {
+    "id": 6636,
+    "name": "Landkreis_Werra-Meißner-Kreis",
+    "latitude": 51.19236858157083,
+    "longitude": 9.922686249446981
+  },
+  {
+    "id": 7111,
+    "name": "Kreisfreie Stadt_Koblenz",
+    "latitude": 50.35120412990451,
+    "longitude": 7.576586741897438
+  },
+  {
+    "id": 7131,
+    "name": "Landkreis_Ahrweiler",
+    "latitude": 50.482250632810235,
+    "longitude": 7.033541967652719
+  },
+  {
+    "id": 7132,
+    "name": "Landkreis_Altenkirchen (Westerwald)",
+    "latitude": 50.7917051869186,
+    "longitude": 7.792575411736405
+  },
+  {
+    "id": 7133,
+    "name": "Landkreis_Bad Kreuznach",
+    "latitude": 49.845358898291636,
+    "longitude": 7.678237504510182
+  },
+  {
+    "id": 7134,
+    "name": "Landkreis_Birkenfeld",
+    "latitude": 49.72403445645508,
+    "longitude": 7.283292359408369
+  },
+  {
+    "id": 7135,
+    "name": "Landkreis_Cochem-Zell",
+    "latitude": 50.15411526088238,
+    "longitude": 7.1626136537341685
+  },
+  {
+    "id": 7137,
+    "name": "Landkreis_Mayen-Koblenz",
+    "latitude": 50.33462496261623,
+    "longitude": 7.3677358838993054
+  },
+  {
+    "id": 7138,
+    "name": "Landkreis_Neuwied",
+    "latitude": 50.54366133499974,
+    "longitude": 7.417505234141421
+  },
+  {
+    "id": 7140,
+    "name": "Landkreis_Rhein-Hunsrück-Kreis",
+    "latitude": 50.00235474654745,
+    "longitude": 7.532637129777135
+  },
+  {
+    "id": 7141,
+    "name": "Landkreis_Rhein-Lahn-Kreis",
+    "latitude": 50.2791169713864,
+    "longitude": 7.816997220998882
+  },
+  {
+    "id": 7143,
+    "name": "Landkreis_Westerwaldkreis",
+    "latitude": 50.57387700377824,
+    "longitude": 7.844046293937795
+  },
+  {
+    "id": 7211,
+    "name": "Kreisfreie Stadt_Trier",
+    "latitude": 49.76879073504406,
+    "longitude": 6.653236350194003
+  },
+  {
+    "id": 7231,
+    "name": "Landkreis_Bernkastel-Wittlich",
+    "latitude": 49.95523816347295,
+    "longitude": 6.9649643996119845
+  },
+  {
+    "id": 7232,
+    "name": "Landkreis_Eifelkreis Bitburg-Prüm",
+    "latitude": 50.0725008090377,
+    "longitude": 6.381295557080332
+  },
+  {
+    "id": 7233,
+    "name": "Landkreis_Vulkaneifel",
+    "latitude": 50.25486760417625,
+    "longitude": 6.755790615082566
+  },
+  {
+    "id": 7235,
+    "name": "Landkreis_Trier-Saarburg",
+    "latitude": 49.62970987682764,
+    "longitude": 6.60940042201701
+  },
+  {
+    "id": 7311,
+    "name": "Kreisfreie Stadt_Frankenthal (Pfalz)",
+    "latitude": 49.53218741810365,
+    "longitude": 8.350958037851534
+  },
+  {
+    "id": 7312,
+    "name": "Kreisfreie Stadt_Kaiserslautern",
+    "latitude": 49.446754564313956,
+    "longitude": 7.758250964112553
+  },
+  {
+    "id": 7313,
+    "name": "Kreisfreie Stadt_Landau in der Pfalz",
+    "latitude": 49.19996985924822,
+    "longitude": 8.112641036421344
+  },
+  {
+    "id": 7314,
+    "name": "Kreisfreie Stadt_Ludwigshafen am Rhein",
+    "latitude": 49.47725378873986,
+    "longitude": 8.437871982129222
+  },
+  {
+    "id": 7315,
+    "name": "Kreisfreie Stadt_Mainz",
+    "latitude": 49.98845950399043,
+    "longitude": 8.25025536176046
+  },
+  {
+    "id": 7316,
+    "name": "Kreisfreie Stadt_Neustadt an der Weinstraße",
+    "latitude": 49.356281027905055,
+    "longitude": 8.151429976867083
+  },
+  {
+    "id": 7317,
+    "name": "Kreisfreie Stadt_Pirmasens",
+    "latitude": 49.20298829860712,
+    "longitude": 7.5919019749029975
+  },
+  {
+    "id": 7318,
+    "name": "Kreisfreie Stadt_Speyer",
+    "latitude": 49.33620630157115,
+    "longitude": 8.43074366117845
+  },
+  {
+    "id": 7319,
+    "name": "Kreisfreie Stadt_Worms",
+    "latitude": 49.63976049249758,
+    "longitude": 8.304761870804878
+  },
+  {
+    "id": 7320,
+    "name": "Kreisfreie Stadt_Zweibrücken",
+    "latitude": 49.24808706442499,
+    "longitude": 7.366325552158089
+  },
+  {
+    "id": 7331,
+    "name": "Landkreis_Alzey-Worms",
+    "latitude": 49.76472933071838,
+    "longitude": 8.122961105528308
+  },
+  {
+    "id": 7332,
+    "name": "Landkreis_Bad Dürkheim",
+    "latitude": 49.47187307745694,
+    "longitude": 8.127930675654955
+  },
+  {
+    "id": 7333,
+    "name": "Landkreis_Donnersbergkreis",
+    "latitude": 49.639528097938424,
+    "longitude": 7.910035549029984
+  },
+  {
+    "id": 7334,
+    "name": "Landkreis_Germersheim",
+    "latitude": 49.18821051164517,
+    "longitude": 8.302136803492054
+  },
+  {
+    "id": 7335,
+    "name": "Landkreis_Kaiserslautern",
+    "latitude": 49.468545536776126,
+    "longitude": 7.553974542627885
+  },
+  {
+    "id": 7336,
+    "name": "Landkreis_Kusel",
+    "latitude": 49.545379510547036,
+    "longitude": 7.436414179243232
+  },
+  {
+    "id": 7337,
+    "name": "Landkreis_Südliche Weinstraße",
+    "latitude": 49.1381570688948,
+    "longitude": 7.961350594179909
+  },
+  {
+    "id": 7338,
+    "name": "Landkreis_Rhein-Pfalz-Kreis",
+    "latitude": 49.45303038742487,
+    "longitude": 8.35472780373417
+  },
+  {
+    "id": 7339,
+    "name": "Landkreis_Mainz-Bingen",
+    "latitude": 49.934765727485896,
+    "longitude": 8.039998650388005
+  },
+  {
+    "id": 7340,
+    "name": "Landkreis_Südwestpfalz",
+    "latitude": 49.290847544617165,
+    "longitude": 7.629229632347283
+  },
+  {
+    "id": 8111,
+    "name": "Stadtkreis_Stuttgart",
+    "latitude": 48.784864651285375,
+    "longitude": 9.173438649805997
+  },
+  {
+    "id": 8115,
+    "name": "Landkreis_Böblingen",
+    "latitude": 48.67665903016649,
+    "longitude": 8.941515621774894
+  },
+  {
+    "id": 8116,
+    "name": "Landkreis_Esslingen",
+    "latitude": 48.66793420968209,
+    "longitude": 9.356398896265832
+  },
+  {
+    "id": 8117,
+    "name": "Landkreis_Göppingen",
+    "latitude": 48.67238557989142,
+    "longitude": 9.699900907080334
+  },
+  {
+    "id": 8118,
+    "name": "Landkreis_Ludwigsburg",
+    "latitude": 48.939117984597544,
+    "longitude": 9.11961737589707
+  },
+  {
+    "id": 8119,
+    "name": "Landkreis_Rems-Murr-Kreis",
+    "latitude": 48.91367980685912,
+    "longitude": 9.517703805286194
+  },
+  {
+    "id": 8121,
+    "name": "Stadtkreis_Heilbronn",
+    "latitude": 49.150590223883995,
+    "longitude": 9.200033965082568
+  },
+  {
+    "id": 8125,
+    "name": "Landkreis_Heilbronn",
+    "latitude": 49.252882957316025,
+    "longitude": 9.26869851406444
+  },
+  {
+    "id": 8126,
+    "name": "Landkreis_Hohenlohekreis",
+    "latitude": 49.287999523730484,
+    "longitude": 9.606541768428729
+  },
+  {
+    "id": 8127,
+    "name": "Landkreis_Schwäbisch Hall",
+    "latitude": 49.14286002592079,
+    "longitude": 9.924737565858582
+  },
+  {
+    "id": 8128,
+    "name": "Landkreis_Main-Tauber-Kreis",
+    "latitude": 49.51846011088627,
+    "longitude": 9.721166849611992
+  },
+  {
+    "id": 8135,
+    "name": "Landkreis_Heidenheim",
+    "latitude": 48.675804788492684,
+    "longitude": 10.132986691609759
+  },
+  {
+    "id": 8136,
+    "name": "Landkreis_Ostalbkreis",
+    "latitude": 48.90258061430557,
+    "longitude": 10.112772358390242
+  },
+  {
+    "id": 8211,
+    "name": "Stadtkreis_Baden-Baden",
+    "latitude": 48.7444271759598,
+    "longitude": 8.250456938215484
+  },
+  {
+    "id": 8212,
+    "name": "Stadtkreis_Karlsruhe",
+    "latitude": 49.014723245742914,
+    "longitude": 8.401637426867085
+  },
+  {
+    "id": 8215,
+    "name": "Landkreis_Karlsruhe",
+    "latitude": 49.2679221768686,
+    "longitude": 8.740418270610874
+  },
+  {
+    "id": 8216,
+    "name": "Landkreis_Rastatt",
+    "latitude": 48.89175949957382,
+    "longitude": 8.198352607856355
+  },
+  {
+    "id": 8221,
+    "name": "Stadtkreis_Heidelberg",
+    "latitude": 49.40092507519548,
+    "longitude": 8.672799483535355
+  },
+  {
+    "id": 8222,
+    "name": "Stadtkreis_Mannheim",
+    "latitude": 49.48911354520629,
+    "longitude": 8.46671290727435
+  },
+  {
+    "id": 8225,
+    "name": "Landkreis_Neckar-Odenwald-Kreis",
+    "latitude": 49.486112617805134,
+    "longitude": 9.28704669626583
+  },
+  {
+    "id": 8226,
+    "name": "Landkreis_Rhein-Neckar-Kreis",
+    "latitude": 49.29934822885231,
+    "longitude": 8.828908752716043
+  },
+  {
+    "id": 8231,
+    "name": "Stadtkreis_Pforzheim",
+    "latitude": 48.88463104253513,
+    "longitude": 8.703890697065898
+  },
+  {
+    "id": 8235,
+    "name": "Landkreis_Calw",
+    "latitude": 48.69878195053932,
+    "longitude": 8.623413281571269
+  },
+  {
+    "id": 8236,
+    "name": "Landkreis_Enzkreis",
+    "latitude": 48.97639226473094,
+    "longitude": 8.78483759936988
+  },
+  {
+    "id": 8237,
+    "name": "Landkreis_Freudenstadt",
+    "latitude": 48.4959132742555,
+    "longitude": 8.440715409650485
+  },
+  {
+    "id": 8311,
+    "name": "Stadtkreis_Freiburg im Breisgau",
+    "latitude": 48.0100547781338,
+    "longitude": 7.820109319398745
+  },
+  {
+    "id": 8315,
+    "name": "Landkreis_Breisgau-Hochschwarzwald",
+    "latitude": 47.95178780283175,
+    "longitude": 8.070797586227341
+  },
+  {
+    "id": 8316,
+    "name": "Landkreis_Emmendingen",
+    "latitude": 48.15309049586719,
+    "longitude": 7.90506525116402
+  },
+  {
+    "id": 8317,
+    "name": "Landkreis_Ortenaukreis",
+    "latitude": 48.44415581436778,
+    "longitude": 7.97343601197852
+  },
+  {
+    "id": 8325,
+    "name": "Landkreis_Rottweil",
+    "latitude": 48.25520488561554,
+    "longitude": 8.517077986469456
+  },
+  {
+    "id": 8326,
+    "name": "Landkreis_Schwarzwald-Baar-Kreis",
+    "latitude": 48.04831802535307,
+    "longitude": 8.383007372550907
+  },
+  {
+    "id": 8327,
+    "name": "Landkreis_Tuttlingen",
+    "latitude": 48.03437635925863,
+    "longitude": 8.807508277449093
+  },
+  {
+    "id": 8335,
+    "name": "Landkreis_Konstanz",
+    "latitude": 47.814332049325884,
+    "longitude": 8.876836307080332
+  },
+  {
+    "id": 8336,
+    "name": "Landkreis_Lörrach",
+    "latitude": 47.69016212177088,
+    "longitude": 7.738932134917431
+  },
+  {
+    "id": 8337,
+    "name": "Landkreis_Waldshut",
+    "latitude": 47.688634906115354,
+    "longitude": 8.186220369446858
+  },
+  {
+    "id": 8415,
+    "name": "Landkreis_Reutlingen",
+    "latitude": 48.425494716964465,
+    "longitude": 9.363127362754534
+  },
+  {
+    "id": 8416,
+    "name": "Landkreis_Tübingen",
+    "latitude": 48.487550956873505,
+    "longitude": 8.984571450970018
+  },
+  {
+    "id": 8417,
+    "name": "Landkreis_Zollernalbkreis",
+    "latitude": 48.27375557296078,
+    "longitude": 8.948310214306556
+  },
+  {
+    "id": 8421,
+    "name": "Stadtkreis_Ulm",
+    "latitude": 48.409699812938015,
+    "longitude": 9.95789432352092
+  },
+  {
+    "id": 8425,
+    "name": "Landkreis_Alb-Donau-Kreis",
+    "latitude": 48.43774605308456,
+    "longitude": 9.732829170464985
+  },
+  {
+    "id": 8426,
+    "name": "Landkreis_Biberach",
+    "latitude": 48.10105934247798,
+    "longitude": 9.822198060718279
+  },
+  {
+    "id": 8435,
+    "name": "Landkreis_Bodenseekreis",
+    "latitude": 47.74898654325089,
+    "longitude": 9.37280606197852
+  },
+  {
+    "id": 8436,
+    "name": "Landkreis_Ravensburg",
+    "latitude": 47.83547534952062,
+    "longitude": 9.762699218428732
+  },
+  {
+    "id": 8437,
+    "name": "Landkreis_Sigmaringen",
+    "latitude": 48.03516661425904,
+    "longitude": 9.218272238263596
+  },
+  {
+    "id": 9161,
+    "name": "Kreisfreie Stadt_Ingolstadt",
+    "latitude": 48.76220144979821,
+    "longitude": 11.418447070174759
+  },
+  {
+    "id": 9162,
+    "name": "Kreisfreie Stadt_München",
+    "latitude": 48.15468171238829,
+    "longitude": 11.560031855480196
+  },
+  {
+    "id": 9163,
+    "name": "Kreisfreie Stadt_Rosenheim",
+    "latitude": 47.84565765720435,
+    "longitude": 12.110896889015551
+  },
+  {
+    "id": 9171,
+    "name": "Landkreis_Altötting",
+    "latitude": 48.22479936298889,
+    "longitude": 12.713689493937796
+  },
+  {
+    "id": 9172,
+    "name": "Landkreis_Berchtesgadener Land",
+    "latitude": 47.65887859823193,
+    "longitude": 12.878572521774894
+  },
+  {
+    "id": 9173,
+    "name": "Landkreis_Bad Tölz-Wolfratshausen",
+    "latitude": 47.72795841729656,
+    "longitude": 11.509260551940029
+  },
+  {
+    "id": 9174,
+    "name": "Landkreis_Dachau",
+    "latitude": 48.33877048028295,
+    "longitude": 11.371623733123291
+  },
+  {
+    "id": 9175,
+    "name": "Landkreis_Ebersberg",
+    "latitude": 48.06601139575081,
+    "longitude": 11.926337209214363
+  },
+  {
+    "id": 9176,
+    "name": "Landkreis_Eichstätt",
+    "latitude": 48.91156300629517,
+    "longitude": 11.360614519204741
+  },
+  {
+    "id": 9177,
+    "name": "Landkreis_Erding",
+    "latitude": 48.30956926820656,
+    "longitude": 12.003512482347281
+  },
+  {
+    "id": 9178,
+    "name": "Landkreis_Freising",
+    "latitude": 48.45617135891535,
+    "longitude": 11.705895429243231
+  },
+  {
+    "id": 9179,
+    "name": "Landkreis_Fürstenfeldbruck",
+    "latitude": 48.203886067740804,
+    "longitude": 11.186088335499443
+  },
+  {
+    "id": 9180,
+    "name": "Landkreis_Garmisch-Partenkirchen",
+    "latitude": 47.573075205866424,
+    "longitude": 11.107645198059968
+  },
+  {
+    "id": 9181,
+    "name": "Landkreis_Landsberg am Lech",
+    "latitude": 48.02755812052214,
+    "longitude": 10.951994299611997
+  },
+  {
+    "id": 9182,
+    "name": "Landkreis_Miesbach",
+    "latitude": 47.754363830040255,
+    "longitude": 11.803468075897069
+  },
+  {
+    "id": 9183,
+    "name": "Landkreis_Mühldorf a. Inn",
+    "latitude": 48.25498532818367,
+    "longitude": 12.401095922308794
+  },
+  {
+    "id": 9184,
+    "name": "Landkreis_München",
+    "latitude": 48.017535026455256,
+    "longitude": 11.604198294713806
+  },
+  {
+    "id": 9185,
+    "name": "Landkreis_Neuburg-Schrobenhausen",
+    "latitude": 48.67852034817657,
+    "longitude": 11.187850194713805
+  },
+  {
+    "id": 9186,
+    "name": "Landkreis_Pfaffenhofen a.d. Ilm",
+    "latitude": 48.52604016372562,
+    "longitude": 11.494019549074775
+  },
+  {
+    "id": 9187,
+    "name": "Landkreis_Rosenheim",
+    "latitude": 47.963576074892124,
+    "longitude": 12.180974066634592
+  },
+  {
+    "id": 9188,
+    "name": "Landkreis_Starnberg",
+    "latitude": 48.03379823904883,
+    "longitude": 11.26545200373417
+  },
+  {
+    "id": 9189,
+    "name": "Landkreis_Traunstein",
+    "latitude": 47.95296159154177,
+    "longitude": 12.645622333899306
+  },
+  {
+    "id": 9190,
+    "name": "Landkreis_Weilheim-Schongau",
+    "latitude": 47.812642005456226,
+    "longitude": 11.02978798414142
+  },
+  {
+    "id": 9261,
+    "name": "Kreisfreie Stadt_Landshut",
+    "latitude": 48.544707416239895,
+    "longitude": 12.148284945295817
+  },
+  {
+    "id": 9262,
+    "name": "Kreisfreie Stadt_Passau",
+    "latitude": 48.5829598380257,
+    "longitude": 13.414030725291004
+  },
+  {
+    "id": 9263,
+    "name": "Kreisfreie Stadt_Straubing",
+    "latitude": 48.88260687717872,
+    "longitude": 12.572451670392818
+  },
+  {
+    "id": 9271,
+    "name": "Landkreis_Deggendorf",
+    "latitude": 48.79361912705181,
+    "longitude": 12.999903731571267
+  },
+  {
+    "id": 9272,
+    "name": "Landkreis_Freyung-Grafenau",
+    "latitude": "48.8457043572641",
+    "longitude": 13.50453429548982
+  },
+  {
+    "id": 9273,
+    "name": "Landkreis_Kelheim",
+    "latitude": 48.843773924716885,
+    "longitude": 11.86915326842873
+  },
+  {
+    "id": 9274,
+    "name": "Landkreis_Landshut",
+    "latitude": 48.58862514466174,
+    "longitude": 12.175175671774891
+  },
+  {
+    "id": 9275,
+    "name": "Landkreis_Passau",
+    "latitude": 48.49962025037134,
+    "longitude": 13.251757991851873
+  },
+  {
+    "id": 9276,
+    "name": "Landkreis_Regen",
+    "latitude": 49.0437618286011,
+    "longitude": 13.070384980795257
+  },
+  {
+    "id": 9277,
+    "name": "Landkreis_Rottal-Inn",
+    "latitude": 48.435949350616895,
+    "longitude": 12.868154006838216
+  },
+  {
+    "id": 9278,
+    "name": "Landkreis_Straubing-Bogen",
+    "latitude": 48.996515210016675,
+    "longitude": 12.657002730311028
+  },
+  {
+    "id": 9279,
+    "name": "Landkreis_Dingolfing-Landau",
+    "latitude": 48.63813898678057,
+    "longitude": 12.584918651406133
+  },
+  {
+    "id": 9361,
+    "name": "Kreisfreie Stadt_Amberg",
+    "latitude": 49.45053786132575,
+    "longitude": 11.845764061372451
+  },
+  {
+    "id": 9362,
+    "name": "Kreisfreie Stadt_Regensburg",
+    "latitude": 49.012011279113715,
+    "longitude": 12.11188605235209
+  },
+  {
+    "id": 9363,
+    "name": "Kreisfreie Stadt_Weiden i.d. OPf.",
+    "latitude": 49.67835659837747,
+    "longitude": 12.15891653743256
+  },
+  {
+    "id": 9371,
+    "name": "Landkreis_Amberg-Sulzbach",
+    "latitude": 49.56384720012044,
+    "longitude": 11.73489053671157
+  },
+  {
+    "id": 9372,
+    "name": "Landkreis_Cham",
+    "latitude": 49.26402850501329,
+    "longitude": 12.656674427691208
+  },
+  {
+    "id": 9373,
+    "name": "Landkreis_Neumarkt i.d. OPf.",
+    "latitude": 49.24360161375859,
+    "longitude": 11.536088734917431
+  },
+  {
+    "id": 9374,
+    "name": "Landkreis_Neustadt a.d. Waldnaab",
+    "latitude": 49.72805617222618,
+    "longitude": 12.158484779389108
+  },
+  {
+    "id": 9375,
+    "name": "Landkreis_Regensburg",
+    "latitude": 49.054879631442674,
+    "longitude": 12.112857301940029
+  },
+  {
+    "id": 9376,
+    "name": "Landkreis_Schwandorf",
+    "latitude": 49.391488748223665,
+    "longitude": 12.245519243161782
+  },
+  {
+    "id": 9377,
+    "name": "Landkreis_Tirschenreuth",
+    "latitude": 49.92567712297307,
+    "longitude": 12.14911983491743
+  },
+  {
+    "id": 9461,
+    "name": "Kreisfreie Stadt_Bamberg",
+    "latitude": 49.89614529170234,
+    "longitude": 10.893089565882637
+  },
+  {
+    "id": 9462,
+    "name": "Kreisfreie Stadt_Bayreuth",
+    "latitude": 49.94410560748431,
+    "longitude": 11.583395975485008
+  },
+  {
+    "id": 9463,
+    "name": "Kreisfreie Stadt_Coburg",
+    "latitude": 50.26988559810677,
+    "longitude": 10.951655669228796
+  },
+  {
+    "id": 9464,
+    "name": "Kreisfreie Stadt_Hof",
+    "latitude": 50.31377432698236,
+    "longitude": 11.90280014842392
+  },
+  {
+    "id": 9471,
+    "name": "Landkreis_Bamberg",
+    "latitude": 49.956426944223395,
+    "longitude": 11.01461179500559
+  },
+  {
+    "id": 9472,
+    "name": "Landkreis_Bayreuth",
+    "latitude": 49.82912855981886,
+    "longitude": 11.455752481813382
+  },
+  {
+    "id": 9473,
+    "name": "Landkreis_Coburg",
+    "latitude": 50.34030158125997,
+    "longitude": 10.842903303200272
+  },
+  {
+    "id": 9474,
+    "name": "Landkreis_Forchheim",
+    "latitude": 49.72612720470873,
+    "longitude": 11.163741264306555
+  },
+  {
+    "id": 9475,
+    "name": "Landkreis_Hof",
+    "latitude": 50.26801403099223,
+    "longitude": 11.700504851648247
+  },
+  {
+    "id": 9476,
+    "name": "Landkreis_Kronach",
+    "latitude": 50.33810425985423,
+    "longitude": 11.37781992667308
+  },
+  {
+    "id": 9477,
+    "name": "Landkreis_Kulmbach",
+    "latitude": 50.11498447790949,
+    "longitude": 11.47596575940837
+  },
+  {
+    "id": 9478,
+    "name": "Landkreis_Lichtenfels",
+    "latitude": 50.13230522433171,
+    "longitude": 11.071795161202505
+  },
+  {
+    "id": 9479,
+    "name": "Landkreis_Wunsiedel i. Fichtelgebirge",
+    "latitude": 50.093396672499665,
+    "longitude": 12.049263387245466
+  },
+  {
+    "id": 9561,
+    "name": "Kreisfreie Stadt_Ansbach",
+    "latitude": 49.301291142829555,
+    "longitude": 10.570241689403558
+  },
+  {
+    "id": 9562,
+    "name": "Kreisfreie Stadt_Erlangen",
+    "latitude": 49.59262676518573,
+    "longitude": 11.004224657832289
+  },
+  {
+    "id": 9563,
+    "name": "Kreisfreie Stadt_Fürth",
+    "latitude": 49.4961663599003,
+    "longitude": 10.965110134311367
+  },
+  {
+    "id": 9564,
+    "name": "Kreisfreie Stadt_Nürnberg",
+    "latitude": 49.454620740267494,
+    "longitude": 11.070895883171403
+  },
+  {
+    "id": 9565,
+    "name": "Kreisfreie Stadt_Schwabach",
+    "latitude": 49.33167635286771,
+    "longitude": 11.021490610984447
+  },
+  {
+    "id": 9571,
+    "name": "Landkreis_Ansbach",
+    "latitude": 49.197330839694516,
+    "longitude": 10.393578826139185
+  },
+  {
+    "id": 9572,
+    "name": "Landkreis_Erlangen-Höchstadt",
+    "latitude": 49.68090736534542,
+    "longitude": 10.83793162201701
+  },
+  {
+    "id": 9573,
+    "name": "Landkreis_Fürth",
+    "latitude": 49.45915796206433,
+    "longitude": 10.828768985111436
+  },
+  {
+    "id": 9574,
+    "name": "Landkreis_Nürnberger Land",
+    "latitude": 49.50951640588009,
+    "longitude": 11.354740767652718
+  },
+  {
+    "id": 9575,
+    "name": "Landkreis_Neustadt a.d. Aisch-Bad Windsheim",
+    "latitude": 49.590126887599695,
+    "longitude": 10.491563497817856
+  },
+  {
+    "id": 9576,
+    "name": "Landkreis_Roth",
+    "latitude": 49.23251385065258,
+    "longitude": 11.106380266876707
+  },
+  {
+    "id": 9577,
+    "name": "Landkreis_Weißenburg-Gunzenhausen",
+    "latitude": 49.037384886962336,
+    "longitude": 10.863593638263595
+  },
+  {
+    "id": 9661,
+    "name": "Kreisfreie Stadt_Aschaffenburg",
+    "latitude": 49.974975812471214,
+    "longitude": 9.145906274320991
+  },
+  {
+    "id": 9662,
+    "name": "Kreisfreie Stadt_Schweinfurt",
+    "latitude": 50.040046013549926,
+    "longitude": 10.221585229607182
+  },
+  {
+    "id": 9663,
+    "name": "Kreisfreie Stadt_Würzburg",
+    "latitude": 49.79259231637736,
+    "longitude": 9.938393742943724
+  },
+  {
+    "id": 9671,
+    "name": "Landkreis_Aschaffenburg",
+    "latitude": 50.07511753789072,
+    "longitude": 9.249820628225107
+  },
+  {
+    "id": 9672,
+    "name": "Landkreis_Bad Kissingen",
+    "latitude": 50.23075816537996,
+    "longitude": 9.899824235935558
+  },
+  {
+    "id": 9673,
+    "name": "Landkreis_Rhön-Grabfeld",
+    "latitude": 50.41779279889106,
+    "longitude": 10.189621550630118
+  },
+  {
+    "id": 9674,
+    "name": "Landkreis_Haßberge",
+    "latitude": 50.09102866281753,
+    "longitude": 10.601223595489817
+  },
+  {
+    "id": 9675,
+    "name": "Landkreis_Kitzingen",
+    "latitude": 49.77446037859657,
+    "longitude": 10.25432428414142
+  },
+  {
+    "id": 9676,
+    "name": "Landkreis_Miltenberg",
+    "latitude": 49.80076964401326,
+    "longitude": 9.236569130795257
+  },
+  {
+    "id": 9677,
+    "name": "Landkreis_Main-Spessart",
+    "latitude": 50.01623124687712,
+    "longitude": 9.62364051377266
+  },
+  {
+    "id": 9678,
+    "name": "Landkreis_Schweinfurt",
+    "latitude": 49.95217148349205,
+    "longitude": 10.329985436227343
+  },
+  {
+    "id": 9679,
+    "name": "Landkreis_Würzburg",
+    "latitude": 49.63212019805927,
+    "longitude": 9.954822888797489
+  },
+  {
+    "id": 9761,
+    "name": "Kreisfreie Stadt_Augsburg",
+    "latitude": 48.34904512126072,
+    "longitude": 10.894055860766391
+  },
+  {
+    "id": 9762,
+    "name": "Kreisfreie Stadt_Kaufbeuren",
+    "latitude": 47.882167138206945,
+    "longitude": 10.6190294529341
+  },
+  {
+    "id": 9763,
+    "name": "Kreisfreie Stadt_Kempten (Allgäu)",
+    "latitude": 47.740077955992305,
+    "longitude": 10.30896203882155
+  },
+  {
+    "id": 9764,
+    "name": "Kreisfreie Stadt_Memmingen",
+    "latitude": 47.98161605493291,
+    "longitude": 10.182878308026291
+  },
+  {
+    "id": 9771,
+    "name": "Landkreis_Aichach-Friedberg",
+    "latitude": 48.447474489734056,
+    "longitude": 11.037716029243231
+  },
+  {
+    "id": 9772,
+    "name": "Landkreis_Augsburg",
+    "latitude": 48.384373675407026,
+    "longitude": 10.642612594955919
+  },
+  {
+    "id": 9773,
+    "name": "Landkreis_Dillingen a.d. Donau",
+    "latitude": 48.59936636982464,
+    "longitude": 10.512581499611994
+  },
+  {
+    "id": 9774,
+    "name": "Landkreis_Günzburg",
+    "latitude": 48.360420498909924,
+    "longitude": 10.382661546265831
+  },
+  {
+    "id": 9775,
+    "name": "Landkreis_Neu-Ulm",
+    "latitude": 48.33267520980937,
+    "longitude": 10.142021445489817
+  },
+  {
+    "id": 9776,
+    "name": "Landkreis_Lindau (Bodensee)",
+    "latitude": 47.61234229307126,
+    "longitude": 9.91025693545133
+  },
+  {
+    "id": 9777,
+    "name": "Landkreis_Ostallgäu",
+    "latitude": 47.75084521796735,
+    "longitude": 10.561108264160664
+  },
+  {
+    "id": 9778,
+    "name": "Landkreis_Unterallgäu",
+    "latitude": 48.072120823887346,
+    "longitude": 10.400081200388007
+  },
+  {
+    "id": 9779,
+    "name": "Landkreis_Donau-Ries",
+    "latitude": 48.83318033427426,
+    "longitude": 10.68937361197852
+  },
+  {
+    "id": 9780,
+    "name": "Landkreis_Oberallgäu",
+    "latitude": 47.582224242807925,
+    "longitude": 10.223175876673084
+  },
+  {
+    "id": 10041,
+    "name": "Landkreis_Regionalverband Saarbrücken",
+    "latitude": 49.27683926463498,
+    "longitude": 6.973772652522039
+  },
+  {
+    "id": 10042,
+    "name": "Landkreis_Merzig-Wadern",
+    "latitude": 49.475267520012615,
+    "longitude": 6.65959395451018
+  },
+  {
+    "id": 10043,
+    "name": "Landkreis_Neunkirchen",
+    "latitude": 49.38366400080482,
+    "longitude": 7.119940578031104
+  },
+  {
+    "id": 10044,
+    "name": "Landkreis_Saarlouis",
+    "latitude": 49.31930773495155,
+    "longitude": 6.738086889621616
+  },
+  {
+    "id": 10045,
+    "name": "Landkreis_Saarpfalz-Kreis",
+    "latitude": 49.23678790844377,
+    "longitude": 7.203789393937794
+  },
+  {
+    "id": 10046,
+    "name": "Landkreis_St. Wendel",
+    "latitude": 49.5178635495485,
+    "longitude": 7.089127249417985
+  },
+  {
+    "id": 12051,
+    "name": "Kreisfreie Stadt_Brandenburg an der Havel",
+    "latitude": 52.407203446323855,
+    "longitude": 12.506116870804878
+  },
+  {
+    "id": 12052,
+    "name": "Kreisfreie Stadt_Cottbus",
+    "latitude": 51.77719295725233,
+    "longitude": 14.343701361396507
+  },
+  {
+    "id": 12053,
+    "name": "Kreisfreie Stadt_Frankfurt (Oder)",
+    "latitude": 52.33875186899499,
+    "longitude": 14.48275492647908
+  },
+  {
+    "id": 12054,
+    "name": "Kreisfreie Stadt_Potsdam",
+    "latitude": 52.40176709204808,
+    "longitude": 13.052474860378382
+  },
+  {
+    "id": 12060,
+    "name": "Landkreis_Barnim",
+    "latitude": 52.872615584034115,
+    "longitude": 13.711302630165125
+  },
+  {
+    "id": 12061,
+    "name": "Landkreis_Dahme-Spreewald",
+    "latitude": 52.05783487887082,
+    "longitude": 13.815538916730816
+  },
+  {
+    "id": 12062,
+    "name": "Landkreis_Elbe-Elster",
+    "latitude": 51.61369630447656,
+    "longitude": 13.439853302958157
+  },
+  {
+    "id": 12063,
+    "name": "Landkreis_Havelland",
+    "latitude": 52.66201113697707,
+    "longitude": 12.560768172405018
+  },
+  {
+    "id": 12064,
+    "name": "Landkreis_Märkisch-Oderland",
+    "latitude": 52.626158052096024,
+    "longitude": 14.126488690979638
+  },
+  {
+    "id": 12065,
+    "name": "Landkreis_Oberhavel",
+    "latitude": 52.91806137314027,
+    "longitude": 13.200035778613113
+  },
+  {
+    "id": 12066,
+    "name": "Landkreis_Oberspreewald-Lausitz",
+    "latitude": 51.7073578511806,
+    "longitude": 13.971604638797492
+  },
+  {
+    "id": 12067,
+    "name": "Landkreis_Oder-Spree",
+    "latitude": 52.26294764849587,
+    "longitude": 14.181549807468338
+  },
+  {
+    "id": 12068,
+    "name": "Landkreis_Ostprignitz-Ruppin",
+    "latitude": "53.0140183613551",
+    "longitude": 12.655887308002237
+  },
+  {
+    "id": 12069,
+    "name": "Landkreis_Potsdam-Mittelmark",
+    "latitude": 52.23380625991935,
+    "longitude": 12.655556812608639
+  },
+  {
+    "id": 12070,
+    "name": "Landkreis_Prignitz",
+    "latitude": 53.126022879543996,
+    "longitude": 11.947949305432084
+  },
+  {
+    "id": 12071,
+    "name": "Landkreis_Spree-Neiße",
+    "latitude": 51.62552864787349,
+    "longitude": 14.46197247036876
+  },
+  {
+    "id": 12072,
+    "name": "Landkreis_Teltow-Fläming",
+    "latitude": 52.12067929635131,
+    "longitude": 13.275832076042962
+  },
+  {
+    "id": 12073,
+    "name": "Landkreis_Uckermark",
+    "latitude": 53.25429790831824,
+    "longitude": 13.816327089427615
+  },
+  {
+    "id": 13003,
+    "name": "Kreisfreie Stadt_Rostock",
+    "latitude": 54.10872362828523,
+    "longitude": 12.122577335111435
+  },
+  {
+    "id": 13004,
+    "name": "Kreisfreie Stadt_Schwerin",
+    "latitude": "53.6320003221381",
+    "longitude": 11.390876140397628
+  },
+  {
+    "id": 13071,
+    "name": "Landkreis_Mecklenburgische Seenplatte",
+    "latitude": 53.58413487660879,
+    "longitude": 13.022669731183262
+  },
+  {
+    "id": 13072,
+    "name": "Landkreis_Rostock",
+    "latitude": 53.92356386540429,
+    "longitude": 12.15967822706109
+  },
+  {
+    "id": 13073,
+    "name": "Landkreis_Vorpommern-Rügen",
+    "latitude": 54.28492099743477,
+    "longitude": 12.867152769300965
+  },
+  {
+    "id": 13074,
+    "name": "Landkreis_Nordwestmecklenburg",
+    "latitude": 53.83507967536144,
+    "longitude": 11.19272666828284
+  },
+  {
+    "id": 13075,
+    "name": "Landkreis_Vorpommern-Greifswald",
+    "latitude": 53.888591595913724,
+    "longitude": 13.697666216730816
+  },
+  {
+    "id": 13076,
+    "name": "Landkreis_Ludwigslust-Parchim",
+    "latitude": 53.43549645312954,
+    "longitude": 11.85625036940031
+  },
+  {
+    "id": 14511,
+    "name": "Kreisfreie Stadt_Chemnitz",
+    "latitude": 50.83671059715803,
+    "longitude": 12.913292078419108
+  },
+  {
+    "id": 14521,
+    "name": "Landkreis_Erzgebirgskreis",
+    "latitude": 50.6427907428432,
+    "longitude": 12.922601819834863
+  },
+  {
+    "id": 14522,
+    "name": "Landkreis_Mittelsachsen",
+    "latitude": 50.97895012625943,
+    "longitude": 13.111369703346162
+  },
+  {
+    "id": 14523,
+    "name": "Landkreis_Vogtlandkreis",
+    "latitude": 50.46488621476276,
+    "longitude": 12.218749008632358
+  },
+  {
+    "id": 14524,
+    "name": "Landkreis_Zwickau",
+    "latitude": 50.80964950022057,
+    "longitude": 12.551349169980753
+  },
+  {
+    "id": 14612,
+    "name": "Kreisfreie Stadt_Dresden",
+    "latitude": 51.06755763364508,
+    "longitude": 13.74546320315216
+  },
+  {
+    "id": 14625,
+    "name": "Landkreis_Bautzen",
+    "latitude": 51.32207001742166,
+    "longitude": 14.232270040979635
+  },
+  {
+    "id": 14626,
+    "name": "Landkreis_Görlitz",
+    "latitude": 51.27957667570868,
+    "longitude": 14.802643244083686
+  },
+  {
+    "id": 14627,
+    "name": "Landkreis_Meißen",
+    "latitude": 51.264321540088744,
+    "longitude": 13.47493719316178
+  },
+  {
+    "id": 14628,
+    "name": "Landkreis_Sächsische Schweiz-Osterzgebirge",
+    "latitude": 50.89376018258923,
+    "longitude": 13.784115488893718
+  },
+  {
+    "id": 14713,
+    "name": "Kreisfreie Stadt_Leipzig",
+    "latitude": 51.34757267779313,
+    "longitude": 12.374065503540164
+  },
+  {
+    "id": 14729,
+    "name": "Landkreis_Leipzig",
+    "latitude": 51.42358030715325,
+    "longitude": 12.796283701309909
+  },
+  {
+    "id": 14730,
+    "name": "Landkreis_Nordsachsen",
+    "latitude": 51.564535447460884,
+    "longitude": 12.75832185388006
+  },
+  {
+    "id": 15001,
+    "name": "Kreisfreie Stadt_Dessau-Roßlau",
+    "latitude": 51.84894336562283,
+    "longitude": 12.221498485887446
+  },
+  {
+    "id": 15002,
+    "name": "Kreisfreie Stadt_Halle (Saale)",
+    "latitude": 51.4884910212035,
+    "longitude": 11.967223208826358
+  },
+  {
+    "id": 15003,
+    "name": "Kreisfreie Stadt_Magdeburg",
+    "latitude": 52.12153959916596,
+    "longitude": 11.622267553540164
+  },
+  {
+    "id": 15081,
+    "name": "Landkreis_Altmarkkreis Salzwedel",
+    "latitude": 52.75819067675618,
+    "longitude": 11.134500755916305
+  },
+  {
+    "id": 15082,
+    "name": "Landkreis_Anhalt-Bitterfeld",
+    "latitude": 51.98961201945359,
+    "longitude": 12.103770594567917
+  },
+  {
+    "id": 15083,
+    "name": "Landkreis_Börde",
+    "latitude": 52.268692324634756,
+    "longitude": 11.289695344567912
+  },
+  {
+    "id": 15084,
+    "name": "Landkreis_Burgenlandkreis",
+    "latitude": 51.17007812780593,
+    "longitude": 11.92244104112553
+  },
+  {
+    "id": 15085,
+    "name": "Landkreis_Harz",
+    "latitude": 51.86559419292274,
+    "longitude": 10.886431894955921
+  },
+  {
+    "id": 15086,
+    "name": "Landkreis_Jerichower Land",
+    "latitude": 52.29333160743828,
+    "longitude": 12.068103862124412
+  },
+  {
+    "id": 15087,
+    "name": "Landkreis_Mansfeld-Südharz",
+    "latitude": 51.531901664994095,
+    "longitude": 11.403841376430968
+  },
+  {
+    "id": 15088,
+    "name": "Landkreis_Saalekreis",
+    "latitude": 51.35923865119753,
+    "longitude": 11.77764914883598
+  },
+  {
+    "id": 15089,
+    "name": "Landkreis_Salzlandkreis",
+    "latitude": 51.86149034998342,
+    "longitude": 11.627704822550907
+  },
+  {
+    "id": 15090,
+    "name": "Landkreis_Stendal",
+    "latitude": 52.73251939857825,
+    "longitude": 11.858753992531664
+  },
+  {
+    "id": 15091,
+    "name": "Landkreis_Wittenberg",
+    "latitude": 51.83007082035824,
+    "longitude": 12.635207104752295
+  },
+  {
+    "id": 16051,
+    "name": "Kreisfreie Stadt_Erfurt",
+    "latitude": 50.982098362828886,
+    "longitude": 11.02597850509219
+  },
+  {
+    "id": 16052,
+    "name": "Kreisfreie Stadt_Gera",
+    "latitude": 50.902992849637265,
+    "longitude": 12.079316454316178
+  },
+  {
+    "id": 16053,
+    "name": "Kreisfreie Stadt_Jena",
+    "latitude": 50.92997891314842,
+    "longitude": 11.579965651964086
+  },
+  {
+    "id": 16054,
+    "name": "Kreisfreie Stadt_Suhl",
+    "latitude": 50.608226132003544,
+    "longitude": 10.67422623098926
+  },
+  {
+    "id": 16055,
+    "name": "Kreisfreie Stadt_Weimar",
+    "latitude": 50.98250108499539,
+    "longitude": 11.324806870780824
+  },
+  {
+    "id": 16056,
+    "name": "Kreisfreie Stadt_Eisenach",
+    "latitude": 50.98135891213223,
+    "longitude": 10.311335680965202
+  },
+  {
+    "id": 16061,
+    "name": "Landkreis_Eichsfeld",
+    "latitude": 51.36038702628073,
+    "longitude": 10.199234311978518
+  },
+  {
+    "id": 16062,
+    "name": "Landkreis_Nordhausen",
+    "latitude": 51.51751346748634,
+    "longitude": 10.731262359408367
+  },
+  {
+    "id": 16063,
+    "name": "Landkreis_Wartburgkreis",
+    "latitude": 50.881551814774866,
+    "longitude": 10.194420657952566
+  },
+  {
+    "id": 16064,
+    "name": "Landkreis_Unstrut-Hainich-Kreis",
+    "latitude": 51.20749467935049,
+    "longitude": 10.512129975121056
+  },
+  {
+    "id": 16065,
+    "name": "Landkreis_Kyffhäuserkreis",
+    "latitude": 51.32576566166398,
+    "longitude": 10.876675876527191
+  },
+  {
+    "id": 16066,
+    "name": "Landkreis_Schmalkalden-Meiningen",
+    "latitude": 50.645757056336066,
+    "longitude": 10.39646809548982
+  },
+  {
+    "id": 16067,
+    "name": "Landkreis_Gotha",
+    "latitude": 50.93049717563525,
+    "longitude": 10.709814424102928
+  },
+  {
+    "id": 16068,
+    "name": "Landkreis_Sömmerda",
+    "latitude": 51.17061576293501,
+    "longitude": 11.115665033365405
+  },
+  {
+    "id": 16069,
+    "name": "Landkreis_Hildburghausen",
+    "latitude": 50.453438719755425,
+    "longitude": 10.719179821386888
+  },
+  {
+    "id": 16070,
+    "name": "Landkreis_Ilm-Kreis",
+    "latitude": 50.78945761411922,
+    "longitude": 10.949237743937795
+  },
+  {
+    "id": 16071,
+    "name": "Landkreis_Weimarer Land",
+    "latitude": 51.04125162116262,
+    "longitude": 11.472812585451328
+  },
+  {
+    "id": 16072,
+    "name": "Landkreis_Sonneberg",
+    "latitude": 50.43242950629388,
+    "longitude": 11.13845040135802
+  },
+  {
+    "id": 16073,
+    "name": "Landkreis_Saalfeld-Rudolstadt",
+    "latitude": 50.64054719906822,
+    "longitude": 11.296383427061087
+  },
+  {
+    "id": 16074,
+    "name": "Landkreis_Saale-Holzland-Kreis",
+    "latitude": 50.931377908087306,
+    "longitude": 11.801941437974925
+  },
+  {
+    "id": 16075,
+    "name": "Landkreis_Saale-Orla-Kreis",
+    "latitude": 50.61934492658918,
+    "longitude": 11.751367592919667
+  },
+  {
+    "id": 16076,
+    "name": "Landkreis_Greiz",
+    "latitude": 50.73963666990821,
+    "longitude": 12.065210366876705
+  },
+  {
+    "id": 16077,
+    "name": "Landkreis_Altenburger Land",
+    "latitude": 50.959625220169194,
+    "longitude": 12.384954377206977
+  },
+  {
+    "id": 11012,
+    "name": "Bezirk_Berlin Reinickendorf",
+    "latitude": 52.5988460072278,
+    "longitude": 13.28643592000481
+  },
+  {
+    "id": 11004,
+    "name": "Bezirk_Berlin Charlottenburg-Wilmersdorf",
+    "latitude": 52.50745503759411,
+    "longitude": 13.271293439015551
+  },
+  {
+    "id": 11009,
+    "name": "Bezirk_Berlin Treptow-Köpenick",
+    "latitude": 52.43861886110884,
+    "longitude": 13.614455982541283
+  },
+  {
+    "id": 11003,
+    "name": "Bezirk_Berlin Pankow",
+    "latitude": 52.60373260442343,
+    "longitude": 13.430882404316177
+  },
+  {
+    "id": 11008,
+    "name": "Bezirk_Berlin Neukölln",
+    "latitude": 52.477893297245615,
+    "longitude": 13.435841998532949
+  },
+  {
+    "id": 11011,
+    "name": "Bezirk_Berlin Lichtenberg",
+    "latitude": 52.529615017192754,
+    "longitude": 13.4918838194228
+  },
+  {
+    "id": 11010,
+    "name": "Bezirk_Berlin Marzahn-Hellersdorf",
+    "latitude": 52.52550736974583,
+    "longitude": 13.578562097259903
+  },
+  {
+    "id": 11005,
+    "name": "Bezirk_Berlin Spandau",
+    "latitude": 52.540290382120965,
+    "longitude": 13.170666389621617
+  },
+  {
+    "id": 11006,
+    "name": "Bezirk_Berlin Steglitz-Zehlendorf",
+    "latitude": 52.43686126745368,
+    "longitude": 13.264706997235846
+  },
+  {
+    "id": 11001,
+    "name": "Bezirk_Berlin Mitte",
+    "latitude": 52.53789638395271,
+    "longitude": 13.3563438472599
+  },
+  {
+    "id": 11002,
+    "name": "Bezirk_Berlin Friedrichshain-Kreuzberg",
+    "latitude": 52.50977190036641,
+    "longitude": 13.44790304410774
+  },
+  {
+    "id": 11007,
+    "name": "Bezirk_Berlin Tempelhof-Schöneberg",
+    "latitude": 52.46121738956324,
+    "longitude": 13.385608284699373
+  }
+]

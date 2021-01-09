@@ -1,0 +1,190 @@
+{
+    "annotations": {
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": "-- Grafana --",
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "type": "dashboard"
+            }
+        ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "links": [],
+    "panels": [
+        {
+            "circleMaxSize": 30,
+            "circleMinSize": 2,
+            "colors": [
+                "rgb(6, 224, 237)",
+                "rgb(3, 255, 242)",
+                "rgb(3, 255, 242)"
+            ],
+            "datasource": "PostgreSQL",
+            "decimals": 0,
+            "esMetric": "Count",
+            "fieldConfig": {
+                "defaults": {
+                    "custom": {}
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 15,
+                "w": 6,
+                "x": 0,
+                "y": 0
+            },
+            "hideEmpty": false,
+            "hideZero": false,
+            "id": 4,
+            "initialZoom": "5",
+            "locationData": "table",
+            "mapCenter": "custom",
+            "mapCenterLatitude": "51",
+            "mapCenterLongitude": "10",
+            "maxDataPoints": 1,
+            "mouseWheelZoom": true,
+            "pluginVersion": "7.3.1",
+            "showLegend": false,
+            "stickyLabels": false,
+            "tableQueryOptions": {
+                "geohashField": "geohash",
+                "labelField": "Risikogebiete",
+                "latitudeField": "lat",
+                "longitudeField": "long",
+                "metricField": "Infizierte",
+                "queryType": "coordinates"
+            },
+            "targets": [
+                {
+                    "format": "table",
+                    "group": [],
+                    "metricColumn": "none",
+                    "queryType": "randomWalk",
+                    "rawQuery": true,
+                    "rawSql": "SELECT \"Counties\".\"name\" AS \"Risikogebiete\", sum(\"Cases\".\"cases\") AS \"Infizierte\", \"Counties\".\"lat\", \"Counties\".\"long\"\nFROM \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Cases\".\"date\" <= current_date AND \"Cases\".\"date\" >= current_date - integer '7' \nGROUP BY \"Counties\".\"name\", \"Counties\".\"population\", \"Counties\".\"lat\", \"Counties\".\"long\"\nHAVING sum(\"Cases\".\"cases\") >= \"Counties\".\"population\" * 0.0005\nORDER BY sum(\"Cases\".\"cases\") DESC, \"Counties\".\"name\" \n\n",
+                    "refId": "A",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "value"
+                                ],
+                                "type": "column"
+                            }
+                        ]
+                    ],
+                    "timeColumn": "time",
+                    "where": [
+                        {
+                            "name": "$__timeFilter",
+                            "params": [],
+                            "type": "macro"
+                        }
+                    ]
+                }
+            ],
+            "thresholds": "0,10",
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Infektionen Risikogebiete (absolute Zahlen)",
+            "type": "grafana-worldmap-panel",
+            "unitPlural": "",
+            "unitSingle": "",
+            "valueName": "max"
+        },
+        {
+            "datasource": "PostgreSQL",
+            "description": "",
+            "fieldConfig": {
+                "defaults": {
+                    "custom": {
+                        "align": null,
+                        "filterable": false
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    }
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 20,
+                "w": 7,
+                "x": 7,
+                "y": 0
+            },
+            "id": 2,
+            "options": {
+                "showHeader": true
+            },
+            "pluginVersion": "7.3.2",
+            "targets": [
+                {
+                    "format": "table",
+                    "group": [],
+                    "metricColumn": "none",
+                    "queryType": "randomWalk",
+                    "rawQuery": true,
+                    "rawSql": "SELECT \"Counties\".\"name\" AS \"Risikogebiete\", sum(\"Cases\".\"cases\") AS \"Infizierte\"\nFROM \"Counties\"\nINNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\"\nWHERE \"Cases\".\"date\" <= current_date AND \"Cases\".\"date\" >= current_date - integer '7' \nGROUP BY \"Counties\".\"name\", \"Counties\".\"population\"\nHAVING sum(\"Cases\".\"cases\") >= \"Counties\".\"population\" * 0.0005\nORDER BY sum(\"Cases\".\"cases\") DESC, \"Counties\".\"name\" \n\n",
+                    "refId": "A",
+                    "select": [
+                        [
+                            {
+                                "params": [
+                                    "value"
+                                ],
+                                "type": "column"
+                            }
+                        ]
+                    ],
+                    "timeColumn": "time",
+                    "where": [
+                        {
+                            "name": "$__timeFilter",
+                            "params": [],
+                            "type": "macro"
+                        }
+                    ]
+                }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "Risikogebiete",
+            "type": "table"
+        }
+    ],
+    "refresh": false,
+    "schemaVersion": 26,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+        "list": []
+    },
+    "time": {
+        "from": "2020-12-09T14:33:52.178Z",
+        "to": "2020-12-10T14:33:52.178Z"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Riskareas",
+    "uid": "G3LqjW1Mk",
+    "version": 1
+}

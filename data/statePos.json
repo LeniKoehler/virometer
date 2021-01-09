@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Schleswig-Holstein",
+    "latitude": 54.1854,
+    "longitude": 9.82201
+  },
+  {
+    "name": "Baden-Württemberg",
+    "latitude": 48.537778,
+    "longitude": 9.041111
+  },
+  {
+    "name": "Bayern",
+    "latitude": 48.94676,
+    "longitude": 11.40387
+  },
+  {
+    "name": "Saarland",
+    "latitude": 49.398721,
+    "longitude": 7.022649
+  },
+  {
+    "name": "Hessen",
+    "latitude": 50.61185,
+    "longitude": 9.19097
+  },
+  {
+    "name": "Thüringen",
+    "latitude": 50.73332,
+    "longitude": 11.07479
+  },
+  {
+    "name": "Sachsen",
+    "latitude": 50.92958,
+    "longitude": 13.45851
+  },
+  {
+    "name": "Sachsen-Anhalt",
+    "latitude": 51.90853,
+    "longitude": 11.49391
+  },
+  {
+    "name": "Berlin",
+    "latitude": 52.51704,
+    "longitude": 13.38886
+  },
+  {
+    "name": "Bremen",
+    "latitude": 53.07582,
+    "longitude": 8.80716
+  },
+  {
+    "name": "Hamburg",
+    "latitude": 53.54376,
+    "longitude": 10.00991
+  },
+  {
+    "name": "Nordrhein-Westfalen",
+    "latitude": 51.47818,
+    "longitude": 7.55423
+  },
+  {
+    "name": "Rheinland-Pfalz",
+    "latitude": 49.913775,
+    "longitude": 7.403395
+  },
+  {
+    "name": "Brandenburg",
+    "latitude": 52.84555,
+    "longitude": 13.24613
+  },
+  {
+    "name": "Niedersachsen",
+    "latitude": 52.83985,
+    "longitude": 9.07596
+  },
+  {
+    "name": "Mecklenburg-Vorpommern",
+    "latitude": 53.77352,
+    "longitude": 12.57557
+  }
+ ]

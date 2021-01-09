@@ -1,0 +1,2427 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "iteration": 1609862120506,
+    "links": [],
+    "panels": [
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 0,
+          "y": 0
+        },
+        "id": 8,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Hamburg' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Hamburg: $MaxLK2",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 7,
+          "x": 8,
+          "y": 0
+        },
+        "id": 15,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Sachsen' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Sachsen: $MaxLK14",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 7,
+          "x": 17,
+          "y": 0
+        },
+        "id": 14,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Saarland' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Saarland: $MaxLK10",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "align": null,
+              "filterable": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 8,
+          "x": 0,
+          "y": 8
+        },
+        "id": 17,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Schleswig-Holstein' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Schleswig-Holstein: $MaxLK1",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 7,
+          "x": 8,
+          "y": 8
+        },
+        "id": 10,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \"Gesamtzahl Infektionen\", \"Gesamtzahl Genesene\", \"Gesamtzahl Todesfälle\" FROM (SELECT max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \"MaximumAlles\".\"Landkreise\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreise\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Mecklenburg-Vorpommern' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Mecklenburg-Vorpommern: $MaxLK13",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 8,
+          "x": 0,
+          "y": 17
+        },
+        "id": 11,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Niedersachsen' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Niedersachsen: $MaxLK3",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 7,
+          "x": 8,
+          "y": 17
+        },
+        "id": 13,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Rheinland-Pfalz' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Rheinland-Pfalz: $MaxLK7",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 8,
+          "x": 0,
+          "y": 26
+        },
+        "id": 2,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Baden-Wuerttemberg' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Baden-Württemberg: $MaxLK8",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 7,
+          "x": 8,
+          "y": 26
+        },
+        "id": 7,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Bremen' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Bremen: $MaxLK4",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 0,
+          "y": 35
+        },
+        "id": 16,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Sachsen-Anhalt' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffener Region (nach Infektionen) in Sachsen-Anhalt: $MaxLK15",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 7,
+          "x": 8,
+          "y": 35
+        },
+        "id": 4,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Bayern' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Bayern: $MaxLK9",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 8,
+          "x": 0,
+          "y": 43
+        },
+        "id": 12,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Nordrhein-Westfalen' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Nordrhein-Westfalen: $MaxLK5",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 7,
+          "x": 8,
+          "y": 44
+        },
+        "id": 5,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Berlin' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Berlin: $MaxLK11",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 0,
+          "y": 52
+        },
+        "id": 3,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "hide": false,
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \"Gesamtzahl Infektionen\", \"Gesamtzahl Genesene\", \"Gesamtzahl Todesfälle\" FROM (SELECT max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \"MaximumAlles\".\"Landkreise\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreise\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Thueringen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Thüringen: $MaxLK16",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 7,
+          "x": 8,
+          "y": 52
+        },
+        "id": 9,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Hessen' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Hessen: $MaxLK6",
+        "type": "bargauge"
+      },
+      {
+        "datasource": "PostgreSQL",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                },
+                {
+                  "color": "blue",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Infektionen"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#02e3fa",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Genesene"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#ffffff",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byRegexp",
+                "options": "Gesamtzahl Todesfälle"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#1f78b4",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 8,
+          "x": 0,
+          "y": 60
+        },
+        "id": 6,
+        "options": {
+          "displayMode": "gradient",
+          "orientation": "vertical",
+          "reduceOptions": {
+            "calcs": [
+              "mean"
+            ],
+            "fields": "/.*/",
+            "values": true
+          },
+          "showUnfilled": true
+        },
+        "pluginVersion": "7.3.2",
+        "targets": [
+          {
+            "format": "table",
+            "group": [],
+            "metricColumn": "none",
+            "queryType": "randomWalk",
+            "rawQuery": true,
+            "rawSql": "SELECT \n  \"Gesamtzahl Infektionen\", \n  \"Gesamtzahl Genesene\", \n  \"Gesamtzahl Todesfälle\" \nFROM \n  (SELECT \n    max(\"Gesamtzahl Fälle\") AS \"Gesamtzahl Infektionen\", \n    max(\"Gesamtzahl Genesene\") AS \"Gesamtzahl Genesene\", \n    max(\"Gesamtzahl Todesfälle\") AS \"Gesamtzahl Todesfälle\", \n    \"MaximumAlles\".\"Landkreise\" \n  FROM \n    (SELECT \"Counties\".\"name\" AS \"Landkreise\", \n    sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\", \n    sum(\"Cases\".\"recovered\") AS \"Gesamtzahl Genesene\", \n    sum(\"Cases\".\"dead\") AS \"Gesamtzahl Todesfälle\" \n      FROM \"Counties\" \n      INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" \n      WHERE \"state\" = 'Brandenburg' \n      GROUP BY \"Counties\".\"name\" \n      ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\n      GROUP BY \"MaximumAlles\".\"Landkreise\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" \nLIMIT 1\n",
+            "refId": "A",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "column"
+                }
+              ]
+            ],
+            "timeColumn": "time",
+            "where": [
+              {
+                "name": "$__timeFilter",
+                "params": [],
+                "type": "macro"
+              }
+            ]
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Meist betroffene Region (nach Infektionen) in Brandenburg: $MaxLK12",
+        "type": "bargauge"
+      }
+    ],
+    "refresh": false,
+    "schemaVersion": 26,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Kreis_Pinneberg",
+            "value": "Kreis_Pinneberg"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Schleswig-Holstein' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK1",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Schleswig-Holstein' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Kreisfreie_Stadt_Hamburg",
+            "value": "Kreisfreie_Stadt_Hamburg"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Hamburg' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK2",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Hamburg' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Landkreis_Region_Hannover",
+            "value": "Landkreis_Region_Hannover"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Niedersachsen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK3",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Niedersachsen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Kreisfreie_Stadt_Bremen",
+            "value": "Kreisfreie_Stadt_Bremen"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Bremen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK4",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Bremen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Kreisfreie_Stadt_Koeln",
+            "value": "Kreisfreie_Stadt_Koeln"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Nordrhein-Westfalen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK5",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Nordrhein-Westfalen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Kreisfreie_Stadt_Frankfurt_am_Main",
+            "value": "Kreisfreie_Stadt_Frankfurt_am_Main"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Hessen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK6",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Hessen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Kreisfreie_Stadt_Mainz",
+            "value": "Kreisfreie_Stadt_Mainz"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Rheinland-Pfalz' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK7",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Rheinland-Pfalz' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Stadtkreis_Stuttgart",
+            "value": "Stadtkreis_Stuttgart"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Baden-Wuerttemberg' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK8",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Baden-Wuerttemberg' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Kreisfreie_Stadt_Muenchen",
+            "value": "Kreisfreie_Stadt_Muenchen"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Bayern' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK9",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Bayern' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Landkreis_Regionalverband_Saarbruecken",
+            "value": "Landkreis_Regionalverband_Saarbruecken"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Saarland' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK10",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Saarland' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Bezirk_Berlin_Mitte",
+            "value": "Bezirk_Berlin_Mitte"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Berlin' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK11",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Berlin' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Landkreis_Oberspreewald-Lausitz",
+            "value": "Landkreis_Oberspreewald-Lausitz"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Brandenburg' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK12",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Brandenburg' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Landkreis_Mecklenburgische_Seenplatte",
+            "value": "Landkreis_Mecklenburgische_Seenplatte"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Mecklenburg-Vorpommern' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK13",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Mecklenburg-Vorpommern' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Landkreis_Erzgebirgskreis",
+            "value": "Landkreis_Erzgebirgskreis"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Sachsen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK14",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Sachsen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Kreisfreie_Stadt_Halle_(Saale)",
+            "value": "Kreisfreie_Stadt_Halle_(Saale)"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Sachsen-Anhalt' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK15",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Sachsen-Anhalt' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "Landkreis_Altenburger_Land",
+            "value": "Landkreis_Altenburger_Land"
+          },
+          "datasource": "PostgreSQL",
+          "definition": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Thueringen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": null,
+          "multi": false,
+          "name": "MaxLK16",
+          "options": [],
+          "query": "SELECT \"Landkreis\" FROM (SELECT max(\"Gesamtzahl Fälle\") , \"MaximumAlles\".\"Landkreis\" FROM (SELECT \"Counties\".\"name\" AS \"Landkreis\", sum(\"Cases\".\"cases\") AS \"Gesamtzahl Fälle\" FROM \"Counties\" INNER JOIN \"Cases\" ON \"Counties\".\"id\" = \"Cases\".\"countyID\" WHERE \"state\" = 'Thueringen' GROUP BY \"Counties\".\"name\" ORDER BY sum(\"Cases\".\"cases\")) AS \"MaximumAlles\"\nGROUP BY \"MaximumAlles\".\"Landkreis\"\nORDER BY max(\"Gesamtzahl Fälle\") DESC) AS \"MaximumLandkreis\" LIMIT 1",
+          "refresh": 2,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        }
+      ]
+    },
+    "time": {
+      "from": "2020-11-18T11:38:52.415Z",
+      "to": "2020-11-20T11:38:52.415Z"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Barchart per state",
+    "uid": "B-dXo0TGk",
+    "version": 1
+  }
