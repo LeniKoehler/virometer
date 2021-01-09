@@ -48,7 +48,7 @@ npm run virometer-win
 (Linux)
 sudo npm run viromer
 ```
-Dies kann einige Minuten dauern, warten Sie einfach geduldig bis der Prozess vollständig abgeschlossen ist. Nun ist der der Server Vollständig gestartet. Unter virometer.it-stud.hs-heilbronn.de:4200 / localhost:4200 ist das Projekt nun erreichbar. Es kann einige Minuten dauern, bis Daten auftauchen, es müssen zunächst mehrere hunderttausend Datensätze verarbeitet werden.
+Dies kann einige Minuten dauern, warten Sie einfach geduldig bis der Prozess vollständig abgeschlossen ist. Nun ist der der Server Vollständig gestartet. Unter mmkoehler.de/virometer:4200 / localhost:4200 ist das Projekt nun erreichbar. Es kann einige Minuten dauern, bis Daten auftauchen, es müssen zunächst mehrere hunderttausend Datensätze verarbeitet werden.
 
 
 ## Tests

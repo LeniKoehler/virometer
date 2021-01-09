@@ -28,7 +28,8 @@
     "virometer-win": "nx run frontend:build --prod && nx run backend:build --prod && docker-compose up -d --build --force-recreate",
     "virometer-test-db": "docker-compose up -d --build --force-recreate && npm test data-access-db",
     "virometer-test-datastorage": "docker-compose up -d --build --force-recreate && npm test data-storage",
-    "virometer-test-download": "docker-compose up -d --build --force-recreate && npm test data-download"
+    "virometer-test-download": "docker-compose up -d --build --force-recreate && npm test data-download",
+    "virometer-test-ui": "npm test ui --codeCoverage --coverageDirectory=coverage-leni"
   },
   "private": true,
   "dependencies": {

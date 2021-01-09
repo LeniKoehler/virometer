@@ -9,8 +9,8 @@ import Button from "@material-ui/core/Button";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 
-const downloadLinkJSON = 'http://virometer.it-stud.hs-heilbronn.de:1337/downloadJSON';
-const downloadLinkCSV = 'http://virometer.it-stud.hs-heilbronn.de:1337/downloadCSV';
+const downloadLinkJSON = 'http://mmkoehler.de/virometer:1337/downloadJSON';
+const downloadLinkCSV = 'http://mmkoehler.de/virometer:1337/downloadCSV';
 /* eslint-disable-next-line */
 export interface DownloadcardProps { }
 
