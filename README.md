@@ -3,16 +3,6 @@
   <img src="./apps/frontend/src/assets/virometerLogo.png" width="200" height="200" >
 </p>
 
-## Vision
-
-Die rasante Entwicklung der Corona Pandemie versetzt die Bevölkerung der Bundesrepublik Deutschland bis heute noch in Angst und Unsicherheit. Bezüglich der Maßnahmen gegen die Verbreitung von Corona herrscht Uneinigkeit in der Welt, wodurch viele Bürger verunsichert sind und sich ihr eigenes Bild machen möchten.
-
-```
-"Unsere Vision ist es, allen Menschen die Möglichkeit zu geben, umfangreiche und
-komplexe Daten viel schneller zu verstehen und sie auf diese Weise
-in ihren alltäglichen Entscheidungen zu unterstützen."
-```
-Unser Produkt ViroMeter unterstützt die freie Meinungsbildung aller Bürger durch die Umsetzung eines Dashboards, das die wichtigsten Daten bezüglich der Corona-Pandemie zeigt und auf diese Weise allen Menschen die Informationen zur Verfügung stellt, die sie benötigen, um auf die besonderen Umstände dieser Zeit selbstbestimmt und angemessen reagieren zu können.
 
 ## Installationsanleitung
 
